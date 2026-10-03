@@ -1,0 +1,376 @@
+{
+  "slug": "bioreactor-hardware",
+  "title": "Bioreactor, Hardware & AIoT Software",
+  "title_zh": "生物反應器、硬體與 AIoT 軟體",
+  "blurb": "The perfusion bioreactor and its hollow-fibre membrane, the in-line photometer, the DiOPAL light array, the hydroponic floating plate, the digital twin, the maths model, and the sensor-to-light path that is meant to connect them.",
+  "blurb_zh": "灌流式生物反應器與其中空纖維膜、在線光度計、DiOPAL 光照陣列、水耕浮板、數位孿生 (digital twin)、數學模型，以及理應把這些串起來的「感測到光照」控制路徑。",
+  "questions": [
+    {
+      "id": "HW-01",
+      "type": "fact",
+      "q": "Walk a judge through the culture loop: what are the working volume, the inoculum, the circulation flow rate, the stirring, and the membrane fitted?",
+      "q_zh": "請向評審說明培養迴路 (culture loop)：工作體積、接種量、循環流速、攪拌條件，以及實際裝上的膜各是多少？",
+      "answer": "The lumen side runs 300 mL of LB in a 500 mL reservoir, inoculated with 20 mL of an overnight B. subtilis culture, circulated by a peristaltic pump at 94 mL/min through the in-line photometer and into the fibre lumens, with a 200 rpm magnetic stir bar added in cycle 2 after sedimentation was diagnosed. The membrane is a PES hollow-fibre cartridge with a 0.2 µm pore and roughly 200 mL of lumen volume. The page also states plainly that the specification is still under discussion in the team, and that the values listed are the ones from the cycles and the assembly guide parts list.",
+      "answer_zh": "管內側 (lumen) 為 500 mL 容器中裝 300 mL LB，接種 20 mL 過夜培養的 B. subtilis，由蠕動泵以 94 mL/min 經在線光度計送入中空纖維管內；第二個循環 (cycle 2) 診斷出沉降問題後加入 200 rpm 磁石攪拌。膜為 PES 中空纖維匣，孔徑 0.2 µm，管內體積約 200 mL。該頁也明白寫出規格仍在團隊內討論中，列出的數值取自各循環與組裝指引的零件清單。",
+      "cite": ["hardware/bioreactor/", "results/"],
+      "trap": "Quoting the Key Specifications table as a settled spec; the page itself says the specification is still under discussion.",
+      "trap_zh": "把「關鍵規格」表當成已定案的規格；該頁本身說規格仍在討論中。"
+    },
+    {
+      "id": "HW-02",
+      "type": "decision",
+      "q": "Your first design was a transgenic plant-growth-promoting rhizobacterium living in the soil. Why did you put the organism in a machine instead, and what did that cost you?",
+      "q_zh": "你們最初的設計是讓基改植物生長促進根圈細菌 (TgPGPR) 住在土壤裡。為什麼後來把菌放進機器裡，而這個改變付出了什麼代價？",
+      "answer": "The page gives one reason: control. Once a transgenic organism is released, expression, dose and spread stop being ours to set, and the bacteria produce whether or not the plant is stressed and travel with soil and water. What the team needed from the bacteria was the molecule, not the organism, so the organism went into a machine and only the product goes to the field, turning a release problem into a containment problem. The cost is that the project now owns a hardware stack and a delivery step it did not have before: a reactor, a membrane, sensors, a light path and a bottle.",
+      "answer_zh": "該頁給的理由是「控制權」。基改生物一旦釋放，表達量、劑量與擴散就不再由我們決定，細菌不管植物有沒有逆境都會生產，並隨土壤與水移動。團隊真正需要的是分子而不是生物體，因此把菌放進機器、只讓產物進入田間，把「釋放問題」轉成「圍阻 (containment) 問題」。代價是專案從此多了原本沒有的硬體與遞送環節：反應器、膜、感測器、光路與瓶裝劑。",
+      "cite": ["hardware/bioreactor/", "description/"],
+      "trap": "Answering only \"biosafety\" without the control argument the page actually makes about dose and expression.",
+      "trap_zh": "只回答「生物安全」，而沒有講出該頁真正的論點：劑量與表達的可控性。"
+    },
+    {
+      "id": "HW-03",
+      "type": "boundary",
+      "q": "The membrane is your containment barrier. What does the 0.2 µm pore stop, and what does it let through that you would rather it did not?",
+      "q_zh": "膜是你們的圍阻屏障。0.2 µm 孔徑攔得住什麼？又讓哪些你們其實不希望通過的東西通過了？",
+      "answer": "The page is explicit: the fitted module is rated 0.2 µm microfiltration, it has no 50 kDa molecular-weight cut-off, and it does not retain secreted vesicles. The pore is large enough to pass ACC deaminase, which is its purpose, so it also passes small vesicles, cell debris and medium components. Containment therefore rests on cell size alone, with B. subtilis given as 0.25 to 1.0 µm in diameter on the containment section. Anything below the pore size reaches the field along with the protectant.",
+      "answer_zh": "該頁寫得很明確：裝上的模組額定為 0.2 µm 微過濾，沒有 50 kDa 分子量截留 (MWCO)，也不會留住分泌型囊泡。孔徑大到足以讓 ACC 去胺酶通過（這正是目的），因此也會讓小囊泡、細胞碎片與培養基成分通過。所以圍阻只靠細胞尺寸：圍阻章節把 B. subtilis 的直徑寫為 0.25 至 1.0 µm。任何小於孔徑的東西都會隨保護劑一起進入田間。",
+      "cite": ["hardware/bioreactor/", "engineering/"],
+      "trap": "Saying the membrane has a molecular-weight cut-off. Engineering records that the old specification claimed a 50 kDa cut-off and that the team withdrew that claim in writing; Entrepreneurship's risk table still says \"molecular-weight cutoff\".",
+      "trap_zh": "說膜有分子量截留。Engineering 頁記載舊規格曾聲稱 50 kDa 截留，團隊已書面撤回；Entrepreneurship 的風險表卻仍寫「molecular-weight cutoff」。"
+    },
+    {
+      "id": "HW-04",
+      "type": "weakness",
+      "q": "What is the complete evidence that engineered cells stay on their side of the membrane?",
+      "q_zh": "工程菌確實留在膜的另一側——支持這件事的全部證據是什麼？",
+      "answer": "Two platings, and we should say so. On 6 June 2 mL of shell-side medium from the prototype I run was spread on LB and grew no colonies, and a later run was plated from both sides and photographed after 24 h at 37 °C. There is one plating per run, no replicate within a run, no recorded incubation time or temperature for the June plate, and no log reduction value anywhere; a poster figure filed under an LRV of 7.5 has no measurement behind it and must not be quoted. Our own pages also give the cell dimension two different ways, and Human Practices records that at the 4 September meeting we presented passive leakage of B. subtilis and protectant through the membrane with no driving force as a major obstacle, which has to be reconciled with the containment claim.",
+      "answer_zh": "只有兩次塗盤，而且應該如實說出。6 月 6 日從原型 I 的殼側 (shell side) 取 2 mL 培養基塗 LB，未長出菌落；後來一次運轉同時塗了兩側並於 37 °C 培養 24 小時後拍照。每次運轉只塗一盤、同一次運轉內沒有重複，六月那盤的培養時間與溫度未記錄，而且任何地方都沒有對數去除值 (LRV)；設計資料夾中一張海報圖被歸檔為 LRV 7.5，但背後沒有任何量測，絕不可引用。我們自己的頁面對細胞尺寸也有兩種寫法；Human Practices 更記載 9 月 4 日會談時，我們把「沒有驅動力下 B. subtilis 與保護劑仍被動滲漏過膜」當作重大障礙提出，這與圍阻主張必須對齊。",
+      "cite": ["hardware/bioreactor/", "results/", "human-practices/"],
+      "trap": "Calling the single no-colony plate \"functional proof that our bioreactor is bio-safe\", which is how the cycle 1 text puts it.",
+      "trap_zh": "把單一無菌落的平盤稱為「證明我們的生物反應器對公共農業使用是生物安全的功能性證據」，這正是 cycle 1 原文的寫法。"
+    },
+    {
+      "id": "HW-05",
+      "type": "alternative",
+      "q": "You could have scaled the hollow-fibre module up rather than down. Why did you not, and what settled it?",
+      "q_zh": "你們本來可以把中空纖維模組放大而不是縮小。為什麼沒有？是什麼決定了這件事？",
+      "answer": "Arithmetic settled it with no test run. A hollow-fibre membrane has to run at a wall shear rate of 2,000 to 6,000 s⁻¹, which fixes the cross-flow once the geometry is chosen. The scale-up option, a 63 mm by 300 mm module of about 1,300 fibres and 1.3 m², needs 16.25 to 48.74 L/min; the scale-down option, 10 mm by 600 mm with 11 fibres and 0.02 m², needs 129 to 388 mL/min, which the 1.5 L/min pump reaches. The gap is a factor of ten to thirty, so no experiment was needed. We should also say our own records carry two module geometries, 150 cm² across eight fibres frozen on 4 July and 200 cm² across eleven characterised on 16 August, and the numbers must not be mixed.",
+      "answer_zh": "靠算術就決定了，沒有做實驗。中空纖維膜必須運轉在 2,000 至 6,000 s⁻¹ 的管壁剪切率，幾何一旦選定，跨流量就被鎖定。放大方案（63 mm × 300 mm、約 1,300 根纖維、1.3 m²）需要 16.25 至 48.74 L/min；縮小方案（10 mm × 600 mm、11 根纖維、0.02 m²）需要 129 至 388 mL/min，1.5 L/min 的泵可達。差距達十到三十倍，因此不需要實驗。我們也應說明自家紀錄中有兩種模組幾何：7 月 4 日定案的 150 cm²／八根纖維，與 8 月 16 日特性化的 200 cm²／十一根纖維，兩套數字不可混用。",
+      "cite": ["engineering/", "hardware/bioreactor/"]
+    },
+    {
+      "id": "HW-06",
+      "type": "decision",
+      "q": "Professor Chang told you in June that nothing in the design pushed protectant from the lumen side to the shell side. What did you do about it, and why not simply raise the flow rate?",
+      "q_zh": "張教授在六月指出，你們的設計沒有任何機制把保護劑從管內側推到殼側。你們怎麼處理？為什麼不乾脆把流速提高？",
+      "answer": "Professor Chang explained that raising the flow rate only recirculates fluid rather than generating outward pressure, so he recommended a valve to build pressure with a reduced tube diameter to concentrate the outward force. We built a stepper pinch valve, then replaced it with a servo in week 23 against four criteria agreed before any option was scored: holding when power is cut, holding force against permeate pressure, buildable from parts already in the lab, and firmware needed. A stepper releases when it loses power and the loop is full of live engineered culture, so the first criterion outranked the other three and decided it on its own.",
+      "answer_zh": "張教授解釋提高流速只是把液體再循環，不會產生向外的壓力，因此建議加閥門建壓並縮小管徑以集中向外的力。我們先做了步進馬達式夾管閥 (pinch valve)，第 23 週改為伺服馬達式，依據在評分任何選項之前就先談定的四項準則：斷電時是否保持關閉、對透過側壓力的保持力、能否用實驗室現有零件自製、需要多少固件。步進馬達斷電就鬆開，而迴路裡裝的是活的工程菌，因此第一項準則壓過其餘三項，單獨決定了結果。",
+      "cite": ["hardware/bioreactor/", "engineering/", "hardware/notebook/"]
+    },
+    {
+      "id": "HW-07",
+      "type": "weakness",
+      "q": "At what flow rate were your reactor growth results obtained, and does that match the flow the hydraulics were designed around?",
+      "q_zh": "你們的反應器生長結果是在什麼流速下取得的？這個流速和水力計算所假設的流速一致嗎？",
+      "answer": "No, and we have to say so. Both reactor growth runs ran at 94 mL/min, which is the number behind the growth result. The pump's vendor sheet gives a range of 230 to 2,600 mL/min, and the reactor hydraulics build their shear, Reynolds, pressure-drop and critical-flux numbers on 230 mL/min as a floor, which sits above every measured point below dial 16. The bench calibration puts dial 10 at 100.3 mL/min while the two pressure runs put the same dial at 140 and at 121.7 to 116.7 mL/min, about 40 per cent apart, and the pump document names a setting 19 that has no row in its own table. The fix recorded on Results is to decide which flow the hydraulics are computed at, recompute, and state on every page which flow each result came from.",
+      "answer_zh": "不一致，而且必須講清楚。兩次反應器生長運轉都在 94 mL/min，生長結果就是這個流速下得到的。泵的廠商規格為 230 至 2,600 mL/min，而反應器水力計算（剪切、雷諾數、壓降、臨界通量）都以 230 mL/min 當下限，但這個值高於刻度 16 以下所有實測點。檯面校正顯示刻度 10 為 100.3 mL/min，兩次壓力運轉同一刻度卻讀到 140 與 121.7–116.7 mL/min，相差約四成；泵文件還提到「設定 19 為 288 mL/min」，但表中沒有設定 19 這一列。Results 頁記下的修正方式是：決定水力計算採用哪個流速、重算，並在每一頁標明每個結果是在什麼流速下取得。",
+      "cite": ["results/", "measurement/", "hardware/bioreactor/"],
+      "trap": "Quoting 263 mL/min or 371 mL/min as \"the\" operating flow; those come from the water pressure-drop calibration and the 102.4 h run, not from the growth runs.",
+      "trap_zh": "把 263 mL/min 或 371 mL/min 當成「那個」操作流速；這兩個數字來自純水壓降校正與 102.4 小時運轉，不是生長實驗。"
+    },
+    {
+      "id": "HW-08",
+      "type": "fact",
+      "q": "Describe the photometer's light path component by component, and write down how a lux pair becomes an OD600 number.",
+      "q_zh": "請逐一說明光度計的光路元件，並寫出一組照度讀數如何變成 OD600 數值。",
+      "answer": "Light leaves a 600 nm amber LED, passes a paralleling lens, then a 2 mm slit, into a 90/10 beamsplitter. Ten per cent goes straight to a reference sensor before the sample; ninety per cent passes the flow cuvette to the sample sensor. Both are GY-302 lux sensors on one I2C bus on an Arduino UNO Q. Bench spacings, fixed since cycle 1, are 5.5 cm LED tip to lens, 10 cm lens to beamsplitter centre, 2 cm beamsplitter to each sensor. The blank gives K = sample/reference, and every live reading is OD600 = −log(sample / (K × reference)), with the LED switched off each cycle for dark readings that are subtracted first. Acquisition is every 10 minutes and the dashboard is served on port 7000.",
+      "answer_zh": "光由 600 nm 琥珀色 LED 出發，經平行化透鏡、2 mm 狹縫，進入 90/10 分光鏡。10% 在樣品之前直接射向參考感測器，90% 穿過流通比色槽到樣品感測器。兩顆都是 GY-302 照度感測器，接在 Arduino UNO Q 的同一條 I2C 匯流排上。cycle 1 定下並沿用的間距為：LED 尖端到透鏡 5.5 cm、透鏡到分光鏡中心 10 cm、分光鏡到各感測器 2 cm。空白值給出 K = 樣品/參考，之後每筆讀數為 OD600 = −log(樣品 / (K × 參考))；每個量測週期會先關閉 LED 取暗讀數並扣除。取樣間隔 10 分鐘，儀表板服務於 7000 埠。",
+      "cite": ["hardware/photometer/", "hardware/bioreactor/"],
+      "trap": "Putting the reference after the cuvette. The page states the reference is split before the sample so that it reports source drift independently; a reference taken after the sample would carry the sample's own attenuation.",
+      "trap_zh": "把參考光路放在比色槽之後。該頁說明參考光必須在樣品之前分出，才能獨立反映光源漂移；若在樣品之後分出，就會帶上樣品本身的衰減。"
+    },
+    {
+      "id": "HW-09",
+      "type": "decision",
+      "q": "Why 600 nm, and not a wavelength further from your optogenetic switch?",
+      "q_zh": "為什麼選 600 nm，而不是離你們的光遺傳開關更遠的波長？",
+      "answer": "Three reasons are given. OD600 is the field standard, so readings are comparable with the BioDrop, with published growth curves and with what a judge expects. 600 nm sits where little absorbs but cells scatter strongly, clear of protein and nucleic acid absorbance in the UV and of the medium's absorbance in the blue, so the reading is turbidity rather than absorption. And 600 nm sits between the green (~535 nm) and red (~672 nm) peaks of CcaS, so an LED that is on continuously and samples every 10 minutes for weeks does not accidentally actuate the circuit. That last point is the answer to the question as asked: moving further from the switch would mean leaving the standard, which the page says would put a limitation on every report.",
+      "answer_zh": "該頁給了三個理由。OD600 是領域標準，讀數因此能與 BioDrop、已發表的生長曲線以及評審的預期比較。600 nm 落在幾乎沒有吸收但細胞強烈散射的區間，避開紫外區的蛋白與核酸吸收、也避開培養基在藍光區的吸收，所以量到的是濁度而非吸收。而 600 nm 位於 CcaS 綠光 (~535 nm) 與紅光 (~672 nm) 峰值之間，因此一顆長時間開著、每 10 分鐘取樣數週的 LED 不會意外啟動線路。最後這點正是本題的答案：離開關更遠就等於離開標準，該頁說那會讓每一份報告都帶上限制。",
+      "cite": ["hardware/photometer/"]
+    },
+    {
+      "id": "HW-10",
+      "type": "boundary",
+      "q": "Over what density range is a photometer reading trustworthy, and what does the instrument not tell you even inside that range?",
+      "q_zh": "光度計讀數在什麼密度範圍內可信？即使在這個範圍內，它仍然無法告訴你什麼？",
+      "answer": "Noise is tight below about 0.4 OD and ragged above about 0.8, so precision is not flat across the range, and the Digital Twin page states the photometer is linear only to about OD 1.2 in its short cell, with the linear fit's error rising to 0.1715 when extrapolated past that. Professor Chang also noted that above OD600 1 a sample has to be diluted before accurate benchtop readings. Inside the range the instrument reports turbidity, not cell number: TiO₂ establishes linearity, not biomass, and optical density alone cannot separate lysis from sporulation or settling, which is why the decline in the long run is reported as observed rather than as a death phase.",
+      "answer_zh": "約 0.4 OD 以下噪訊很小，約 0.8 以上就變得粗糙，所以精度在整個量程並不一致；Digital Twin 頁指出在短光程比色槽中僅線性到約 OD 1.2，外推超過此值時線性擬合誤差升至 0.1715。張教授也指出 OD600 超過 1 的樣品必須稀釋才能在檯面儀器上準確讀取。即使在量程內，儀器量的是濁度而非菌數：TiO₂ 建立的是線性度而不是生物量，而光密度本身無法分辨細胞裂解、產孢或沉降，這也是長時間運轉的下降段只被報為「觀察到」而非死亡期的原因。",
+      "cite": ["hardware/photometer/", "hardware/bioreactor/", "software/"]
+    },
+    {
+      "id": "HW-11",
+      "type": "fact",
+      "q": "What did the TiO₂ calibration actually find, with numbers?",
+      "q_zh": "TiO₂ 校正實際上得到什麼結果？請給出數字。",
+      "answer": "Two runs against a Bio-Drop, scored against cumulative TiO₂ mass as the ground truth. Both instruments regress against mass at R² above 0.999, Releaf 0.9999 and Bio-Drop 0.9998. Plotted directly against the Bio-Drop with the line of identity, the raw uncalibrated Releaf points agree to a median paired difference of 3.8 per cent, with a residual scatter of RMSE 0.011 OD600 at R² 0.9997 about the fitted line. In Test 1 the residual scatter against the mass standard was 0.024 OD600 for Releaf against 0.030 for the Bio-Drop. Two single points were excluded on objective grounds, both Bio-Drop readings, and both are shown as open markers rather than deleted.",
+      "answer_zh": "兩次運轉以 Bio-Drop 為對照，並以累加的 TiO₂ 質量作為真值評分。兩台儀器對質量的回歸 R² 都高於 0.999（Releaf 0.9999、Bio-Drop 0.9998）。直接對 Bio-Drop 畫圖並加上等值線時，未校正的 Releaf 原始讀數的配對中位差為 3.8%，對擬合線的殘差 RMSE 為 0.011 OD600、R² 0.9997。在 Test 1 中，對質量標準的殘差為 Releaf 0.024 OD600、Bio-Drop 0.030。有兩個單點依客觀理由被排除，兩者都是 Bio-Drop 的讀數，且以空心標記呈現而非刪除。",
+      "cite": ["hardware/bioreactor/", "hardware/photometer/", "software/"],
+      "trap": "Describing the exclusions vaguely. One is a handling error off the trend of its neighbours at 37 mg; the other violates monotonicity at 5 mg, exceeding readings both above and below it.",
+      "trap_zh": "把排除的點說得含糊。一個是 37 mg 處偏離鄰點趨勢的操作誤差；另一個是 5 mg 處違反單調性，比上下兩點都高。"
+    },
+    {
+      "id": "HW-12",
+      "type": "decision",
+      "q": "iGEM's OD600 calibration standard is a silica suspension. You used titanium dioxide, and then applied no calibration transform at all. Defend both choices.",
+      "q_zh": "iGEM 的 OD600 校正標準品是二氧化矽懸浮液。你們用的是二氧化鈦，而且最後完全沒有套用校正轉換。請為這兩個決定辯護。",
+      "answer": "TiO₂ was chosen because we had it, it performed nearly the same suspended in 1% SDS, and it was much cheaper, so the SiO₂ calibration was deferred rather than dropped; it is written up as cycle 7 and is still not written. Using culture to calibrate was rejected because it grows, settles and lyses between readings, while an inert particle gives a stable scattering target whose added mass is a common linear ground truth both instruments can be judged against. No transform was applied because fitting our readings to the Bio-Drop would tie them to the reference instrument's own error without improving agreement that is already within a few percent, and the Bio-Drop is the slightly less linear of the two against the mass standard. On that evidence calibration is treated as unnecessary rather than pending.",
+      "answer_zh": "選 TiO₂ 是因為手邊就有、懸浮於 1% SDS 時表現幾乎相同，而且便宜得多，所以 SiO₂ 校正是延後而非放棄；它被列為 cycle 7，至今仍未寫出。用培養液校正被否決，因為培養液會生長、沉降並在讀數之間裂解，而惰性顆粒提供穩定的散射標的，其加入質量是兩台儀器都能被獨立評分的共同線性真值。不套用轉換，是因為把我們的讀數擬合到 Bio-Drop 只會把它綁上對照儀器本身的誤差，而一致性已在幾個百分點內；且對質量標準而言 Bio-Drop 還是兩者中線性稍差的一台。依此證據，校正被視為不必要，而非待辦。",
+      "cite": ["hardware/bioreactor/", "hardware/photometer/"],
+      "trap": "Saying the SiO₂ calibration is done. Cycle 7 is a heading with \"Not written yet\" under it.",
+      "trap_zh": "說 SiO₂ 校正已經做了。Cycle 7 只是一個標題，底下寫著「尚未撰寫」。"
+    },
+    {
+      "id": "HW-13",
+      "type": "weakness",
+      "q": "A judge compares the photometer page's own opening paragraph with its bill of materials, and compares the long run's length across three pages. What do they find?",
+      "q_zh": "評審把光度計頁開頭的段落和它的材料清單對照，又把長時間運轉的時長在三個頁面之間對照。他們會發現什麼？",
+      "answer": "Two sets of numbers that do not agree, and we should name the correct one rather than talk around it. The flow cuvette is listed in the bill of materials and in section 9.2 as 0.2 mm path length, and the hero figure says 0.2 mm, while the opening paragraph of both the photometer page and section 3.2 of the bioreactor page call it a 2 mm wavelength path cuvette, and the Digital Twin channel table says 2 mm. Separately the same continuous run is reported as passing 400 hours in photometer cycle 5, as 336 h and 2132 points on the photometer page where it is traced from a dashboard snapshot at 14 d 0 h 11 m, and as 434 hours with 2,671 valid rows on the Digital Twin and Results pages. The run length is reconcilable as different cut points on one run; the path length is not, and one of the two figures is wrong.",
+      "answer_zh": "兩組彼此不合的數字，而我們應該指出哪一個才對，而不是繞過去。流通比色槽在材料清單與 9.2 節寫為 0.2 mm 光程，首圖也寫 0.2 mm；但光度計頁開頭段落與生物反應器頁 3.2 節都稱其為 2 mm 光程比色槽，Digital Twin 的通道表也寫 2 mm。另外，同一次連續運轉在光度計 cycle 5 被記為「超過 400 小時」，在光度計頁被記為 336 小時、2132 點（取自 14 天 0 小時 11 分的儀表板截圖描繪），而在 Digital Twin 與 Results 頁則記為 434 小時、2,671 筆有效資料。運轉時長可以用「同一次運轉的不同截點」解釋；光程不行，兩個數字必有一個是錯的。",
+      "cite": ["hardware/photometer/", "hardware/bioreactor/", "software/", "results/"]
+    },
+    {
+      "id": "HW-14",
+      "type": "alternative",
+      "q": "Immersed probes, clamp-on sensors and commercial in-line monitors all exist. Why build your own?",
+      "q_zh": "浸入式探頭、夾持式感測器與商用在線監測器都已存在。為什麼要自己做？",
+      "answer": "The comparison table on the photometer page gives each one its due. Benchtop cuvette spectrophotometry is the accuracy reference we check against, but every reading removes material from the culture, so it is disruptive, discontinuous and impractical overnight. Immersed probes read continuously but occupy vessel volume, complicate sterilisation and are generally expensive. Clamp-on sensors such as ClampOD are simple and cheap but have their path length fixed by whatever tubing is present, which is precisely the constraint that limits high-density accuracy. Commercial in-line monitors solve the problem well and are priced out of reach for most student teams. Ours gives continuous in-line measurement at a short, chosen path length at student-project cost, around $150 against the $15,000 Bio-Drop, and does not replace a benchtop reference.",
+      "answer_zh": "光度計頁的比較表對每一種都有交代。檯面比色槽分光光度計是我們用來對照的準確度基準，但每次讀數都要從培養液取出材料，所以具干擾性、不連續，過夜不可行。浸入式探頭能連續讀取，但佔用槽內體積、使滅菌複雜，且通常昂貴。像 ClampOD 這類夾持式感測器簡單便宜，但光程被現有管徑固定，而這正是限制高密度準確度的瓶頸。商用在線監測器解得很好，但價格超出多數學生隊伍的能力。我們的方案以學生專案的成本（約 150 美元，對比 15,000 美元的 Bio-Drop）提供在短且自選光程下的連續在線量測，且不取代檯面對照儀器。",
+      "cite": ["hardware/photometer/"],
+      "trap": "Claiming novelty for the ratiometric design. The page says splitting a reference off the source is standard photometric practice, and credits ClampOD by Bertaux and colleagues as the closest published design.",
+      "trap_zh": "把比率式設計說成原創。該頁說從光源分出參考光是光度學的標準做法，並指出 Bertaux 等人的 ClampOD 是最接近的已發表設計。"
+    },
+    {
+      "id": "HW-15",
+      "type": "alternative",
+      "q": "Bubbles in the flow cell were your biggest measurement problem. You could have changed the optics, degassed the loop, or filtered in software. What did you do, and in what order?",
+      "q_zh": "流通槽中的氣泡是你們最大的量測問題。你們本可以改光學、對迴路除氣，或在軟體裡過濾。你們做了什麼？順序如何？",
+      "answer": "All of it except changing the optics, and in a traceable order. V1 kept the path flat and horizontal, where a bubble parks in the beam with nowhere to go. V2 stood the path up so buoyancy carries a bubble out along the beam axis. Cycle 4 put the whole body on a printed wedge, so no surface inside the cuvette is horizontal, which the mechanical section says clears almost all bubbles within about a quarter of a second at a 10 degree tilt. The tilt was deliberately put in the wedge rather than in the optics, so the cycle 1 beam geometry stays untouched and the wedge can be reprinted at another angle. At the same time we stopped treating bubbles as purely optical and fitted a dual luer valve with syringes to bleed gas before a run, and in firmware a burst-median rejection filter removes what gets through.",
+      "answer_zh": "除了改光學以外全都做了，而且順序可追溯。V1 的光路是水平的，氣泡卡在光束裡無處可去。V2 把光路立起來，讓浮力沿光束軸把氣泡帶走。Cycle 4 把整個本體放在列印的楔形座上，使比色槽內沒有任何水平面；機構章節指出在 10 度傾角下幾乎所有氣泡約 0.25 秒內離開。傾角刻意做在楔形座而非光學件上，以保持 cycle 1 的光束幾何不變，並可用不同角度重印楔形座。同時我們不再把氣泡當純光學問題，加裝雙 luer 閥與針筒在運轉前排氣，固件中則以叢發中位數剔除濾波器處理漏過的氣泡。",
+      "cite": ["hardware/bioreactor/", "hardware/photometer/"]
+    },
+    {
+      "id": "HW-16",
+      "type": "weakness",
+      "q": "Your dashboard reports a bubble-and-outlier rejection rate. In the long run it read 42.9 per cent, then 14.3, then 0. Explain that, and tell me where the rule is written down.",
+      "q_zh": "你們的儀表板會報告氣泡與離群值剔除率。在長時間運轉中它先是 42.9%，然後 14.3%，再到 0%。請解釋，並說明這條規則寫在哪裡。",
+      "answer": "We cannot fully explain it, and the wiki says so. The filter takes 14 lux readings in a burst, uses the median as a bubble-proof centre, computes the median absolute deviation of the 13 distances, and rejects anything beyond median ± 3·MAD. The learn note on cycle 5 records that the three rates cannot all be cumulative, that the rejection rule is not written down anywhere, and that it needs stating as a rule including the window the rate is computed over before any filtered data appears on the wiki. The photometer page adds a second problem from the other end: on a burst of only fourteen the MAD is itself noisy, so a clean burst loses about one reading in fourteen at ±3·MAD and half of all clean bursts lose at least one.",
+      "answer_zh": "我們無法完全解釋，而維基也如此寫明。濾波器以叢發方式取 14 筆照度讀數，用中位數作為不受氣泡影響的中心，計算 13 個距離的中位絕對偏差 (MAD)，剔除超出中位數 ± 3·MAD 的點。Cycle 5 的學習欄記下：三個比率不可能都是累積值、剔除規則沒有寫在任何地方，且必須先寫成一條規則（包含比率是在多長的視窗內計算）才能讓任何經過濾的資料出現在維基上。光度計頁從另一端補上第二個問題：只有十四筆的叢發中，MAD 本身就很嘈雜，所以在 ±3·MAD 下乾淨的叢發平均每十四筆會掉一筆，而且一半的乾淨叢發至少掉一筆。",
+      "cite": ["hardware/photometer/", "hardware/bioreactor/"]
+    },
+    {
+      "id": "HW-17",
+      "type": "fact",
+      "q": "Describe DiOPAL: layout, wavelengths, how intensity is set, and what dose target it is aiming at.",
+      "q_zh": "請描述 DiOPAL：配置、波長、強度如何設定，以及它要瞄準的劑量目標。",
+      "answer": "A 4 × 6 array of 24 LEDs, two wavelengths by three intensity tiers, four internal-resistance-matched LEDs per column, so one run gives six defined light conditions with four replicates each under identical surroundings. The green channel is taken as around 535 nm and induces protectant expression, the red around 670 nm and halts it. Intensity is set by pulse-width modulation from an Arduino Uno R4 WiFi through a MOSFET per LED group, held constant for the whole of a test, so each tube receives a fixed stated dose. The tiers are meant to bracket the Castillo-Hair half-maximal point for CcaS/CcaR, 4.66 µmol m⁻² s⁻¹. A tall print holds the tubes at a fixed distance and external-light coverage isolates them from the room.",
+      "answer_zh": "4 × 6、共 24 顆 LED 的陣列，兩種波長乘以三個強度階，每一欄四顆經內電阻配對的 LED，因此一次運轉可在完全相同的環境下得到六種定義好的光條件、各四重複。綠光通道取約 535 nm，誘導保護劑表達；紅光約 670 nm，使其停止。強度由 Arduino Uno R4 WiFi 經每組 LED 的 MOSFET 以脈寬調變 (PWM) 設定，整個測試期間維持固定，使每支試管接受可用數值陳述的固定劑量。這些強度階的目的是夾住 Castillo-Hair 對 CcaS/CcaR 的半最大點 4.66 µmol m⁻² s⁻¹。一個高的列印件把試管固定在相同距離，外部遮光罩把它們與室內光隔離。",
+      "cite": ["hardware/diopal/"],
+      "trap": "Quoting the Hardware overview's \"520 nm green, 660 nm red\". The DiOPAL page says around 535 and around 670, and the photometer page says 535 and 672 for the CcaS peaks.",
+      "trap_zh": "引用 Hardware 總覽頁的「520 nm 綠光、660 nm 紅光」。DiOPAL 頁寫的是約 535 與約 670，光度計頁對 CcaS 峰值寫的是 535 與 672。"
+    },
+    {
+      "id": "HW-18",
+      "type": "decision",
+      "q": "You measured every LED individually and sorted them into tiers. Then you stopped using LED selection to set intensity. Why?",
+      "q_zh": "你們逐顆量測每個 LED 並分成不同強度階，然後卻不再用 LED 篩選來設定強度。為什麼？",
+      "answer": "Because the measurement showed selection could not produce distinct levels. Across parts sold as identical the green LEDs ran 2.01 to 2.54 kLux, a 26 per cent spread, and the red 360 to 438 lux, 22 per cent. Sorting tightened each group of four well inside 1 per cent for green low and mid and about 2 per cent for red, so matching makes a column agree with itself, which the comparison needs. But the separation between tiers came out at only about 7 per cent green low to high and about 10 per cent red, which is the natural spread of sorted parts rather than three light levels. So the tiers had to come from PWM duty cycle in software, with matching kept for within-column agreement. We should also admit the green high group spans 2.38 to 2.50, roughly 5 per cent, because it is the leftover group of what did not match anything else.",
+      "answer_zh": "因為量測顯示篩選無法產生真正分開的強度層級。在以相同規格販售的零件中，綠光 LED 從 2.01 到 2.54 kLux，差距 26%；紅光從 360 到 438 lux，差距 22%。排序後每組四顆收得很緊：綠低與綠中都在 1% 以內，紅色各組約 2%，因此配對能讓同一欄彼此一致，這是比較所需要的。但階與階之間的差距只有綠光低到高約 7%、紅光約 10%，這是排序後零件的自然散佈，而不是三個光強度層級。因此強度階必須改由軟體的 PWM 占空比產生，配對則保留用於欄內一致性。我們也應承認綠高組跨 2.38 到 2.50（約 5%），因為它是配不上其他組的剩餘組。",
+      "cite": ["hardware/diopal/"]
+    },
+    {
+      "id": "HW-19",
+      "type": "boundary",
+      "q": "What can DiOPAL's numbers be compared with, and what can they not?",
+      "q_zh": "DiOPAL 的數字可以和什麼比較？又不能和什麼比較？",
+      "answer": "They compare LEDs against each other and nothing else yet. Every intensity on the page is reported in lux, which is weighted for human vision peaking near 555 nm, so the weighting error differs between the green and red channels, while the dose that matters to the cells is photon flux in µmol m⁻² s⁻¹. The team found this in week 16 and the page states that until the readings are converted the numbers cannot be compared with a published dose, including the 4.66 µmol m⁻² s⁻¹ target. The stated wavelength peaks are the classic CcaS/CcaR values rather than measured on our parts, so they are assumptions until the LEDs are characterised. And matching corrects spread at build time only, not drift as LEDs age or warm up during a long run.",
+      "answer_zh": "目前只能彼此比較，別的都不行。該頁所有強度都以 lux 報告，而 lux 是依人眼視覺（峰值約 555 nm）加權的，因此綠光與紅光通道的加權誤差大小不同；對細胞真正重要的劑量是光子通量 (µmol m⁻² s⁻¹)。團隊在第 16 週發現此事，該頁也寫明在讀數換算之前，這些數字無法與任何已發表劑量比較，包括 4.66 µmol m⁻² s⁻¹ 這個目標。所列波長峰值是 CcaS/CcaR 的經典值，而非在我們零件上量測的，因此在 LED 被特性化之前只是假設。配對也只修正製作時的散佈，不修正 LED 老化或長時間運轉升溫造成的漂移。",
+      "cite": ["hardware/diopal/", "hardware/notebook/"]
+    },
+    {
+      "id": "HW-20",
+      "type": "weakness",
+      "q": "DiOPAL exists to answer one question: does protectant production change with light intensity? What is the answer?",
+      "q_zh": "DiOPAL 的存在是為了回答一個問題：保護劑的生產量會隨光強度改變嗎？答案是什麼？",
+      "answer": "We do not have one. Section 8, the Level 2 intensity variability test the instrument was built for, is a set of planned headings with no text, and so is section 7, the proof of concept with its demonstrated culture run, flow conditions, temperature and starting and final OD. Results states the same thing from the whole-project side: no experiment anywhere shows PcpcG2 output changing with green light, and the fix is one dose series on DiOPAL with an expression readout, green against dark. Results also says the array's tiers cannot yet be called intensity tiers and that evenness of dose across the 24 positions was never measured. The one light-arm dataset we do have, R5 on the Digital Twin, measured growth rate rather than expression and found green induction costs no growth.",
+      "answer_zh": "我們沒有答案。第 8 節——儀器當初就是為它而造的 Level 2 強度變異測試——只是一組預定的標題，沒有內文；第 7 節概念驗證（示範培養運轉、流動條件、溫度、起始與最終 OD）同樣如此。Results 頁從全專案角度說了同一件事：沒有任何實驗顯示 PcpcG2 的輸出隨綠光改變，補救方式是在 DiOPAL 上做一組劑量序列並加上表達讀值，綠光對暗處。Results 也指出陣列的階目前還不能稱為強度階，且 24 個位置之間劑量的均勻性從未量測。我們唯一有的光照分組資料是 Digital Twin 的 R5，它量的是生長速率而非表達量，結論是綠光誘導不犧牲生長。",
+      "cite": ["hardware/diopal/", "results/", "software/"],
+      "trap": "Offering R5 (six light arms on the LPA) as evidence of induction. R5 is a growth fit; it says nothing about expression.",
+      "trap_zh": "拿 R5（LPA 上六個光照分組）當作誘導的證據。R5 是生長曲線擬合，完全沒有談表達量。"
+    },
+    {
+      "id": "HW-21",
+      "type": "alternative",
+      "q": "Light plate apparatuses are an established pattern in optogenetics. What in DiOPAL is yours?",
+      "q_zh": "光照板裝置 (LPA) 在光遺傳學中是既有的設計模式。DiOPAL 裡哪些部分是你們的？",
+      "answer": "The page says so directly: illuminating a plate of cultures from below with per-well control is the Light Plate Apparatus pattern from the optogenetics literature, and our printed enclosure still carries LPA_Box as its part name because that is where the design started. The biology, the CcaS/CcaR green-red switch, is also from the literature and was not designed here, and the dose target comes from the Castillo-Hair characterisation. What we built on top is the dual-wavelength column layout, the resistance-matched LED selection, and the enclosure and tube holder sized for our tubes and our incubator.",
+      "answer_zh": "該頁直接說明：從下方照射一盤培養物並逐孔控制，是光遺傳學文獻中的 Light Plate Apparatus 模式，我們列印的外殼至今仍沿用 LPA_Box 這個零件名稱，因為設計就是從那裡開始的。生物部分 CcaS/CcaR 綠紅開關同樣來自文獻，不是我們設計的，劑量目標也來自 Castillo-Hair 的特性化。我們加上去的是雙波長的欄式配置、以內電阻配對挑選 LED，以及依我們的試管與培養箱尺寸設計的外殼與試管座。",
+      "cite": ["hardware/diopal/"]
+    },
+    {
+      "id": "HW-22",
+      "type": "fact",
+      "q": "Give the hydroponic plate's measured geometry and how it floats.",
+      "q_zh": "請給出水耕浮板的實測幾何，以及它如何浮起來。",
+      "answer": "The plate envelope is 117.50 × 92.50 × 25.08 mm with a 3.175 mm top slab, carrying 13 bores of ∅11.26 mm on a 21.59 mm pitch, staggered 4, 5, 4 with the outer rows half a pitch off the middle. Flotation is two sealed air chambers, one per long side, each an internal void of 113.80 × 6.90 × 20.32 mm capped underneath by a 1.7 mm skin, 28.7 cm³ for the pair, with nothing at all beneath the middle of the plate. The pontoons are hollow with a teardrop cross-section at 15 per cent gyroid infill in PLA. The geometry was measured off the same STLs the part is printed from, on a 0.1 mm grid.",
+      "answer_zh": "板體外形為 117.50 × 92.50 × 25.08 mm，上板厚 3.175 mm，含 13 個 ∅11.26 mm 的孔，間距 21.59 mm，以 4、5、4 交錯排列，外側兩排相對中排偏移半個間距。浮力來自兩個密封氣室，各在一側長邊，內部空腔為 113.80 × 6.90 × 20.32 mm，下方以 1.7 mm 薄殼封住，兩者合計 28.7 cm³，板中央下方完全沒有結構。浮筒為中空、水滴形斷面，PLA 材質、15% 迴旋 (gyroid) 填充。幾何是以列印該件的同一組 STL 在 0.1 mm 網格上量測的。",
+      "cite": ["hardware/hydroponics/"]
+    },
+    {
+      "id": "HW-23",
+      "type": "decision",
+      "q": "Your first plate was fixed over a liquid chamber and it worked. Why replace it with a floating plate, and why build the buoyancy into the frame?",
+      "q_zh": "你們第一版是固定在液槽上方的板子，而且可以用。為什麼要改成浮板？又為什麼把浮力做進框架裡？",
+      "answer": "Because the fixed plate only worked while somebody kept the level correct. The level has to sit just under the growing platform and as high as possible, and the window between losing root contact and flooding the platform is narrow. Plants drink and medium evaporates, so a level that was right at the start of a run is wrong by the end, and every top-up is a chance for conditions to drift between replicates. A floating plate holds root depth constant with no manual topping up. The buoyancy is sealed air inside the frame rather than a foam block or something strapped underneath, so there is nothing to glue or strap on and nothing to come loose in the medium. The first floating version carried four corner poles taking washers as ballast; once the volume was tuned closely enough the poles came off.",
+      "answer_zh": "因為固定板只有在有人持續維持液位時才有效。液位必須正好在生長平台下方且盡可能高，而「根失去接觸」與「平台淹水」之間的窗口很窄。植物會喝水、培養基會蒸發，所以運轉開始時正確的液位到結束時就不對了，而每次補液都可能讓重複組之間的條件漂移。浮板則在無需人工補液的情況下維持固定的根部深度。浮力是框架內的密封空氣，而非泡棉塊或綁在底下的東西，因此沒有要黏或綁的部件，也沒有會在培養液中鬆脫的零件。第一代浮板有四根角柱可加墊圈作配重；浮力調得夠準之後角柱就取消了。",
+      "cite": ["hardware/hydroponics/"]
+    },
+    {
+      "id": "HW-24",
+      "type": "boundary",
+      "q": "Is the hydroponic plate part of the delivery system, and what conditions is it specified for?",
+      "q_zh": "水耕浮板是遞送系統的一部分嗎？它的規格適用於什麼條件？",
+      "answer": "It is the downstream growth plate the protectant is tested on, not a field delivery device. It is specified for 13 Arabidopsis seedlings in liquid medium: seed holders made from 1.5 mL black microcentrifuge tube lids with a 2 mm hole and 0.7 per cent agar, four days of stratification in the dark at 4 °C, then an opaque box holding 250 mL of half-strength MS at pH 5.7 to 5.8, in an incubator at 22 °C and 40 to 45 per cent humidity, with the medium changed every one to two weeks. The buoyancy sizing is a displacement calculation redone every time the design changed; the one worked case given is a plate mass of roughly 180 g where the pontoons needed about 0.65 cubic inches of extra volume each. The plate's full design, build, test and learn cycles are written up with the plant experiments, not on the hardware page.",
+      "answer_zh": "它是保護劑受測的下游生長平台，不是田間遞送裝置。它的規格是液體培養基中的 13 株阿拉伯芥：種子座以 1.5 mL 黑色微量離心管蓋打一個 2 mm 孔、填 0.7% 洋菜膠製成，先在 4 °C 黑暗中層積四天，之後放入裝有 250 mL 半濃度 MS（pH 5.7 至 5.8）的不透光盒，置於 22 °C、濕度 40 至 45% 的培養箱中，每一至兩週更換培養基。浮力尺寸計算是排水量問題，設計每改一次就重算；頁面給的一個實例是板重約 180 g 時，每根浮筒還差約 0.65 立方英吋的體積。浮板完整的設計、建造、測試、學習循環寫在植物實驗那邊，不在硬體頁。",
+      "cite": ["hardware/hydroponics/", "plant/"]
+    },
+    {
+      "id": "HW-25",
+      "type": "weakness",
+      "q": "The Hardware award asks whether you conducted user testing and learned from feedback. What is your answer, and is it consistent across your own pages?",
+      "q_zh": "Hardware 獎項會問你們是否做過使用者測試並從回饋中學習。你們的答案是什麼？在你們自己的頁面之間一致嗎？",
+      "answer": "Not consistent, and we should say which is right. The Hardware overview states that one test is recorded, in week 13 of the notebook, where the DiOPAL assembly guide was tested by handing it to somebody else, and that nothing else in the section records a session with a user outside the build team. But the hydroponics page records returning to Professor Cheng Mei-Chun of NTU in August with the updated system and protocol, receiving feedback on experimental conditions, and her group subsequently adopting the design for her graduate students, which the page itself calls an important endpoint for the iteration. Both are ours and the overview's claim is too narrow as written. The documentation gaps are real though: the bioreactor's assembly guide is marked in progress, the hydroponics assembly section and DiOPAL's assembly guide both say not written yet.",
+      "answer_zh": "不一致，我們應該說清楚哪一個才對。Hardware 總覽頁說只記錄了一次測試，在筆記本第 13 週，把 DiOPAL 組裝指引交給別人試用，並說該章節沒有其他與建造團隊以外使用者的互動紀錄。但水耕頁記載八月帶著更新後的系統與流程再次拜訪台大鄭美君（Cheng Mei-Chun）教授，取得關於實驗條件的回饋，之後她的研究室採用了這個設計給研究生使用，該頁自己稱這是迭代的重要終點。兩者都是我們寫的，而總覽頁的說法以文字而論過於狹窄。不過文件缺口是真的：生物反應器的組裝指引標為進行中，水耕的組裝章節與 DiOPAL 的組裝指引都寫「尚未撰寫」。",
+      "cite": ["hardware/", "hardware/hydroponics/", "hardware/diopal/", "hardware/bioreactor/"],
+      "trap": "Claiming broad user testing. One handover of an assembly guide and one adopting research group is the whole record; no usability session with an operator outside the build team is recorded for the interface either.",
+      "trap_zh": "聲稱做了廣泛的使用者測試。全部紀錄就是一次組裝指引的交付與一個採用的研究室；介面方面也沒有任何與建造團隊以外操作者的可用性測試紀錄。"
+    },
+    {
+      "id": "HW-26",
+      "type": "fact",
+      "q": "What does the digital twin actually measure on the reactor today, and what stops a bug in the software from driving the loop past a limit?",
+      "q_zh": "數位孿生今天在反應器上實際量到什麼？又是什麼機制阻止軟體錯誤把迴路推過安全上限？",
+      "answer": "Seven measured channels and six motor-driven valves on one Arduino Uno Q. In-line: OD600 from the dual-beam photometer, pH on a newly integrated probe, four pressure transducers one on each side of the module, and loop flow on a turbine meter. Commanded: two pinch valves and four Luer valves. Soft: lumen ΔP, transmembrane pressure and fouling ratio computed through the hydraulic model. Planned, drawn dashed: green light, temperature, dissolved oxygen and permeate mass. The interlocks run on the microcontroller rather than in the browser, so no fault in a model or page can drive the loop past a limit: transmembrane pressure above 0.50 bar opens the pinch valve, and five seconds with no command from the interface opens it and turns the light off. The link is Web Serial over USB at 115,200 baud with a two-second heartbeat.",
+      "answer_zh": "在一片 Arduino Uno Q 上有七個量測通道與六個馬達驅動閥。在線 (in-line)：雙光束光度計的 OD600、新整合的 pH 探頭、模組兩側各一共四個壓力傳感器，以及渦輪流量計的迴路流量。受命令 (commanded)：兩個夾管閥與四個 luer 閥。軟感測 (soft)：由水力模型算出的管內壓差、跨膜壓與積垢比。規劃中（以虛線繪製）：綠光、溫度、溶氧與透過液質量。安全連鎖執行在微控制器而非瀏覽器，因此模型或網頁的任何錯誤都無法把迴路推過上限：跨膜壓高於 0.50 bar 時夾管閥打開，介面五秒未下命令則同樣打開並關掉光源。連線為 USB 上的 Web Serial，115,200 baud，心跳間隔兩秒。",
+      "cite": ["software/"]
+    },
+    {
+      "id": "HW-27",
+      "type": "boundary",
+      "q": "You call it a digital twin. In the terms of the literature you cite, what is it, and what would it take to earn the name?",
+      "q_zh": "你們稱它為數位孿生。按你們引用的文獻定義，它現在是什麼？要配得上這個名字還需要什麼？",
+      "answer": "The Limits section says it plainly: the loop is not closed. Valves move under software control, but every decision about the culture still goes through a person, so in the maturity terms of Portela and Gargalo this is a digital shadow with actuation available, not yet a closed-loop twin. Closing it needs green light on the reactor, which is listed as the final build and would turn induction from a policy into a controlled variable. The other stated boundaries: n equals one almost everywhere, one long run behind R3, one perfusion run behind R4, one plate behind R5; two chassis, with R1 to R4 on B. subtilis 168 and the production strain WB800N; and the fast growth parameters come from 37 °C while the field unit runs near ambient, so transfer is a test rather than an assumption.",
+      "answer_zh": "Limits 章節講得很直接：迴路沒有閉合。閥門可由軟體驅動，但關於培養的每個決定仍然要經過人，所以按 Portela 與 Gargalo 的成熟度用語，這是「具致動能力的數位影子 (digital shadow)」，還不是閉環孿生。要閉合它需要把綠光裝上反應器，這被列為最終版 (final build)，會把誘導從一項政策變成受控變數。其他明示的邊界：幾乎每處都是 n = 1（R3 背後一次長運轉、R4 一次灌流運轉、R5 一塊培養盤）；兩個底盤，R1 至 R4 是 B. subtilis 168，量產菌株是 WB800N；快速生長參數來自 37 °C 而田間機組接近室溫運轉，因此轉移是待驗的測試而非假設。",
+      "cite": ["software/", "hardware/bioreactor/"]
+    },
+    {
+      "id": "HW-28",
+      "type": "weakness",
+      "q": "R3 claims 26.7 hours of warning before the OD channel became unusable. Is that a detection rate?",
+      "q_zh": "R3 聲稱在 OD 通道失效前提供了 26.7 小時的預警。這算是偵測率嗎？",
+      "answer": "No, and the page says so under \"What this is not\". It is one run, one process event, one instrument event: a worked counterexample and a demonstration of the method, not a detection rate. A rate needs faults made on purpose, several of each kind, on batches the layer has not seen. What the result does establish honestly is the method and its discipline: two axes scored every 10 minutes from separate features, both trained on the first 120 h only with the alarm limit fixed in advance at the 99.5th percentile of the training score, then scored on everything after, with the sensor alarm at 216.3 h and the channel unusable at 243.0 h. We should also volunteer the two loose ends: the 120 to 160 h event is unexplained, and R2's Gaussian process 95 per cent band covered only 88.9 per cent of held-out points, so its intervals are too narrow and are reported as such.",
+      "answer_zh": "不算，該頁在「這不是什麼」一節自己說了。那是一次運轉、一個製程事件、一個儀器事件：是一個做實的反例與方法示範，不是偵測率。要有率，必須刻意製造故障、每類數次，並在該層沒見過的批次上測。這個結果誠實建立的是方法與其紀律：兩個軸每 10 分鐘各以不同特徵評分，兩者都只用前 120 小時訓練，警報門檻事先固定在訓練分數的第 99.5 百分位，之後對所有資料評分；感測器警報出現在 216.3 小時，通道在 243.0 小時變得不可用。我們也該主動說出兩個未結的線頭：120 至 160 小時的事件原因不明；R2 的高斯過程 95% 區間只涵蓋 88.9% 的保留點，區間過窄，而頁面也如此報告。",
+      "cite": ["software/"]
+    },
+    {
+      "id": "HW-29",
+      "type": "decision",
+      "q": "Your controller forecasts stress three days ahead instead of reacting to it. Why, and what number drove that?",
+      "q_zh": "你們的控制器是預測未來三天的逆境，而不是對當下逆境做反應。為什麼？是什麼數字驅動這個決定？",
+      "answer": "Because the reactor cannot deliver in time if it waits. The model page records that a cold reactor at 22 °C needs twenty to thirty-four hours before it produces anything, and the circuit's own activation half-time adds to that, so a controller that waits for measured stress delivers protectant after the event. That is why the stress map runs on a three-day CWA forecast at D+1 to D+3 and the interface counts down to when the light should start. The same forecast window is what makes banking protectant ahead of a severe event possible, which the delivery table needs because one reactor cannot cover a severe event at heading. We should be clear that the twenty to thirty-four hours is a modelled lead time from the growth model, not a measured dead time on an induced reactor, since no induction has been run.",
+      "answer_zh": "因為等下去反應器就來不及。模型頁記載，22 °C 冷啟動的反應器需要二十到三十四小時才開始生產，而線路本身的啟動半時還要加上去，所以等到量到逆境才動作的控制器會在事件之後才送出保護劑。這就是逆境地圖以中央氣象署三天預報（D+1 至 D+3）運行、介面倒數「何時該開燈」的原因。同樣的預報窗口也讓「在嚴重事件前先備料」成為可能，而遞送表正需要這一點，因為單一反應器無法應付抽穗期的嚴重事件。我們必須講清楚：二十到三十四小時是生長模型推算的前置時間，不是在已誘導反應器上量到的死區時間 (dead time)，因為誘導實驗從未執行。",
+      "cite": ["model/", "software/", "results/"],
+      "trap": "Presenting the 20 to 34 h lead time, or the interface's countdown, as a measured response time of a closed control loop.",
+      "trap_zh": "把 20 至 34 小時的前置時間或介面的倒數，說成閉環控制迴路量測到的響應時間。"
+    },
+    {
+      "id": "HW-30",
+      "type": "fact",
+      "q": "Write down the chain from a field reading to a green-light setting: the index, the inversion, and the unit conversion.",
+      "q_zh": "請寫出從田間讀數到綠光設定值的完整鏈條：指數、反演，以及單位換算。",
+      "answer": "Three field inputs (temperature, soil electrical conductivity, vapour pressure deficit) each become a sub-score through a Hill function on the amount by which they exceed a crop-specific threshold, and the composite is CSI = 0.35 s_T + 0.35 s_S + 0.15 s_H + 0.15 s_T s_S, four weights chosen by the team summing to one, with the last term the heat-salt interaction. CSI then inverts the CcaSR Hill curve: PPFD = clip[K(CSI/(1−CSI))^(1/n), 0.5, 20] with K = 4.66 µmol m⁻² s⁻¹ and n = 1.88. PPFD converts to illuminance as Lux = 124 × PPFD, the constant derived from the photon energy at 526 nm and the luminous efficacy there. Across the 990-scenario sweep the maximum CSI observed was 0.77, which maps to about 8.8 µmol m⁻² s⁻¹ or 1,091 lux, well under the 20 ceiling.",
+      "answer_zh": "三個田間輸入（溫度、土壤導電度、飽和水汽壓差）各經一個 Hill 函數（以超出作物專屬閾值的量為自變數）轉成子分數，複合指數為 CSI = 0.35 s_T + 0.35 s_S + 0.15 s_H + 0.15 s_T s_S，四個權重由團隊自選、總和為一，最後一項是熱與鹽的交互作用。CSI 接著反演 CcaSR 的 Hill 曲線：PPFD = clip[K(CSI/(1−CSI))^(1/n), 0.5, 20]，其中 K = 4.66 µmol m⁻² s⁻¹、n = 1.88。PPFD 再換成照度：Lux = 124 × PPFD，該常數由 526 nm 的光子能量與該波長的發光效率推得。在 990 組情境掃描中，觀察到的最大 CSI 為 0.77，對應約 8.8 µmol m⁻² s⁻¹（1,091 lux），遠低於 20 的上限。",
+      "cite": ["model/"],
+      "trap": "Attributing K and n confidently. The draft credits Ohlendorf et al. 2019 while the team's citation list carries Castillo-Hair et al. 2019 for B. subtilis CcaSR, and the model page lists the attribution as unsettled.",
+      "trap_zh": "很有信心地說出 K 與 n 的出處。草稿歸功於 Ohlendorf 等人 2019，而團隊的引用清單對 B. subtilis CcaSR 寫的是 Castillo-Hair 等人 2019，模型頁把出處列為未定。"
+    },
+    {
+      "id": "HW-31",
+      "type": "weakness",
+      "q": "Your project sentence is \"sense stress, emit light, release protectant\". What has the stress predictor been trained on, and what has it been validated against?",
+      "q_zh": "你們的專案一句話是「感測逆境、發出光、釋放保護劑」。逆境預測模型是用什麼訓練的？又用什麼驗證過？",
+      "answer": "The index in production has not been fitted to anything. Its four weights were chosen by the team and never fitted, and the three onset thresholds and six Hill constants behind equations 2 to 4 are not written down anywhere; they live in a script, and they produced the 990-scenario sweep, the heat map and every stress score the interface has shown. The yield-fitted replacement, trained against Agriculture and Food Agency county rice yields since 2001 with a held-out season, has an introduction, a chain diagram and a definition, and no fitted coefficient, no R² and no validation season, because none has been written down yet. The only dose response of our own behind any arm is the salinity one, nine Arabidopsis seedlings per group at four NaCl levels on agar on one day, and nothing converts molarity in agar to field conductivity. EC itself is estimated from coastal distance and elevation where no sensor exists and is called the weakest input in the model; VPD is not independently measured. There is no field validation anywhere on the page.",
+      "answer_zh": "目前上線的指數沒有對任何資料擬合過。它的四個權重由團隊自選、從未擬合，而式 (2) 至 (4) 背後的三個起始閾值與六個 Hill 常數沒有寫在任何地方；它們存在於一個腳本裡，卻產生了 990 組情境掃描、熱圖以及介面顯示過的每一個逆境分數。用產量擬合的替代版本（以農糧署 2001 年起的各縣市稻作產量訓練，並保留一季作測試）目前有引言、鏈條圖與定義，但沒有任何擬合係數、沒有 R²、沒有驗證季，因為都還沒寫下來。唯一有我們自己劑量反應支持的只有鹽分那一支：洋菜膠上四個 NaCl 濃度、每組九株阿拉伯芥、單日單次實驗，而且沒有任何換算把洋菜膠中的莫耳濃度轉成田間導電度。EC 本身在沒有感測器時是由海岸距離與海拔推估，被頁面稱為模型中最弱的輸入；VPD 則沒有獨立量測。頁面上沒有任何田間驗證。",
+      "cite": ["model/", "software/"],
+      "trap": "Calling the AIoT predictor validated because the stress map runs over all 346 townships. Coverage is not validation; the page states no fitted coefficient or validation season exists.",
+      "trap_zh": "因為逆境地圖涵蓋全部 346 個農業鄉鎮就說 AIoT 預測模型已驗證。覆蓋範圍不等於驗證；該頁明說沒有任何擬合係數或驗證季。"
+    },
+    {
+      "id": "HW-32",
+      "type": "alternative",
+      "q": "Most crop stress indices use expert-chosen weights. You are refitting yours to harvests instead. Why, and where does that stand?",
+      "q_zh": "多數作物逆境指數採用專家選定的權重。你們改以實際收穫量重新擬合。為什麼？目前進展到哪裡？",
+      "answer": "Because an expert-weighted index is rarely checked against what happened in the field, and ours drives a lamp: if the number is wrong the lamp runs when the crop is fine or stays off while the harvest is lost. The Agriculture and Food Agency has published county rice yields for every season since 2001, so a season whose yield fell below its trend counts as a stressed season, and the index is defined as a log yield loss with fractional loss 1 − e^(−S) so that predicted yield is the county trend times e^(−S) and the published realised yield is a direct test. One year is deliberately held out as a test. Where it stands: the draft carries the introduction, the chain diagram and the definition, and the four results it will be reported under are headings with no text, so the weighted composite is still the index in production.",
+      "answer_zh": "因為專家加權的指數很少被拿去對田間實際情形檢驗，而我們這個指數是要去控制一盞燈：數字錯了，燈就會在作物沒事時亮、或在收成正在流失時不亮。農糧署自 2001 年起公布各季的縣市稻作產量，因此產量低於其趨勢的一季就算是逆境季；指數被定義為對數產量損失，分數損失為 1 − e^(−S)，於是預測產量等於縣市趨勢乘以 e^(−S)，而已公布的實際產量就是直接的檢驗。並刻意保留一年作為測試。進展：草稿有引言、鏈條圖與定義，而它將呈現的四項結果仍只是沒有內文的標題，所以上線使用的仍是加權複合指數。",
+      "cite": ["model/"]
+    },
+    {
+      "id": "HW-33",
+      "type": "boundary",
+      "q": "Where exactly does the green light enter the system today, and what follows from that for every growth and production number you report?",
+      "q_zh": "今天綠光究竟在系統的哪個位置進入？這對你們報告的每一個生長與生產數字意味著什麼？",
+      "answer": "On the DiOPAL plate apparatus only. The twin's channel table lists green light as planned, not on the reactor yet, characterised on DiOPAL, and going in on the final build, and it is drawn dashed for that reason. So the light control loop is open: the bioreactor integration cycle states that ACC deaminase was placed under a constitutive promoter precisely to remove light control as a variable, and every reactor growth and secretion number on record, including the 102.4 h run and the 2 to 4 September integration run, is constitutive expression. The model's own parameter table lists the LED panel's 0.5 to 20 µmol m⁻² s⁻¹ range as assumed for a panel designed, not built, even though the bioreactor parts list carries a 3 m green LED strip. Nothing in the reactor record should be quoted as a light-induced result.",
+      "answer_zh": "只在 DiOPAL 光照板上。孿生的通道表把綠光列為「規劃中」：還沒裝上反應器、已在 DiOPAL 上特性化、將在最終版裝入，也因此以虛線繪製。所以光控迴路是開環的：生物反應器整合循環明說把 ACC 去胺酶放在組成型啟動子下，正是為了把光控當變數排除；而紀錄中每一個反應器生長與分泌數字，包括 102.4 小時運轉與 9 月 2 至 4 日的整合運轉，都是組成型表達。模型自己的參數表把 LED 面板 0.5 至 20 µmol m⁻² s⁻¹ 的範圍標為「假設，面板已設計但未建造」，儘管生物反應器零件清單裡有一條 3 公尺的綠光 LED 燈條。反應器紀錄中的任何數字都不應被當作光誘導結果引用。",
+      "cite": ["software/", "hardware/bioreactor/", "model/", "results/"],
+      "trap": "Pointing at the 3 m green LED strip in the bioreactor parts list as evidence that induction is wired up on the reactor.",
+      "trap_zh": "拿生物反應器零件清單裡那條 3 公尺綠光 LED 燈條，當作誘導已接上反應器的證據。"
+    },
+    {
+      "id": "HW-34",
+      "type": "weakness",
+      "q": "Equation 10 predicts promoter output against light dose. How much of that curve is measured?",
+      "q_zh": "式 (10) 預測啟動子輸出對光劑量的關係。這條曲線有多少是量測得來的？",
+      "answer": "Two points. The OFF state at 1,500 MEFL and the ON state at 30,000 MEFL for PcpcG2-veg are described as wet-lab endpoints; everything between them, the S-shaped rise, is assumed to follow the same Hill shape as the upstream CcaS light sensor because that is the only characterised transfer function we have. The page says so and draws the curve dashed for that reason. Two further problems are listed in the open questions: the two MEFL endpoints need a date and a file, or the equation should be rewritten with a symbolic floor and ceiling; and the borrowed K and n were measured on a system using chemically inducible promoters to set CcaS and CcaR levels while our construct uses constitutive promoters, so the effective K or n of the full circuit may differ and should be re-characterised before any field deployment. A single intermediate-light measurement would test the shape.",
+      "answer_zh": "兩個點。PcpcG2-veg 的 OFF 狀態 1,500 MEFL 與 ON 狀態 30,000 MEFL 被描述為濕式實驗端點；兩點之間那段 S 形上升完全是假設它遵循上游 CcaS 光感測器的同一 Hill 形狀，因為那是我們唯一有特性化的轉移函數。該頁如此說明，也因此把曲線畫成虛線。未解問題中還列了兩項：兩個 MEFL 端點需要日期與檔案，否則該式應改寫為符號化的上下限；以及借來的 K 與 n 是在用化學誘導型啟動子設定 CcaS 與 CcaR 表達量的系統上量測的，而我們的構築使用組成型啟動子，整個線路的有效 K 或 n 可能不同，應在任何田間佈署前重新特性化。只要一個中間光強的量測就能檢驗曲線形狀。",
+      "cite": ["model/", "results/"]
+    },
+    {
+      "id": "HW-35",
+      "type": "alternative",
+      "q": "The original design sent protectant down the irrigation line. You now produce a bottle. What changed, and what did you give up?",
+      "q_zh": "原本的設計是把保護劑送進灌溉管線，現在改成生產一瓶。為什麼改？放棄了什麼？",
+      "answer": "The delivery model changed the design rather than describing it. Irrigation sprays indiscriminately across the field, including soil between rows where no plant exists, wasting enzyme and reducing the effective dose per unit leaf area, and ACC deaminase acts on the leaf surface, not the root zone. A bottled foliar spray lets the farmer target the canopy, and the system computes the batch volume for that field so the instruction is to apply the whole bottle, which keeps dosing accuracy in the reactor rather than with the person holding the sprayer. The 1.5 safety margin is already inside the bottle. What we gave up is the irrigation route itself, which the model page lists under Not modelled as a recorded team position, and the farmer now carries a timing decision instead of a measuring one. If a protectant is confirmed to act at the root zone, LEA14 or BoPep4, its delivery reverts to the soil transport branch and the foliar equation must not be used for it.",
+      "answer_zh": "是遞送模型改變了設計，而不是描述設計。灌溉會不分對象地噴灑整片田，包括行間沒有植物的土壤，浪費酵素並降低每單位葉面積的有效劑量；而 ACC 去胺酶作用在葉表面，不是根圈。瓶裝葉面噴劑讓農民能針對冠層施用，系統為該田塊算出批次體積，指示就是「把整瓶用完」，使劑量準確度留在反應器裡，而不是落在拿噴霧器的人身上。1.5 倍安全餘裕已經包含在瓶內。我們放棄的是灌溉路線本身，模型頁在「未建模」一節把它記為團隊既定立場；農民現在要做的是時機判斷而非計量。若某個保護劑（LEA14 或 BoPep4）被確認作用於根圈，其遞送就回到土壤傳輸分支，葉面劑量公式不得用於它。",
+      "cite": ["model/"]
+    },
+    {
+      "id": "HW-36",
+      "type": "boundary",
+      "q": "Can one reactor supply a field under severe stress? Give the arithmetic and the parameters it rests on.",
+      "q_zh": "嚴重逆境下，一台反應器能供應一塊田嗎？請給出算式及其所依賴的參數。",
+      "answer": "No, and the model says so for the case the system exists for. On a 200 m² field at Cshell = 50 mg/L in week 8, mild stress at CSI 0.2 needs 0.72 mL/m², a 145 mL batch and 7 mg of protectant, supplied within three days; moderate stress at CSI 0.4 needs 3.82 mL/m², 763 mL and 38 mg, supplied by day 8 at 10 g biomass; severe stress at CSI 0.7 needs 19.06 mL/m², 3.8 L and 191 mg, which exceeds the 14-day maximum of about 120 mg. Demand rises about five times per step in CSI while reactor yield rises far more slowly, so the gap opens exactly where it matters, and closing it needs a larger reactor, a higher Cshell, parallel units or protectant banked ahead of the forecast. The arithmetic rests on parameters the page flags: the titre of 5.4 mg/L is a placeholder with no in-house titre, the root-zone threshold of 0.1 mg/L is a placeholder with no dose response, Dmin and the leaf-surface half-life are open, and spray efficiency is fixed at 0.55 to 0.70 from literature.",
+      "answer_zh": "不能，而且模型對「系統存在的理由」那個情況就是這樣說的。以 200 m² 田塊、Cshell = 50 mg/L、第 8 週計算：輕度逆境 CSI 0.2 需 0.72 mL/m²、批次 145 mL、7 mg 保護劑，三天內可供；中度 CSI 0.4 需 3.82 mL/m²、763 mL、38 mg，第 8 天在 10 g 生物量下可供；嚴重 CSI 0.7 需 19.06 mL/m²、3.8 L、191 mg，超過 14 天約 120 mg 的上限。CSI 每上一階需求約增五倍，而反應器產量上升慢得多，缺口恰好開在最關鍵處；要補上得靠更大的反應器、更高的 Cshell、並聯機組，或依預報提前備料。這些算式所依賴的參數頁面都有標示：5.4 mg/L 的效價是佔位值、沒有自家效價資料；0.1 mg/L 的根圈閾值是佔位值、沒有劑量反應；Dmin 與葉面半衰期未定；噴灑效率則取文獻的 0.55 至 0.70 固定值。",
+      "cite": ["model/", "geospatial-analysis/"]
+    },
+    {
+      "id": "HW-37",
+      "type": "alternative",
+      "q": "You name three protectants but built a single-channel reactor. What was the alternative, and why is it not built?",
+      "q_zh": "你們提了三種保護劑，卻只做了單通道反應器。原本的替代方案是什麼？為什麼沒有做出來？",
+      "answer": "A three-chamber bioreactor. The three protectants, ACC deaminase, LEA peptide and BoPep, target different types and combinations of plant stress, so the concept was three isolated compartments with green and red light switched per compartment to choose which protectant is produced and secreted, rather than making a small farmer pick one. It is not built: the requirement was a fully sterile, modular, easily reproducible compartment system, and the 3D prints we use cannot be made completely waterproof, which limits both production and testing. What exists is CAD concept models showing the packaged arrangement and the volume it would have to fit in; the page states plainly that nothing there has been built. The second unbuilt item is Professor Chang's replaceable culture capsule, swapped like a battery, which is planned and not yet drawn.",
+      "answer_zh": "三腔室生物反應器。三種保護劑（ACC 去胺酶、LEA 胜肽、BoPep）針對不同類型與組合的植物逆境，因此概念是三個互相隔離的腔室，各自切換綠光與紅光來決定生產與分泌哪一種保護劑，而不是逼小農只能選一種。它沒有做出來：需求是完全無菌、模組化、易於重製的腔室系統，而我們用的 3D 列印件無法做到完全防水，這限制了製造與測試。現有的是 CAD 概念模型，呈現封裝後的配置與它必須塞進的體積；該頁明白寫出那裡沒有任何東西被建造過。第二個未完成項目是張教授建議的可更換菌體膠囊（像換電池一樣），目前只是規劃，尚未繪製。",
+      "cite": ["hardware/bioreactor/"],
+      "trap": "Describing the three-channel package as a prototype. The page says nothing in it has been built and that it is drawn from CAD.",
+      "trap_zh": "把三通道封裝說成原型機。該頁說裡面沒有任何東西被建造過，而且是從 CAD 繪製的。"
+    }
+  ]
+}

@@ -1,0 +1,278 @@
+{
+  "slug": "plant-stress",
+  "title": "Plant & Stress Biology",
+  "title_zh": "植物與逆境生物學",
+  "blurb": "The Arabidopsis salt and heat assay on agar, in water and in soil: how the stress dose was set, how a protectant reaches a plant, and what the four candidates have and have not shown.",
+  "blurb_zh": "阿拉伯芥 (Arabidopsis) 在洋菜膠、水耕與土壤中的鹽逆境與熱逆境試驗：逆境劑量如何設定、保護劑如何施用到植物上，以及四個候選保護劑目前證明了什麼、還沒證明什麼。",
+  "questions": [
+    {
+      "id": "PS-01",
+      "type": "fact",
+      "q": "Give the salt ladder: the four mean root lengths, the salt levels, the sample size and the day they were scored.",
+      "q_zh": "請說出鹽度梯度 (salt ladder)：四個平均主根長、對應的鹽濃度、樣本數，以及判讀的天數。",
+      "answer": "Experiment set 6, scored at day 6 on 3 August: mean primary root length 74.95, 34.77, 11.00 and 1.36 mm at 0, 75, 100 and 150 mM NaCl, nine seedlings per group, with standard deviations of 2.77, 4.41, 4.07 and 1.09 mm. The spreads do not overlap, so this is the one dose response for injury the project owns. Day numbers count from transfer onto the condition plate, not from sowing.",
+      "answer_zh": "實驗組 6，8 月 3 日第 6 天判讀：在 0、75、100、150 mM NaCl 下主根長平均為 74.95、34.77、11.00 與 1.36 mm，每組九株幼苗，標準差依序為 2.77、4.41、4.07、1.09 mm。各組離散範圍不重疊，因此這是本專題唯一一條傷害的劑量反應曲線。天數是從移植到處理培養皿那天起算，不是從播種起算。",
+      "cite": ["plant/", "measurement/", "results/", "model/"],
+      "trap": "Quoting 1.8 mm for 150 mM; that is the docx figure that drops the two dead seedlings.",
+      "trap_zh": "把 150 mM 說成 1.8 mm；那是 docx 檔案捨棄兩株死亡幼苗後的數字。"
+    },
+    {
+      "id": "PS-02",
+      "type": "decision",
+      "q": "Why does the screen run at 75 and 100 mM NaCl rather than at the 150 and 250 mM you started with?",
+      "q_zh": "為什麼篩選最後跑 75 與 100 mM NaCl，而不是一開始採用的 150 與 250 mM？",
+      "answer": "At 250 mM the seedlings began bleaching white on day three, almost all had bleached by day five, the run was stopped at day six, and chlorophyll from those plates read below the acetone blank. At 150 mM roots stop under 2 mm, so there is nothing left to rescue, while below about 50 mM the seedlings shrug the salt off. 75 and 100 mM injure the plant and leave it alive, and we took those numbers off our own set 6 ladder; the advisors only set the ceiling, with Dr. Kyle in July and Prof. Cheng in September both putting it at 200 mM.",
+      "answer_zh": "在 250 mM 下幼苗第三天開始白化，第五天幾乎全白，試驗在第六天中止，那些培養皿的葉綠素讀值甚至低於丙酮空白值。150 mM 下根長停在 2 mm 以下，已經沒有東西可以救；而低於約 50 mM 時幼苗幾乎不受影響。75 與 100 mM 會傷害植物但讓它活著，這兩個數字是我們自己從實驗組 6 的梯度讀出來的；指導者只設上限，Kyle 博士在七月、鄭教授在九月都把上限定在 200 mM。",
+      "cite": ["plant/", "measurement/"],
+      "trap": "Saying an advisor chose 75 and 100 mM; they set only the 200 mM ceiling.",
+      "trap_zh": "說是指導者選了 75 與 100 mM；他們只設了 200 mM 的上限。"
+    },
+    {
+      "id": "PS-03",
+      "type": "boundary",
+      "q": "You have nine seedlings per group with standard deviations. What is that n entitled to say, and what is it not?",
+      "q_zh": "每組有九株幼苗並附標準差。這個 n 可以主張什麼、不能主張什麼？",
+      "answer": "The nine seedlings share one pour of agar, one position in the rack and one day of light, so they are nine measurements of one plate: the plate is the biological replicate and the seedlings are technical replicates. The spread therefore raises the precision of the measurement, not the number of experiments. No salt ladder has been run twice to completion, so error bars on these means show only within-plate spread, and no statistical test has been applied to any comparison on the page.",
+      "answer_zh": "這九株幼苗共用同一批洋菜膠、同一個架上位置與同一天的光照，所以它們是同一個培養皿的九次測量：培養皿才是生物重複 (biological replicate)，幼苗是技術重複 (technical replicate)。離散度因此提高的是測量精度，而不是實驗次數。沒有任何一條鹽度梯度被完整重跑過，所以這些平均值的誤差線只代表單一培養皿內的離散，頁面上的任何比較也都沒有做過統計檢定。",
+      "cite": ["plant/", "measurement/"],
+      "trap": "Treating n = 9 as nine replicates of the experiment.",
+      "trap_zh": "把 n = 9 當成九次實驗重複。"
+    },
+    {
+      "id": "PS-04",
+      "type": "weakness",
+      "q": "Two of your own files give different means for the same set 6 groups. Which one does the wiki use, and what is still unexplained?",
+      "q_zh": "你們自己的兩份檔案對實驗組 6 同一組給出不同平均值。維基採用哪一份，又有什麼仍未解釋？",
+      "answer": "Three of the eight values in Experiment Set 6 Root Length.docx disagree with the per-seedling workbook. At 150 mM the docx gives 1.753 mm, which is the mean of the seven seedlings that grew, while the workbook's nine seedlings average 1.364; we now publish 1.364, because a treatment that kills two plants in nine should not be rewarded for it. The 100 mM plus 5 mM trehalose figure, 13.602 against 14.713, does not reconstruct at all under any single exclusion, and the 5 mM control differs by 0.14 mm for the same unexplained reason. The dead-seedling convention is written nowhere in either file, which is fix 1.",
+      "answer_zh": "Experiment Set 6 Root Length.docx 的八個數值中有三個與逐株原始工作表不符。150 mM 時 docx 給 1.753 mm，那是七株有生長的幼苗的平均；工作表九株的平均是 1.364，我們現在採用 1.364，因為一個殺死九株中兩株的處理不該因此得到獎勵。100 mM 加 5 mM 海藻糖 (trehalose) 的 13.602 對 14.713，無論排除哪一株都無法重建；5 mM 對照組也有 0.14 mm 的差異，原因同樣不明。兩份檔案都沒有寫下死亡幼苗如何計算的慣例，這就是 fix 1。",
+      "cite": ["plant/", "results/", "measurement/"],
+      "trap": "Not noticing that the Results figure caption still uses the seven-seedling convention, so it quotes a 42.7-fold fall where the prose and Plants say 55-fold.",
+      "trap_zh": "沒注意到 Results 頁的圖說仍採七株的慣例，因此寫成下降 42.7 倍，而內文與 Plants 頁說的是 55 倍。"
+    },
+    {
+      "id": "PS-05",
+      "type": "fact",
+      "q": "Name the three readouts, say which sets carry all three, and state the rule you apply to them.",
+      "q_zh": "請說出三個判讀指標、哪些實驗組有完整三項，以及你們對它們採用的規則。",
+      "answer": "Root length traced in ImageJ, pooled fresh weight of whole seedlings, and total chlorophyll from an 80% acetone extract. From set 4 onward all three are collected together and a result carried by only one of the three is treated as unconfirmed. Sets 1 to 3 predate the rule and were scored by counting seedlings visibly growing out of nine, an ordinal readout with no chlorophyll at all; set 7 ran on round plates and has chlorophyll, fresh weight and leaf area but no root length.",
+      "answer_zh": "以 ImageJ 描繪的主根長、整株幼苗混合後的新鮮重，以及 80% 丙酮萃取的總葉綠素。從實驗組 4 起三項同時收集，只有其中一項支持的結果視為未確認。實驗組 1 到 3 在這條規則之前，是以九株中「明顯有生長」的株數計數，屬於順序型指標且完全沒有葉綠素資料；實驗組 7 用圓盤培養皿，有葉綠素、新鮮重與葉面積，但沒有根長。",
+      "cite": ["plant/", "measurement/"],
+      "trap": "Claiming all eight sets have all three readouts.",
+      "trap_zh": "聲稱八個實驗組都有完整三項判讀。"
+    },
+    {
+      "id": "PS-06",
+      "type": "alternative",
+      "q": "Root length was traced by hand. What tool did you not use, and what does hand tracing cost you?",
+      "q_zh": "根長是手工描繪的。你們沒有用什麼工具，手工描繪的代價是什麼？",
+      "answer": "SmartRoot was recommended to us alongside the ImageJ protocol and we did not use it; every root length on the page was traced by hand in ImageJ from the blue transfer line to the tip. The cost is that root length from a photograph is an operator-dependent measurement, and no two people on this team were ever compared on the same image, so inter-tracer variation is unmeasured. The measurement page lists recording the tracer, and photographing at a fixed time of day, as the two changes that would improve this more than any refinement of the tracing itself.",
+      "answer_zh": "當初推薦我們的除了 ImageJ 流程還有 SmartRoot，我們沒有採用；頁面上每一個根長都是在 ImageJ 中手工從藍色移植基線描到根尖。代價是照片上的根長屬於操作者相依的測量，而本團隊從未讓兩個人描繪同一張影像做比對，所以描繪者之間的變異完全沒有量化。Measurement 頁把「記錄描繪者」與「固定每天同一時間拍照」列為比改良描繪技巧更有效的兩項改善。",
+      "cite": ["measurement/", "plant/"]
+    },
+    {
+      "id": "PS-07",
+      "type": "decision",
+      "q": "The plates went round, then square and vertical, then round again. Justify each move.",
+      "q_zh": "培養皿從圓盤改成方形直立，又改回圓盤。請說明每一次改變的理由。",
+      "answer": "Vertical 13 x 13 cm squares at about 10 degrees were adopted at set 4 on Dr. Kyle's advice, because a root growing down the agar surface can be traced in ImageJ while a root in a flat plate cannot. In August the readout we cared about moved above ground, so screening went back to flat round plates, which hold forty plants and give enough rosette tissue for a chlorophyll extraction. The rule we would hand another team is to choose orientation before the first plate is poured: vertical if the readout is below ground, flat if it is above, and the two are not interchangeable because they measure different variables.",
+      "answer_zh": "實驗組 4 時依 Kyle 博士建議改用約 10 度傾斜的 13 x 13 cm 方形直立培養皿，因為沿洋菜膠表面向下生長的根可以用 ImageJ 描繪，平放培養皿裡的根則不行。八月時我們關心的指標轉到地上部，篩選因此改回平放圓盤：一皿可放四十株，蓮座葉組織也足夠做葉綠素萃取。我們會交給別隊的規則是：在倒第一皿之前就決定方向，判讀在地下用直立、在地上用平放，兩者不可互換，因為測的是不同變數。",
+      "cite": ["plant/", "measurement/"]
+    },
+    {
+      "id": "PS-08",
+      "type": "boundary",
+      "q": "What is a chlorophyll number from this project allowed to say, and why can you not quote an absolute content?",
+      "q_zh": "本專題的葉綠素數值可以主張到什麼程度？為什麼不能引用絕對含量？",
+      "answer": "Chlorophyll here is a relative ranking within one plate reader session, and only once the normalisation is declared. On 5 August we found absorbance had been read at 633 nm where Arnon's equation wants 663 nm; the OD633 formula line sits over tables headed OD663 in nine sheets across the two agar workbooks, covering sets 4, 6, 7 trials 1 and 3, the heat pretest and set 8, and one sheet carries two incompatible equations eight rows apart. The extraction volume also varied, 1, 2 or 4 mL depending on the set, and V multiplies the result directly. Only the hydroponic workbook is clean throughout, a re-measurement of set 6 returned errors, and no agar chlorophyll figure is quoted as an absolute anywhere on the wiki.",
+      "answer_zh": "這裡的葉綠素只能作為同一次盤式讀儀讀數內的相對排序，而且必須先宣告用哪一種標準化。8 月 5 日我們發現吸光是在 633 nm 讀的，而 Arnon 公式要的是 663 nm；兩本洋菜膠工作簿中有九張工作表的 OD633 公式行壓在標頭寫 OD663 的表格上，涵蓋實驗組 4、6、7 的試驗 1 與 3、熱逆境預試與實驗組 8，其中一張表相隔八列有兩個互不相容的公式。萃取體積也不一致，依實驗組為 1、2 或 4 mL，而 V 直接乘進結果。只有水耕那本工作簿全程乾淨，實驗組 6 的重新測量回報錯誤，維基上沒有任何一個洋菜膠葉綠素數值被當作絕對值引用。",
+      "cite": ["measurement/", "plant/", "results/"],
+      "trap": "Saying the wavelength problem affects only three sets; the 22 September archive widened it twice.",
+      "trap_zh": "說波長問題只影響三個實驗組；9 月 22 日的資料歸檔已兩度擴大其範圍。"
+    },
+    {
+      "id": "PS-09",
+      "type": "weakness",
+      "q": "A judge opens your chlorophyll workbooks. What will they find?",
+      "q_zh": "評審打開你們的葉綠素工作簿，會發現什麼？",
+      "answer": "Two files, Chlorophyll content for Agar plate.xlsx and its (for wiki) copy, hold sheets with the same names, the same raw absorbances and the same fresh weights, and compute different results on every shared sheet: set 4's control is 0.185 against 0.276 mg g-1, set 7 trial 1's pre-treatment at 100 mM differs by a factor of 62, the heat pretest control by five and set 8's control by sixty-six. The wiki copy also relabels the 633 nm columns as 663 in sets 4 and 6 with no record of a re-measurement, and is missing the set 7 trial 4 sheet, which is the one internally coherent peptide dataset we have. Two further faults sit in those sheets: set 8 has three technical replicates of one extract at OD645 0.106, 0.830 and 1.092, and set 7 trial 3 sits at blank-corrected OD663 of 2.1 to 2.3, past the reader's linear range, so all twelve arms return 17 to 18 mg g-1 whatever the treatment. Nobody should quote a chlorophyll number from this project without naming its file.",
+      "answer_zh": "兩個檔案 Chlorophyll content for Agar plate.xlsx 與其 (for wiki) 副本，工作表名稱相同、原始吸光值相同、新鮮重也相同，卻在每一張共有的工作表上算出不同結果：實驗組 4 的對照是 0.185 對 0.276 mg g-1，實驗組 7 試驗 1 在 100 mM 的前處理組差 62 倍，熱逆境預試對照差 5 倍，實驗組 8 對照差 66 倍。為維基準備的那份副本還把實驗組 4 與 6 的 633 nm 欄位改標為 663，卻沒有任何重新測量紀錄，而且完全缺少實驗組 7 試驗 4 的工作表——那是我們唯一一組內部自洽的胜肽資料。那些工作表還有兩個問題：實驗組 8 同一管萃取液的三個技術重複 OD645 讀到 0.106、0.830、1.092；實驗組 7 試驗 3 扣空白後的 OD663 落在 2.1 到 2.3，超出讀儀線性範圍，所以十二個處理組不論處理為何都回報 17 到 18 mg g-1。引用本專題任何葉綠素數值時都必須說明出自哪個檔案。",
+      "cite": ["measurement/", "plant/", "results/"]
+    },
+    {
+      "id": "PS-10",
+      "type": "fact",
+      "q": "Walk through the chlorophyll extraction, including the equation and the volume of acetone.",
+      "q_zh": "請說明葉綠素萃取流程，包括公式與丙酮用量。",
+      "answer": "Whole seedlings are lifted off the plate, blotted, weighed as a pooled group in a tared vessel, put in a 15 mL tube with ten steel beads and frozen at -80 C for ten minutes, then extracted in 80% acetone and vortexed until the tissue is no longer green; 200 uL goes into each of three wells per sample and the blank is 200 uL of 80% acetone. Total chlorophyll in mg g-1 is (20.2 x A645 + 8.02 x A663) x V / (1000 x FW), with Arnon's coefficients for 80% acetone. The written protocol says add 4 mL, but the workbooks record V = 2 mL for agar sets 4, 5 and 6 and for set 7 trials 1 and 3, and 4 mL for the hydroponic set, the heat pretest and set 8, so values are not directly comparable between sets.",
+      "answer_zh": "整株幼苗從培養皿取下、吸乾、以同組混合方式在歸零的秤盤上秤重，放入 15 mL 離心管加十顆不鏽鋼珠，於 -80 °C 冷凍十分鐘，再以 80% 丙酮萃取並振盪至組織不再呈綠色；每個樣品取 200 uL 分注三個孔，空白為 200 uL 的 80% 丙酮。總葉綠素 (mg g-1) 為 (20.2 x A645 + 8.02 x A663) x V / (1000 x FW)，採用 Arnon 在 80% 丙酮下的係數。書面流程寫加 4 mL，但工作簿記錄洋菜膠實驗組 4、5、6 與實驗組 7 的試驗 1、3 用 V = 2 mL，水耕組、熱逆境預試與實驗組 8 用 4 mL，因此各組數值不能直接相互比較。",
+      "cite": ["experiments/", "measurement/", "plant/"],
+      "trap": "Quoting one V as the project standard; the protocol and the workbooks disagree.",
+      "trap_zh": "把某一個 V 說成全專題標準；流程書與工作簿並不一致。"
+    },
+    {
+      "id": "PS-11",
+      "type": "weakness",
+      "q": "Your own write-up says trehalose groups sustained more chlorophyll than the controls. Defend or withdraw that.",
+      "q_zh": "你們自己的撰稿說海藻糖組的葉綠素甚至超過對照組。請為它辯護或撤回它。",
+      "answer": "We withdraw it as written. Those set 4 readings are divided by fresh weight, and the salt-plus-trehalose group weighed 0.0562 g against a control of 0.2292 g, a factor of four, so the division is doing the work; the un-normalised column of the same workbook reads control 56.5, 100 mM NaCl 20.1 and 100 mM plus 0.5 mM trehalose 17.8, which reverses every one of those statements. The hydroponic set does the same thing in the other direction at a 2.4-fold weight spread, and set 7 trial 3 is the third case, where normalised figures put the salt-treated groups above their own unstressed control. Both readings stay on the page because both are in the record, and the recorded position does not move: trehalose is not a validated positive control. Fix 4 is open until somebody decides which normalisation the set 4 figures are published with and says so on the figure.",
+      "answer_zh": "按原文我們撤回這句話。實驗組 4 的那些讀值是除以新鮮重的，鹽加海藻糖組重 0.0562 g，對照組重 0.2292 g，差四倍，真正起作用的是那個除法；同一本工作簿未標準化的欄位讀到對照 56.5、100 mM NaCl 20.1、100 mM 加 0.5 mM 海藻糖 17.8，把上述每一句都反轉過來。水耕組在 2.4 倍的重量差下以相反方向出現同樣效應，實驗組 7 試驗 3 是第三個案例：標準化後的數值把加鹽組排在自己未逆境對照之上。兩種讀法都留在頁面上，因為兩者都在紀錄裡，而記載的立場不變：海藻糖不是經驗證的陽性對照。Fix 4 在有人決定實驗組 4 以哪一種標準化發表並在圖上註明之前仍未結案。",
+      "cite": ["plant/", "measurement/", "results/"]
+    },
+    {
+      "id": "PS-12",
+      "type": "decision",
+      "q": "Why do you report chlorophyll twice, normalised and un-normalised, instead of picking one?",
+      "q_zh": "為什麼葉綠素要同時報告標準化與未標準化兩種，而不是選一種？",
+      "answer": "Because fresh weight is the denominator and salt changes it: a stressed seedling weighs a fraction of its control, so a group that made almost no pigment and almost no tissue can come out above a healthy control per gram. Dr. Kyle told us to plot it both ways, and that instruction is the only reason the artefact is visible at all in our own data. The fix costs nothing and we offer it as a contribution: report the un-normalised total alongside the per gram figure, or name which you used, and record the fresh weights so a reader can undo the division. The same caution applies to anything reported per gram of a tissue whose mass the treatment changes.",
+      "answer_zh": "因為新鮮重是分母，而鹽會改變它：受逆境的幼苗重量只有對照的一小部分，所以一個幾乎沒有色素也幾乎沒有組織的組別，換算成每克後可能高於健康的對照。Kyle 博士要我們兩種都畫，而這條指示是我們自己的資料中這個假象唯一得以現形的原因。修正方式不花成本，我們把它當作一項貢獻提出：在每克數值旁一併報告未標準化的總量，或明確說明採用哪一種，並記下新鮮重讓讀者可以還原那個除法。任何以「每克組織」報告、而處理本身會改變該組織質量的量測，都適用同一個告誡。",
+      "cite": ["measurement/", "plant/"]
+    },
+    {
+      "id": "PS-13",
+      "type": "fact",
+      "q": "Set 1 is where trehalose toxicity showed up. Give the numbers and say what was actually measured.",
+      "q_zh": "實驗組 1 顯示了海藻糖的毒性。請給出數字，並說明當時實際量的是什麼。",
+      "answer": "In set 1, 10 to 27 May, 1 mM trehalose alone cut unstressed seedlings to 14.6 mm against a 51.7 mm control, while 50 mM salt alone gave 21.5 mm and 50 mM with 1 mM trehalose gave 34.8 mm. So trehalose has a toxic ceiling, and 0.5 mM in set 2 was harmless on its own and rescued nothing. What was measured in set 1 is whole-seedling length, not root length, and the 100 mM rows of that deck are corrupt, so nothing is quoted from them.",
+      "answer_zh": "實驗組 1（5 月 10 日至 27 日）中，單獨 1 mM 海藻糖把未逆境幼苗壓到 14.6 mm，對照為 51.7 mm；單獨 50 mM 鹽為 21.5 mm，50 mM 加 1 mM 海藻糖為 34.8 mm。因此海藻糖有毒性上限；而實驗組 2 的 0.5 mM 單獨使用無害，也救不了任何東西。實驗組 1 量的是全株長度，不是根長，而且該份簡報的 100 mM 列資料損壞，我們不引用其中任何數字。",
+      "cite": ["plant/"],
+      "trap": "Calling 14.6 mm a root length; set 1 predates the ImageJ root measurement, which starts at set 4.",
+      "trap_zh": "把 14.6 mm 當成根長；實驗組 1 早於 ImageJ 根長測量，後者從實驗組 4 才開始。"
+    },
+    {
+      "id": "PS-14",
+      "type": "decision",
+      "q": "Trehalose is not one of your protectants. Why did six of eight sets use it, and where is it now?",
+      "q_zh": "海藻糖不是你們的保護劑。為什麼八個實驗組中有六個用它，而它現在的定位是什麼？",
+      "answer": "Trehalose was never a candidate; it is the reference osmolyte we run to ask whether the assay can see a rescue at all, chosen off a published dose study that set both the 1 to 10 mM trehalose range and the 150 and 250 mM salt levels used in set 5. After six sets we cannot call it a validated positive control, and in August we took it out of the circuit design altogether. The lesson we publish from it is to pick a reference protectant with a published dose in your own assay before you build experiments on it.",
+      "answer_zh": "海藻糖從來不是候選保護劑；它是我們用來檢驗「這個試驗到底看不看得見拯救效果」的參考滲透調節物質，其 1 到 10 mM 的濃度範圍與實驗組 5 所用的 150、250 mM 鹽濃度都取自一篇已發表的劑量研究。跑完六個實驗組後，我們無法稱它為經驗證的陽性對照，八月時更把它完全移出電路設計。我們公開的教訓是：在以某個參考保護劑為基礎設計實驗之前，先確認它在你自己的試驗系統中有已發表的劑量。",
+      "cite": ["plant/", "contribution/", "results/"]
+    },
+    {
+      "id": "PS-15",
+      "type": "weakness",
+      "q": "Six sets of a reference compound and no validated positive control. What is the worst single result in that series?",
+      "q_zh": "參考化合物跑了六個實驗組，卻沒有一個經驗證的陽性對照。這一系列中最糟的單一結果是什麼？",
+      "answer": "Set 3 trial 2: salt alone reached 8 growing seedlings of 9 while all three trehalose doses came in lower, at 4, 6 and 5, so salt alone beat every dose. Set 3's two simultaneous trials also pointed opposite ways, in set 4 every salt-plus-trehalose group weighed less than salt alone, and in set 6 at 5 mM every move sits inside the group's own standard deviation and two rungs went down. Worse for the design, the two trials of set 5 picked different best doses, 5 mM and 10 mM, and set 6 had already been designed around 5 mM before the second analysis came back; that is a scheduling mistake and it is why the concentration question is still open.",
+      "answer_zh": "實驗組 3 試驗 2：單獨加鹽有 9 株中 8 株生長，而三個海藻糖劑量分別只有 4、6、5 株，也就是單獨加鹽勝過每一個劑量。實驗組 3 的兩個同時進行的試驗結論相反；實驗組 4 中每一個鹽加海藻糖組都比單獨加鹽更輕；實驗組 6 在 5 mM 下每一個變化都落在該組自身標準差之內，其中兩個階層還往下掉。對設計更不利的是，實驗組 5 的兩個試驗選出不同的最佳劑量（5 mM 與 10 mM），而實驗組 6 在第二份分析回來之前就已依 5 mM 設計完成；這是排程上的錯誤，也是濃度問題至今未決的原因。",
+      "cite": ["plant/", "results/"]
+    },
+    {
+      "id": "PS-16",
+      "type": "boundary",
+      "q": "Prof. Cheng puts the useful plant age at ten to twenty days. How old were the plants in your runs?",
+      "q_zh": "鄭教授認為可用的植株年齡是十到二十天。你們實驗中的植株實際上幾天大？",
+      "answer": "Four days old at transfer in every set we have a dated record for: four days of stratification, four days of germination, then onto the condition plate on day 8. The ten to twenty day window and the 200 mM ceiling are real advice, written into the new protocol text, but they do not yet describe a run. Set 8 was meant to be the first built to the wider window and its own decks record treatment four days after the plates entered the incubator, the same schedule as sets 1 to 7, which is fix 6. It also explains set 5: those seedlings had four days of vernalisation and three at 22 C behind them when they met 250 mM, and nothing that age survives it.",
+      "answer_zh": "在所有有日期紀錄的實驗組中，移植時都是四天大：四天低溫層積、四天發芽，第八天移上處理培養皿。十到二十天的窗口與 200 mM 上限是真實的建議，也已寫進新的流程文字，但目前還沒有一次實驗照它執行。實驗組 8 本應是第一個依較寬窗口設計的，但它自己的簡報記錄的是培養皿進培養箱後第四天就處理，與實驗組 1 到 7 的排程相同，這就是 fix 6。這同時解釋了實驗組 5：那些幼苗遇到 250 mM 時只經過四天春化與三天 22 °C，這個年齡沒有東西能撐過去。",
+      "cite": ["plant/", "engineering/"],
+      "trap": "Engineering says set 8's germination was extended from four days to ten; the set 8 decks say four.",
+      "trap_zh": "Engineering 頁說實驗組 8 的發芽期從四天延長到十天；實驗組 8 的簡報寫的是四天。"
+    },
+    {
+      "id": "PS-17",
+      "type": "alternative",
+      "q": "You were advised to sterilise seeds with chlorine gas in June. Did you, and what did it cost?",
+      "q_zh": "六月時你們被建議用氯氣進行種子表面滅菌。做了嗎？代價是什麼？",
+      "answer": "Dr. Kyle recommended chlorine-gas treatment in June for the bacterial contamination we kept seeing, and we did not apply it consistently. The minutes give unsanitised seeds as the reason we lost the whole first CH Bio peptide trial, which had to be declared contaminated and redone. The step that did cut contamination most was supervised transfers in the cabinet from July, with plates pushed out through the sleeve rather than a hand going inside it, but that does not substitute for sterilising the seed before sowing.",
+      "answer_zh": "Kyle 博士在六月針對我們反覆出現的細菌汙染建議做氯氣處理，而我們沒有一致執行。會議紀錄把未滅菌的種子列為我們整個第一次正瀚胜肽試驗失敗的原因，該試驗被宣告汙染並重做。真正把汙染率壓下最多的措施，是七月起在生物安全櫃內由指導者全程監督移植，並以推擠套袋的方式取出培養皿而不把手伸進去，但那並不能取代播種前的種子滅菌。",
+      "cite": ["plant/"]
+    },
+    {
+      "id": "PS-18",
+      "type": "decision",
+      "q": "How the protectant reaches the plant was rebuilt three times. Give the three methods and the confound that forced the last change.",
+      "q_zh": "保護劑如何到達植物被重建了三次。請說出三種方法，以及迫使最後一次改變的干擾因子。",
+      "answer": "Pipetting onto the plate first, which floated unrooted seedlings off the agar and risked hyperhydricity when 3 mL was flooded on and 2 mL drawn back off; then spraying, which reaches leaves but leaves droplets over the stomata and was ruled out by Prof. Cheng on 2 September with the instruction to transfer, not spray; then from set 8, moving plants onto fresh plates that already contain the salt, the protectant or both. The confound is that protectant added a day early is still in the agar when the salt arrives, so the pre-treatment arm was in effect pre- plus co-treatment at a higher cumulative dose. We raised it in August and did not solve it until set 8 moved to transfers, so every pre-treatment result before that carries it. With the dose now a property of the plate, numbers from one phase should still not be compared with numbers from another.",
+      "answer_zh": "最初是用微量吸管滴在培養皿上，這會讓尚未扎根的幼苗浮離洋菜膠，而為求均勻先淹 3 mL 再抽回 2 mL 又有過度含水 (hyperhydricity) 的風險；接著改為噴霧，噴霧能到達葉片，但會在氣孔上留下水滴，鄭教授在 9 月 2 日否決此法，指示要「移植，不要噴」；再從實驗組 8 起改為把植株移到已含鹽、保護劑或兩者的新培養皿上。干擾因子是：提前一天加入的保護劑在鹽到達時仍在洋菜膠裡，所以前處理組實際上是「前處理加同時處理」且累積劑量更高。我們八月就提出，直到實驗組 8 改成移植才解決，因此之前所有前處理結果都帶著這個問題。即使現在劑量由培養皿決定，不同階段的數字仍然不應互相比較。",
+      "cite": ["plant/", "engineering/"]
+    },
+    {
+      "id": "PS-19",
+      "type": "fact",
+      "q": "State the set 7 design: compound, dose, how the liquid was controlled for, and how many conditions.",
+      "q_zh": "請說明實驗組 7 的設計：化合物、劑量、液體效應如何控制，以及有幾個處理條件。",
+      "answer": "CH Biotech's commercial peptide 富肽2號, received 9 July and used at the supplier's recommended 1:500 dilution because that is how it would be used in a field. In the plate that is 100 uL of stock into 50 mL of agar; on the surface, 3 mL flooded on and 2 mL drawn back off, leaving 1 mL, and every other group got 1 mL of sterile water the same day so the liquid itself is controlled for. Three treatment timings, day -1, day 0 and day +1, plus an untreated control, crossed with 0, 75 and 100 mM NaCl gives twelve conditions, on round plates at 40 seeds per plate. The supplier gave no mass concentration, so we cannot state ug mL-1, and the preparation is a finished mixture whose active component is unknown.",
+      "answer_zh": "正瀚生技的商業胜肽富肽2號，7 月 9 日取得，依供應商建議的 1:500 稀釋使用，因為實際田間也會用這個濃度。在培養皿中是 100 uL 原液加入 50 mL 洋菜膠；在表面施用則是先淹 3 mL 再抽回 2 mL，留下 1 mL，同一天其他每一組都加 1 mL 無菌水，以控制液體本身的效應。三個處理時機（第 -1、0、+1 天）加上未處理對照，與 0、75、100 mM NaCl 交叉共十二個條件，使用圓盤培養皿、每皿 40 粒種子。供應商未提供質量濃度，所以我們無法標示 ug mL-1，而且這是成品混合物，有效成分不明。",
+      "cite": ["plant/", "experiments/", "results/"]
+    },
+    {
+      "id": "PS-20",
+      "type": "weakness",
+      "q": "Which treatment timing won in set 7? Your pages do not agree.",
+      "q_zh": "實驗組 7 中哪一個處理時機勝出？你們的頁面說法並不一致。",
+      "answer": "We cannot name a winner yet, and the Engineering page overstates it. Plant_.docx says after-treatment showed the most consistent rescue; read un-normalised, the trial 3 sheet has after-treatment below its matched control at all three salt levels and only the two salt-stressed pre-treatment arms above theirs, while trial 4 ranks the arms differently at each salt level and has a failed no-salt control on the co-treatment arm. Trial 1 was declared contaminated and redone and trial 2 has two days of photographs and no result, so three usable orders from three trials. Engineering states as a result that co-treatment won at 75 mM and after-treatment at 100 mM; that is the student draft's reading, not what the sheets support, and fix 5 asks whoever wrote the sentence to name the trial, the workbook and the normalisation.",
+      "answer_zh": "我們還不能指出勝出者，而 Engineering 頁的說法過強。Plant_.docx 說後處理顯示最一致的拯救效果；但以未標準化方式讀取，試驗 3 的工作表顯示後處理在三個鹽濃度下都低於其配對對照，只有兩個受鹽逆境的前處理組高於各自對照，而試驗 4 在每個鹽濃度下的排序都不同，且同時處理組的無鹽對照失敗。試驗 1 被宣告汙染並重做，試驗 2 只有兩天照片沒有結果，所以三個試驗給出三種排序。Engineering 頁把「75 mM 由同時處理勝出、100 mM 由後處理勝出」寫成結果；那是學生草稿的讀法，不是工作表所支持的，fix 5 要求寫下那句話的人指明試驗、工作簿與所用的標準化。",
+      "cite": ["plant/", "engineering/", "results/"],
+      "trap": "Quoting the Engineering result line as settled; Plants records three trials and three orders.",
+      "trap_zh": "把 Engineering 頁的結果句當成已定論；Plants 頁記載的是三個試驗、三種排序。"
+    },
+    {
+      "id": "PS-21",
+      "type": "alternative",
+      "q": "Your best protectant signal comes from a commercial mixture. Why is that the wrong endpoint, and what would you do about it?",
+      "q_zh": "你們最強的保護劑訊號來自一個商業混合物。為什麼那是錯的終點？你們打算怎麼處理？",
+      "answer": "The CH Bio peptide is a finished mixture, so if it rescues a plant we do not know which component did the rescuing, and a mixture is the wrong endpoint for a project whose output is a bacterium expressing one thing. The route is ordinary deconvolution: fractionate the preparation, run the fractions through the same three-timing assay at 75 and 100 mM, and keep whichever fraction carries the effect. It sits under future work, not in progress, because it needs an assay whose noise is smaller than the difference between fractions, which is stricter than anything our screen has met. Identifying the active component is what turns a product that works into a sequence that can be built.",
+      "answer_zh": "正瀚胜肽是成品混合物，所以即使它救了植物，我們也不知道是哪個成分起作用；而對一個產出「表現單一蛋白的細菌」的專題來說，混合物是錯的終點。路徑是常規的去卷積：把製劑分離成區分，將各區分放進同一套三時機試驗、在 75 與 100 mM 下測試，保留帶有效果的那個區分。它被放在未來工作而不是進行中，因為它需要一個雜訊小於區分間差異的試驗系統，這比我們篩選目前達到的任何標準都更嚴格。確認有效成分，才能把「有效的產品」變成「可以建造的序列」。",
+      "cite": ["plant/"]
+    },
+    {
+      "id": "PS-22",
+      "type": "fact",
+      "q": "Five hydroponic prototypes, one survivor. Give the germination counts and say what actually changed.",
+      "q_zh": "五個水耕原型只有一個存活。請給出發芽數，並說明真正改變的是什麼。",
+      "answer": "Boxes 1, 2, 3 and 5 were sown with seed and germinated 4, 3, 1 and 7 of 10; every one of them contaminated. Box 4 took four-day-old seedlings across from an agar plate on 7 June instead, with filter paper in place of an agar cap, no lid and medium only, and 5 of 5 came through six days with no problem we could name; it is the design still running. The counts do not measure the same thing: the others are germination rates, prototype 4's 5 of 5 counts seedlings that arrived alive and stayed alive. Prototype 5 is the check, the same box with a hand-cut float board and seed again, and the contamination came back with it.",
+      "answer_zh": "1、2、3、5 號箱以種子播種，10 粒中分別發芽 4、3、1、7 粒，每一箱都汙染。4 號箱改為在 6 月 7 日從洋菜膠培養皿移入四天大的幼苗，以濾紙取代洋菜膠帽、不加蓋、只用培養液，5 株中 5 株撐過六天沒有可指認的問題，也是目前仍在運作的設計。這些數字量的不是同一件事：其他箱是發芽率，4 號原型的 5/5 算的是活著抵達並存活的幼苗。5 號原型是對照檢驗：同一個箱子改回手工裁切的浮板並重新播種，汙染也跟著回來。",
+      "cite": ["plant/"],
+      "trap": "Calling prototype 4 a clean design outright; our own 22 September hydroponics write-up lists a contaminated medium among its problems, which is fix 13.",
+      "trap_zh": "直接把 4 號原型稱為乾淨的設計；我們自己 9 月 22 日的水耕撰稿把「培養液已汙染」列為它的問題之一，這是 fix 13。"
+    },
+    {
+      "id": "PS-23",
+      "type": "boundary",
+      "q": "A result seen on agar: how far does it travel to hydroponics, to soil, and to a field?",
+      "q_zh": "在洋菜膠上看到的結果，能延伸到水耕、土壤與田間多遠？",
+      "answer": "Not far on its own. Agar has no microbiome, no drainage and no water potential gradient, and a plant on a plate never has to grow a root system that finds anything; we treat a result seen in only one system as a property of that system until another repeats it. Hydroponics gives a known concentration at the root and is closest to greenhouse delivery, but every timing run there is one box per arm with the two normalisations pointing opposite ways. Soil is the only system a farmer recognises and the worst to measure in. The dry lab adds the last gap: nothing converts the salt ladder to the field, because the ladder is NaCl molarity in agar and the stress index takes conductivity in the field, and no conversion is recorded for our agar or our crop.",
+      "answer_zh": "單靠它走不遠。洋菜膠沒有微生物相、沒有排水、沒有水勢梯度，培養皿上的植物也從來不需要長出能找到東西的根系；我們把只在一個系統中看到的結果視為該系統的性質，直到另一個系統重現它為止。水耕能給根部一個已知濃度，也最接近溫室的施用方式，但那裡每一次時機試驗都是每組一箱，而兩種標準化指向相反。土壤是農民唯一認得的系統，也是最難測量的。乾實驗室補上最後一個缺口：沒有任何換算能把鹽度梯度接到田間，因為梯度是洋菜膠中的 NaCl 莫耳濃度，而逆境指數取的是田間電導度，我們的洋菜膠與作物都沒有記載換算關係。",
+      "cite": ["plant/", "model/", "measurement/"]
+    },
+    {
+      "id": "PS-24",
+      "type": "alternative",
+      "q": "Name two things your advisors recommended for the plant and hydroponic work that you have not done.",
+      "q_zh": "請說出指導者為植物與水耕工作建議、但你們尚未完成的兩件事。",
+      "answer": "Prof. Chen Wen-liang pushed us on 20 June toward a recirculating hydroponic system and argued against the auto-filling reservoir we had put on a slide; we have built neither, and the recirculating design sits on the future list. The ROS staining Prof. Cheng recommended in March was also not done, and we said so in the progress report we took back to her on 28 August, where four of her seven March suggestions were done. A third is Dr. Kyle's June advice to pour horizontal plates at 0.7 to 0.8% agar because 1% is too thick: we kept 1%, seedlings failed to root into the surface in August, and the September decision was to stay at 1% across a treatment series so the plates in one comparison match, which keeps the plates consistent but does not answer her point.",
+      "answer_zh": "陳文亮教授在 6 月 20 日推動我們改做循環式水耕系統，並反對我們放在簡報上的自動補水儲槽；兩者我們都沒有建造，循環式設計留在未來清單上。鄭教授三月建議的 ROS 染色也沒有做，我們在 8 月 28 日帶回給她的進度報告中明說了這一點，她三月七項建議中我們完成了四項。第三件是 Kyle 博士六月的建議：平放培養皿應使用 0.7 到 0.8% 洋菜膠，因為 1% 太厚；我們維持 1%，結果八月出現幼苗無法扎入表面的問題，九月的決定是在同一處理系列中一律維持 1%，讓同一組比較的培養皿一致——這維持了一致性，但沒有回答她的論點。",
+      "cite": ["plant/"]
+    },
+    {
+      "id": "PS-25",
+      "type": "boundary",
+      "q": "Your soil salt schedule has no end date. What can the soil arm claim today?",
+      "q_zh": "你們的土壤加鹽排程沒有終止日期。土壤組今天能主張什麼？",
+      "answer": "Very little. The revised schedule pours equal volumes of 100, then 200, then 300 mM with no watering in between, then repeats 300 mM until the effect is visible, so the plants decide when it stops; 30 to 50 mL per pot until a little runs out of the bottom is how we know it reached the roots. Two pots, one per published protocol, went in on 6 September with two-week-old plants, and we chose Prof. Cheng's protocol by eye because the accumulation method did not cause much stress damage; the data has not been collected. The ACCD salinity trial went in on 12 September and the heat trial on 22 September, and fix 7 records that the soil ACCD deck shows five arms photographed through 1 September with no measurement of any kind, so the soil arm is unmeasured rather than void.",
+      "answer_zh": "非常有限。修訂後的排程是依序澆等量的 100、200、300 mM，其間不澆水，之後重複 300 mM 直到效果明顯，也就是由植物決定何時停止；每盆 30 到 50 mL 直到底部略有滲出，是我們判斷藥液到達根部的依據。9 月 6 日放入兩盆，各依一篇已發表流程，使用兩週大的植株，我們憑肉眼選了鄭教授論文的流程，因為累積法沒有造成多少逆境傷害；資料尚未收集。ACCD 鹽逆境試驗於 9 月 12 日放入、熱逆境試驗於 9 月 22 日放入，而 fix 7 記載土壤 ACCD 簡報顯示五個處理組拍照到 9 月 1 日卻沒有任何測量，所以土壤組的狀態是「未測量」而不是「作廢」。",
+      "cite": ["plant/", "results/"],
+      "trap": "Calling the soil ACCD arm void on the strength of the 24 August blot; Plants corrected that to unmeasured.",
+      "trap_zh": "以 8 月 24 日的西方墨點為依據說土壤 ACCD 組作廢；Plants 頁已更正為未測量。"
+    },
+    {
+      "id": "PS-26",
+      "type": "alternative",
+      "q": "You ran a gradual soil salinity build-up first and then abandoned it. Whose design was it and why did it go?",
+      "q_zh": "你們先採用漸進式土壤鹽度累積後來放棄。那是誰的設計，為什麼放棄？",
+      "answer": "Dr. Verslues proposed it and we started with it: 25 mM per day building toward 100 mM. Prof. Cheng's assessment on 2 September was that for a month-old plant that dose is too mild, and worse, watering between doses washes the salt back out instead of letting it accumulate. The plant age moved with it: we had used one-month-old plants, already close to the end of their life cycle, and went to two weeks on her outreach suggestion. The two published protocols were then compared side by side in September, and the accumulation method again produced little visible stress.",
+      "answer_zh": "那是 Verslues 博士提出的，我們也從它開始：每天累加 25 mM、朝 100 mM 推進。鄭教授 9 月 2 日的評估是：對一個月大的植株這個劑量太溫和，更糟的是劑量之間澆水會把鹽沖掉，使它無法累積。植株年齡也隨之改變：我們原本用一個月大的植株，已接近生命週期尾端，依她在外部交流時的建議改為兩週大。九月再把兩篇已發表流程並列比較，累積法再一次只造成很少的可見逆境。",
+      "cite": ["plant/"]
+    },
+    {
+      "id": "PS-27",
+      "type": "weakness",
+      "q": "ACC deaminase is the project's headline protectant. What plant evidence do you have for it, and for LEA14 and BoPep4?",
+      "q_zh": "ACC 去胺酶 (ACC deaminase) 是本專題的主打保護劑。你們對它、以及對 LEA14 與 BoPep4，有什麼植物層面的證據？",
+      "answer": "None. Set 8 was its only agar trial and was abandoned twice: the pretest sown 18 August grew bacterial colonies on every plate that received ACCD while controls stayed clean, and trial 1 sown 21 August grew bacteria again after the preparation was filtered on the open bench instead of in the laminar flow hood. The Western blot of 24 August then read the same culture that was being sprayed and found no ACC deaminase in it; the single band near 41 kDa sits in the 18 August lane and the 23 August lane is empty, so there was nothing to test. There is also no activity assay at all: the ELISA is design only, the Berthelot assay has no figure for a ReLeaf extract, and the DNPH route was never run. LEA14 and BoPep4 have never been applied to a plant, so a four-way protectant comparison across three platforms cannot be written from this evidence. The useful part is the negative: the plant assay alone could not have shown the protectant was missing, and we caught it only because the blot was run on the same batch that went on the plants.",
+      "answer_zh": "沒有。實驗組 8 是它唯一的洋菜膠試驗，而且兩次都放棄：8 月 18 日播種的預試中，每一個施用 ACCD 的培養皿都長出細菌菌落，對照組則保持乾淨；8 月 21 日播種的試驗 1 再次長菌，原因是製劑在開放檯面而非層流櫃內過濾。8 月 24 日的西方墨點 (Western blot) 檢測了當時正噴在植物上的同一批培養液，未測得 ACC 去胺酶；約 41 kDa 的單一條帶出現在 8 月 18 日的樣品道，8 月 23 日的樣品道是空的，所以根本沒有東西可測。也完全沒有活性測定：ELISA 只有設計、Berthelot 反應沒有任何 ReLeaf 萃取物的數值、DNPH 路線從未執行。LEA14 與 BoPep4 從未施用到植物上，因此以這些證據無法寫出跨三個平台的四種保護劑比較。有用的部分是那個負面結果：單靠植物試驗無法顯示保護劑根本不存在，我們之所以抓到，是因為墨點跑的正是上到植物身上的同一批。",
+      "cite": ["plant/", "measurement/", "results/"],
+      "trap": "Saying the ACCD plates show the protectant does not work; the material was empty, so the set is evidence in neither direction.",
+      "trap_zh": "說 ACCD 的培養皿顯示保護劑無效；當時的材料是空的，所以該實驗組在任何方向上都不構成證據。"
+    }
+  ]
+}

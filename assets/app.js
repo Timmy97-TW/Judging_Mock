@@ -254,8 +254,9 @@
       var h = el("div", "sec-head");
       h.appendChild(el("h2", null, pick(s, "title")));
       h.appendChild(el("p", null, pick(s, "blurb")));
-      h.appendChild(el("span", "n", qs.length + " " + t().m_q +
-        (qs.length !== s.questions.length ? " (" + t().of + " " + s.questions.length + ")" : "")));
+      h.appendChild(el("span", "n", qs.length !== s.questions.length
+        ? qs.length + " / " + s.questions.length + " " + t().m_q
+        : qs.length + " " + t().m_q));
       sec.appendChild(h);
       qs.forEach(function (q) { sec.appendChild(card(q)); });
       host.appendChild(sec);

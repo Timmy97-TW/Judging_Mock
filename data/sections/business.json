@@ -1,0 +1,265 @@
+{
+  "slug": "business",
+  "title": "Business & Entrepreneurship",
+  "title_zh": "商業與創業",
+  "blurb": "The business model and who pays, the unit cost basis and payback, customer validation, competition, the regulatory and IP path to a sellable product, the sustainability claims, and scale-up.",
+  "blurb_zh": "商業模式與付費方、單位成本基礎與回收期、客戶驗證、競爭、通往可販售產品的法規與智財路徑、永續宣稱，以及規模化。",
+  "questions": [
+    {
+      "id": "BE-01",
+      "type": "fact",
+      "q": "What does one ReLeaf unit cost, and what does a farm pay for it? Give the figure and its currency.",
+      "q_zh": "一台 ReLeaf 裝置的成本是多少，農場要付多少錢？請給出數字與幣別。",
+      "answer": "The wiki does not give one number. Entrepreneurship shows a target price box of 135,297.77 with no currency stated, says about 100,000 to 150,000 for initial installation, and elsewhere on the same page says our prices are estimated to be at $60,000 NTD. Geospatial Analysis prices every deployment calculation at NT$30,000 per unit, and the Hardware bioreactor materials list sums the lab-use parts to NT$30,480 (US$960.91). The honest answer is that the price is not settled: Biomanufacturing states outright that it publishes no unit cost until the bill of materials is settled, and the lab-use sheet does not even state whether each price is per unit or per line.",
+      "answer_zh": "維基上沒有單一數字。Entrepreneurship 頁的目標價格框寫 135,297.77 但未標幣別，文中說初期安裝約 100,000 至 150,000，同一頁另一處又寫價格估計為 $60,000 NTD。Geospatial Analysis 的所有部署計算都以每台 NT$30,000 計價，而 Hardware 生物反應器的材料清單把實驗室版零件加總為 NT$30,480（US$960.91）。誠實的答案是定價尚未確定：Biomanufacturing 明白表示在物料清單（BOM）定案前不公布單位成本，而實驗室版成本表連每個價格是單價還是整列總價都沒寫。",
+      "cite": ["entrepreneurship/", "geospatial-analysis/", "hardware/bioreactor/", "biomanufacturing/"],
+      "trap": "Quoting 135,297.77 as if it were NTD and treating it as a settled price.",
+      "trap_zh": "把 135,297.77 當成新台幣報出，並當作已定案的價格。"
+    },
+    {
+      "id": "BE-02",
+      "type": "decision",
+      "q": "Why a social enterprise rather than a conventional for-profit company, and what evidence drove that choice?",
+      "q_zh": "為什麼選擇社會企業而非一般營利公司？是什麼證據促成這個決定？",
+      "answer": "Two things drove it. Professor Chen 陳文亮 told us we could not compete on price with chemical fertilizers, so we removed price competition from the plan; and Ubuntu Social Enterprise Ghana, which inspired the original pitch, showed a model that serves smallholders without becoming an NGO. The arithmetic supports it independently: Geospatial Analysis shows that at NT$30,000 per unit the capital cost per hectare is at or above a full year of gross paddy revenue in every soil type, so the beneficiaries cannot be the payers. The canvas therefore splits them: industrial farms, distributors, NGOs and government pay, smallholders benefit.",
+      "answer_zh": "有兩個原因。陳文亮教授告訴我們無法在價格上與化學肥料競爭，因此我們把價格競爭從計畫中移除；而啟發我們最初提案的 Ubuntu Social Enterprise Ghana 示範了一種既服務小農、又不必成為非政府組織（NGO）的模式。算術也獨立支持這個選擇：Geospatial Analysis 顯示以每台 NT$30,000 計，各種土壤類型下每公頃資本支出都等於或超過一整年的稻作毛收入，所以受益者不可能是付費者。因此商業模式圖把兩者分開：工業化農場、經銷商、NGO 與政府付費，小農受益。",
+      "cite": ["entrepreneurship/", "geospatial-analysis/", "human-practices/"]
+    },
+    {
+      "id": "BE-03",
+      "type": "weakness",
+      "q": "Your regulatory section rests on a three-layered containment approach including a CRISPR kill switch. Show me the kill switch.",
+      "q_zh": "你們的法規章節建立在三層圍阻（含 CRISPR 自殺開關）之上。請把那個自殺開關給我看。",
+      "answer": "There is no kill switch. Dr. Brophy advised us that physical containment should be the primary safety mechanism rather than relying on a kill switch, and Dr. Lin advised us not to build one at all; we took that advice and made the hollow-fibre membrane the containment. The Entrepreneurship page still claims redundant genetic kill switches, a CRISPR-based kill switch in the risk table, and a three-layered approach in the conclusion. That text is out of date and overstates our biosafety case, and the Safety page confirms no test of the containment is reported.",
+      "answer_zh": "並沒有自殺開關。Brophy 博士建議我們以物理圍阻為主要安全機制，而非依賴自殺開關；Lin 博士則建議根本不要做。我們採納了這些建議，改以中空纖維膜作為圍阻。Entrepreneurship 頁至今仍寫著「冗餘的基因自殺開關」、風險表中的「CRISPR 自殺開關」，以及結論裡的「三層圍阻」。那段文字已過時，誇大了我們的生物安全論證；Safety 頁也確認該頁並未報告任何圍阻測試。",
+      "cite": ["entrepreneurship/", "human-practices/", "development/", "safety-and-security/"],
+      "trap": "Defending the three-layer claim instead of saying the kill switch was deliberately dropped on expert advice.",
+      "trap_zh": "替三層圍阻的說法辯護，而不是說明自殺開關是依專家建議刻意捨棄的。"
+    },
+    {
+      "id": "BE-04",
+      "type": "boundary",
+      "q": "At what farm size does a farmer buying the device stop making financial sense?",
+      "q_zh": "農民自購裝置在多大的農場規模下就不再划算？",
+      "answer": "It never makes sense at our target scale. Deployment density is 10 units per hectare in clay up to 50 in sandy loam, so at NT$30,000 per unit the capital cost per hectare equals or exceeds one year of gross paddy revenue in every soil type and reaches roughly five times annual revenue in sandy loam. Since 99% of Taiwanese farmers work under 2 hectares, individual ownership is arithmetically out of reach for nearly the whole target sector, and a shared asset owned by a farmers' association (農會) is the only ownership structure the numbers permit. The Entrepreneurship page does not carry those per-hectare unit counts, which is a gap we should close.",
+      "answer_zh": "在我們的目標規模下從來都不划算。部署密度從黏土的每公頃 10 台到砂質壤土的 50 台，因此以每台 NT$30,000 計，各土壤類型下每公頃資本支出都等於或超過一年的稻作毛收入，砂質壤土更約達年收入的五倍。由於 99% 的台灣農民耕作面積低於 2 公頃，個人自購在整個目標族群中幾乎算不過來，由農會持有的共享資產是數字唯一容許的所有權結構。Entrepreneurship 頁並未載明這些每公頃台數，這是我們應該補上的缺口。",
+      "cite": ["geospatial-analysis/", "entrepreneurship/"]
+    },
+    {
+      "id": "BE-05",
+      "type": "alternative",
+      "q": "Why not just manufacture the protectant centrally and sell it in a bottle, like every existing biostimulant company?",
+      "q_zh": "為什麼不像現有的生物刺激素公司一樣，集中生產保護劑、裝瓶販售？",
+      "answer": "Three reasons. A centralized biological needs a cold chain, and the nearest measured analogue we found puts cold-chain infrastructure at 43% of logistics cost and transport at a further 34%, 77% together; our fertilizer routing model shows every kilogram still travels real roads to a farm averaging under 1.1 hectares. On-site production also lets the dose be adjusted within hours of a predicted stress event rather than committed at purchase. The trade is explicit on our own pages: every farm needs a machine and continuous power, and a direct effect-size comparison against conventional biostimulants is still outstanding, so a cheaper bottle may still be the rational choice for a cash-constrained farmer.",
+      "answer_zh": "有三個理由。集中生產的生物製劑需要冷鏈，我們找到最接近的實測類比顯示冷鏈基礎設施佔物流成本 43%、運輸再佔 34%，合計 77%；我們的肥料路徑模型也顯示每一公斤都得走真實道路，送到平均不足 1.1 公頃的農場。現地生產還能在預測到逆境事件後數小時內調整劑量，而不是在購買時就固定。這個取捨在我們自己的頁面上寫得很清楚：每個農場都需要一台機器與持續電力，而且與傳統生物刺激素的效果量直接比較仍未完成，因此對現金拮据的農民來說，較便宜的一瓶藥劑仍可能是理性選擇。",
+      "cite": ["biomanufacturing/", "geospatial-analysis/"]
+    },
+    {
+      "id": "BE-06",
+      "type": "fact",
+      "q": "Where did your price come from? Name the event and the companies you benchmarked against.",
+      "q_zh": "你們的價格從哪裡來的？請說出那個活動與你們對標的公司。",
+      "answer": "Taiwan SMART Agriweek. The page records that we finalized our own pricing based on the pricing we learned from other companies selling similar products, specifically BioBar and AgriWeather, and that the same conversation gave us the claim that government sectors are willing to subsidise products like ours. The competitor figure we print for sensing-only or production-only products reads 80,000 to 10,000 NTD, which is garbled and needs correcting. So the price is competitor-anchored from one exhibition visit, not derived from our own cost build-up.",
+      "answer_zh": "台灣智慧農業週（Taiwan SMART Agriweek）。頁面記載我們是依據從其他販售類似產品的公司所了解到的價格來定案自己的定價，具體是 BioBar 與 AgriWeather（阿龜微氣候），同一場對話也是「政府部門願意補助類似產品」這項說法的來源。我們印出的競品價格「80,000 到 10,000NTD」（只做感測或只做生產的產品）寫法有誤，需要更正。所以價格是從一次展會參訪對競品錨定而來，不是從我們自己的成本堆疊推導出來的。",
+      "cite": ["entrepreneurship/", "human-practices/"],
+      "trap": "Claiming the price came from the bill of materials; the BOM gives NT$30,480, not 60,000 or 135,297.",
+      "trap_zh": "聲稱價格來自物料清單；BOM 得到的是 NT$30,480，不是 60,000 或 135,297。"
+    },
+    {
+      "id": "BE-07",
+      "type": "weakness",
+      "q": "Has any farmer ever told you a number they would pay for this?",
+      "q_zh": "有任何一位農民曾經告訴你們願意為此付多少錢嗎？",
+      "answer": "No. Willingness to pay was never measured. Our farmer evidence is qualitative: farmers at the Taipei Expo market said they are not against technology as long as it is affordable, accessible and practical, and our forum surveys are Knowledge-Attitude-Practice instruments that measure willingness to consider or support technology, not willingness to pay a price. The forum response count per group is still listed as Pending on Human Practices, and there is no price-sensitivity study, letter of intent or pre-order anywhere on the wiki. The nearest thing to a pricing anchor is the farmer-facing rule on the page that adoption is most likely if one season of the service costs the same as the existing method, which is an assumption rather than a measurement.",
+      "answer_zh": "沒有。付費意願從未被量測。我們的農民證據是質性的：台北花博農夫市集的農民說只要可負擔、可取得、實用，他們不反對技術；而我們的論壇問卷是知識—態度—行為（KAP）量表，量的是願意考慮或支持技術，不是願意付多少錢。Human Practices 上各族群的論壇問卷回覆數目前仍標示為待補，整個維基也沒有任何價格敏感度研究、意向書或預訂。最接近定價錨點的是頁面上那條面向農民的原則：若一季的服務費用與現行做法相同，採用的可能性最高，但那是假設而非量測。",
+      "cite": ["entrepreneurship/", "human-practices/"],
+      "trap": "Citing the 80% farmer KAP score as evidence of willingness to pay; it measures willingness to consider the technology.",
+      "trap_zh": "拿農民 KAP 問卷的 80% 當作付費意願的證據；那量的是願意考慮該技術。"
+    },
+    {
+      "id": "BE-08",
+      "type": "boundary",
+      "q": "Can an organic farmer buy ReLeaf? Your serviceable obtainable market is 4.7 million organic farms.",
+      "q_zh": "有機農民可以買 ReLeaf 嗎？你們的可取得服務市場（SOM）寫的是 470 萬個有機農場。",
+      "answer": "No, and that is a mistake on the Entrepreneurship page. Taiwan's Organic Agriculture Promotion Act excludes any product of a genetically modified organism from certified organic production regardless of containment, so because ACC deaminase comes from an engineered strain ReLeaf is excluded from organic and friendly-environment farming, about 3.7% of cultivated land. Geospatial Analysis is explicit that the addressable market is conventional agriculture, roughly 96% of cultivated land, and our own stakeholder analysis says over 97% of farmers worldwide are conventional. Naming organic farms as the obtainable market contradicts both, and should be corrected to conventional smallholders.",
+      "answer_zh": "不行，而且這是 Entrepreneurship 頁上的錯誤。台灣《有機農業促進法》將任何基因改造生物的產物排除於認證有機生產之外，無論是否圍阻；由於 ACC 脫胺酶（ACC deaminase）來自工程化菌株，ReLeaf 因此被排除於有機與友善環境耕作之外，約佔耕地 3.7%。Geospatial Analysis 明確指出可觸及市場是慣行農業，約佔耕地 96%，我們自己的利害關係人分析也說全球超過 97% 的農民是慣行農民。把有機農場列為可取得市場與這兩者都矛盾，應更正為慣行小農。",
+      "cite": ["entrepreneurship/", "geospatial-analysis/"],
+      "trap": "Arguing that containment makes the product organic-compatible; the Act excludes GMO products regardless of containment.",
+      "trap_zh": "主張圍阻讓產品符合有機規範；該法不論是否圍阻都排除基改產物。"
+    },
+    {
+      "id": "BE-09",
+      "type": "decision",
+      "q": "Why register as a biostimulant or fertilizer rather than as a biopesticide?",
+      "q_zh": "為什麼要以生物刺激素或肥料登記，而不是以生物農藥登記？",
+      "answer": "Time and evidence burden. The Entrepreneurship page puts the fertilizer pathway at roughly 20 days for the specification report plus 7 days of government review, about 30 days total, against 3 to 5 years, multi-season field trials and GLP animal testing for a biopesticide. More fundamentally, Laws and Regulations concluded that our function is abiotic-stress tolerance, which maps onto the EU PFC 6(B) non-microbial plant biostimulant definition, so we keep commercial claims inside abiotic-stress resilience and avoid pesticidal claims. The limit is real: Taiwan's Pesticide Management Act Article 5 covers products that regulate crop growth or affect plant physiological functions, so classification is not ours to assert and must be confirmed with the Ministry of Agriculture.",
+      "answer_zh": "時間與舉證負擔。Entrepreneurship 頁把肥料途徑估為規格報告約 20 天加政府審查 7 天、合計約 30 天，而生物農藥則要 3 到 5 年、多季田間試驗與 GLP 動物試驗。更根本的是，Laws and Regulations 的結論是我們的功能屬於非生物逆境耐受性，對應歐盟 PFC 6(B) 非微生物植物生物刺激素的定義，所以我們把商業宣稱限制在非生物逆境韌性，避開農藥性宣稱。限制是真實存在的：台灣《農藥管理法》第 5 條涵蓋調節作物生長或影響植物生理機能的產品，因此分類不是我們自己說了算，必須向農業部確認。",
+      "cite": ["entrepreneurship/", "laws-and-regulations/"]
+    },
+    {
+      "id": "BE-10",
+      "type": "weakness",
+      "q": "Your Entrepreneurship page says you bypass the environmental-release framework by proving absolute containment to BAPHIQ and MOA. Does your own legal research support that?",
+      "q_zh": "你們的 Entrepreneurship 頁說只要向防檢署與農業部證明「絕對圍阻」就能繞過環境釋出的規範框架。你們自己的法規研究支持這個說法嗎？",
+      "answer": "Not as written. Laws and Regulations states that no directly applicable general Taiwan contained-use GMO rule for this exact scenario was identified in our review and that this must be confirmed with the authority, so there is no established pathway to bypass. The same page says we cannot assume BoPep4, AtLEA14 or ACCD qualify as fertilizers and that classification must be confirmed by MOA, while the approximately 30 days to market figure appears only on Entrepreneurship with no source. The two pages also disagree on first market: Entrepreneurship sequences Taiwan then the Philippines, Laws and Regulations prioritizes the EU. Entrepreneurship states a strategy as if it were a finding, and should be rewritten to match the legal page.",
+      "answer_zh": "就目前的寫法來說不支持。Laws and Regulations 指出，在我們的檢視中並未找到直接適用於此情境的台灣一般性「封閉使用」基改法規，且必須向主管機關確認，因此並不存在已確立的繞道途徑。同一頁也說不能假設 BoPep4、AtLEA14 或 ACCD 符合肥料資格，分類必須由農業部確認；而「約 30 天上市」這個數字只出現在 Entrepreneurship 頁且無出處。兩頁對首個市場也不一致：Entrepreneurship 排的是台灣再菲律賓，Laws and Regulations 則以歐盟優先。Entrepreneurship 把策略寫成了結論，應改寫以與法規頁一致。",
+      "cite": ["entrepreneurship/", "laws-and-regulations/"]
+    },
+    {
+      "id": "BE-11",
+      "type": "fact",
+      "q": "Name the three proteins your product sells, and say which of them you have made.",
+      "q_zh": "說出你們產品販售的三個蛋白，並說明哪些已經做出來了。",
+      "answer": "The project's three protectants are ACC deaminase, LEA14 and BoPep4. The Entrepreneurship page is out of date: it names LEA 14, ACCD and NaD1 as an antifungal, and NaD1 appears nowhere else on the wiki except Education. Only ACC deaminase has bench results; Biomanufacturing states that LEA14 and BoPep4 are designed, not yet made in quantity, and that no titre has been measured in the permeate. So the sellable product today is one protein, not three.",
+      "answer_zh": "本專案的三個保護劑是 ACC 脫胺酶（ACC deaminase）、LEA14 與 BoPep4。Entrepreneurship 頁已過時：它寫的是 LEA 14、ACCD 與作為抗真菌劑的 NaD1，而 NaD1 除了 Education 頁之外在整個維基都沒有出現。只有 ACC 脫胺酶有實驗數據；Biomanufacturing 指出 LEA14 與 BoPep4 只完成設計、尚未量產，且透過液（permeate）中從未測得效價（titre）。所以今天可販售的產品是一個蛋白，不是三個。",
+      "cite": ["entrepreneurship/", "biomanufacturing/", "protein-design/", "peptide-design/"],
+      "trap": "Defending NaD1 as a current component, or calling BoPep4 an antifungal; BoPep4 is a Brassica oleracea elicitor peptide studied for salinity tolerance.",
+      "trap_zh": "把 NaD1 當成現行成分辯護，或把 BoPep4 稱為抗真菌劑；BoPep4 是研究用於耐鹽性的甘藍（Brassica oleracea）誘導子胜肽。"
+    },
+    {
+      "id": "BE-12",
+      "type": "alternative",
+      "q": "Why build a company at all, instead of licensing the biology to CH Biotech or one of the four majors you list?",
+      "q_zh": "為什麼要自己創一家公司，而不是把生物技術授權給正瀚生技或你們列出的四大巨頭之一？",
+      "answer": "Because the defensible part is the integration, not the molecules. Our barriers-to-entry section argues that a competitor would have to reproduce the engineered B. subtilis, the stress-responsive control, the protectant production and membrane separation working as one system, not one component; the molecules themselves are literature-derived. Licensing is in the plan, but only later: lab sales in the first quarter of the marketing year, licensing in the third, and a transition from direct sales to licensing in year 3 to 4. We have not negotiated with anyone. The CH Biotech conversations covered regulation, delivery and cost, not partnership terms, and no term sheet or licensing discussion is recorded.",
+      "answer_zh": "因為可防禦的部分是整合，而不是分子本身。我們的進入障礙章節主張競爭者必須重現工程化枯草桿菌（B. subtilis）、逆境感應控制、保護劑生產與膜分離作為一個系統運作，而不只是其中一個元件；分子本身來自文獻。授權確實在計畫中，但排在後面：行銷年度第一季先做實驗室銷售、第三季取得授權，第 3 到 4 年再從直接銷售轉向技術授權。我們並未與任何人談過。與正瀚生技的對話涵蓋法規、施用與成本，不涉及合作條件，也沒有任何條件書或授權洽談的紀錄。",
+      "cite": ["entrepreneurship/", "human-practices/"]
+    },
+    {
+      "id": "BE-13",
+      "type": "boundary",
+      "q": "Over what range does your payback case hold, and where does it break?",
+      "q_zh": "你們的回收期論證在什麼範圍內成立，又在哪裡失效？",
+      "answer": "It holds on interior-plain soils and breaks exactly where the need is greatest. At NT$30,000 per unit, clay needs 10 units per hectare and breaks even in about 4.6 years under moderate salinity; loam, Inceptisol and Alfisol recover in roughly 7 to 10 years; sandy loam needs 50 units per hectare and takes 23.0 years. Sandy loam is also the coastal, most salt-exposed class, so the land that most needs protection is the slowest to pay for it. Every figure assumes one crop per year, and double-cropping roughly halves each payback. The bounding caveat is on the same page: the soil classes are a heuristic, so until the TARI soil survey replaces them everything priced from them is illustrative.",
+      "answer_zh": "它在內陸平原土壤上成立，而恰好在最需要的地方失效。以每台 NT$30,000 計，黏土每公頃需 10 台，中度鹽逆境下約 4.6 年回本；壤土、新成土（Inceptisol）與淋溶土（Alfisol）約 7 到 10 年；砂質壤土每公頃需 50 台，要 23.0 年。砂質壤土同時是沿海、鹽害最嚴重的土類，所以最需要保護的土地回收最慢。所有數字都假設一年一作，雙期作會使回收期大致減半。界限警語就在同一頁：土壤分類是啟發式推估，在農業試驗所（TARI）土壤調查取代之前，據此定價的一切都只是示意性的。",
+      "cite": ["geospatial-analysis/"]
+    },
+    {
+      "id": "BE-14",
+      "type": "weakness",
+      "q": "Your canvas lists a growing patent portfolio and freedom-to-operate verification. What have you actually filed or searched?",
+      "q_zh": "你們的商業模式圖列出「成長中的專利組合」與自由實施（FTO）查核。實際上你們申請或檢索了什麼？",
+      "answer": "Nothing yet. Freedom to operate and IP protection appear on the social business model canvas as key activities and a growing patent portfolio as a key resource, but no prior-art search, no FTO opinion and no filing is documented anywhere on the wiki. We should also say what is unlikely to be patentable: BoPep4 is a natural Brassica oleracea peptide rather than a de novo design, and the CcaS/CcaR optogenetic system is published literature, so the realistic subject matter is the hardware integration and the control logic. Treating the portfolio as existing rather than planned is an overstatement we need to fix.",
+      "answer_zh": "目前還沒有。自由實施（FTO）與智財保護在社會企業商業模式圖中列為關鍵活動，「成長中的專利組合」列為關鍵資源，但整個維基沒有任何先前技術檢索、FTO 意見或申請紀錄。我們也該說清楚哪些大概不能申請：BoPep4 是天然的甘藍（Brassica oleracea）胜肽，不是全新設計；CcaS/CcaR 光遺傳系統是已發表文獻。因此現實上可申請的標的是硬體整合與控制邏輯。把尚在規劃的組合寫成已存在，是我們需要修正的誇大。",
+      "cite": ["entrepreneurship/", "peptide-design/", "parts/"]
+    },
+    {
+      "id": "BE-15",
+      "type": "fact",
+      "q": "Walk me through your financial projection: fixed cost, variable cost, and your break-even point.",
+      "q_zh": "請說明你們的財務預估：固定成本、變動成本，以及損益兩平點。",
+      "answer": "Annual fixed cost is US$89,097: machine costs of US$55,467 for a quantity of 25, plus one labor cost of US$33,570. Variable cost is US$201.55 for one batch or reaction of experimental materials, with packaging at US$0.50 per screw vial and US$0.25 additional, not included in that total. The break-even point is not calculated, because the plan has not fixed a selling price. We should also admit two problems a judge will spot: the formula on the page uses 89,037 rather than the 89,097 in the table, and the unit in the variable cost is a reagent batch while the unit in the fixed cost is a machine, so the two sides of the break-even equation are not the same unit.",
+      "answer_zh": "年固定成本為 89,097 美元：機器成本 55,467 美元（數量 25）加上一筆人力成本 33,570 美元。變動成本為實驗材料每批次或每反應 201.55 美元，包材另計為螺旋瓶每個 0.5 美元、額外包材 0.25 美元，未納入該總額。損益兩平點並未計算，因為計畫尚未確定售價。我們也該承認評審會看到的兩個問題：頁面公式用的是 89,037 而非表中的 89,097；而且變動成本的「單位」是試劑批次、固定成本的「單位」是機器，損益兩平式兩邊的單位並不相同。",
+      "cite": ["entrepreneurship/"],
+      "trap": "Quoting a break-even number; the page deliberately does not compute one.",
+      "trap_zh": "報出一個損益兩平數字；該頁刻意沒有計算。"
+    },
+    {
+      "id": "BE-16",
+      "type": "decision",
+      "q": "Why target conventional smallholders first rather than industrial farms or indoor vertical growers like Yes Health iFarm?",
+      "q_zh": "為什麼先鎖定慣行小農，而不是工業化農場或像源鮮智慧農場（Yes Health iFarm）這樣的室內垂直農場？",
+      "answer": "Because that is where the problem and the volume are. In Taiwan 99.15% of farms are under 2 hectares yet work 86.18% of the farmed land, over 97% of farmers worldwide are conventional, and smallholders supply more than 80% of domestic fresh vegetables and fruit. Industrial farms are not dropped: in the social enterprise model they are a payer segment whose purchases and the data they generate cross-subsidise smallholder access, and we treat them as massive market validation. Yes Health iFarm was a learning visit on controlled hydroponics, not a target customer. Smart Agriweek told us the first adopters will be young farmers, and that older farmers are the harder half of this segment.",
+      "answer_zh": "因為問題與量體都在那裡。台灣有 99.15% 的農場面積低於 2 公頃，卻耕作了 86.18% 的農地；全球超過 97% 的農民是慣行農民；小農供應了國內超過 80% 的生鮮蔬果。工業化農場並未被放棄：在社會企業模式中，它們是付費方，其採購與產生的資料用以交叉補貼小農的取得，我們也把它們視為重要的市場驗證。源鮮智慧農場是關於控制型水耕的學習參訪，不是目標客戶。智慧農業週告訴我們最早採用者會是青農，而年長農民是這個族群中較難的一半。",
+      "cite": ["entrepreneurship/", "geospatial-analysis/", "human-practices/"]
+    },
+    {
+      "id": "BE-17",
+      "type": "weakness",
+      "q": "You say your customer is the conventional smallholder. Every farmer you interviewed seems to be organic or natural. How is that validation?",
+      "q_zh": "你們說客戶是慣行小農，但你們訪談的每一位農民似乎都是有機或自然農法。這算什麼驗證？",
+      "answer": "That is a fair hit. The Farmer Expo interviews were with organic smallholders, Ms. Chen practices natural farming, Mr. Chen's Lanyang River cooperative works without pesticides or chemical fertilizer, and the forum was at the Water Garden Organic Farmers' Market, while the segment legally able to buy ReLeaf is conventional agriculture, about 96% of Taiwan's cultivated land. The pages also never state how many farmers were interviewed. What that sample did give us is real: it pushed us to add biotic stress, produced Ms. Chen's dependency objection, and produced the Nantou finding that organic-transition farmers will not risk an input of uncertain certification status. A dedicated conventional-grower sample is work we have not done.",
+      "answer_zh": "這是個合理的質疑。農夫市集的訪談對象是有機小農，陳女士採自然農法，蘭陽溪合作社的陳先生完全不用農藥與化肥，論壇也辦在水花園有機農夫市集；而法律上能購買 ReLeaf 的族群是慣行農業，約佔台灣耕地 96%。頁面也從未寫出訪談了多少位農民。那個樣本確實給了我們真東西：它促使我們加入生物性逆境、產生了陳女士的「依賴性」質疑，也得到南投的發現——正在轉型有機的農民不願冒險使用認證狀態不明的投入品。針對慣行農民的專門樣本，是我們還沒做的工作。",
+      "cite": ["human-practices/", "geospatial-analysis/", "entrepreneurship/"]
+    },
+    {
+      "id": "BE-18",
+      "type": "alternative",
+      "q": "Your headline product is a device a farmer buys. Why not lead with rental or cooperative ownership instead?",
+      "q_zh": "你們的主打產品是農民購買的裝置。為什麼不一開始就以租賃或合作社共有為主？",
+      "answer": "On our own evidence we probably should. Geospatial Analysis concludes that a shared asset through farmers' associations (農會) is not a preference but the only ownership structure the numbers permit, and the number that matters to an individual farmer is cost per hectare per season from an association-owned unit, not capital cost. On Entrepreneurship, rental, cooperative purchasing, NGO bulk purchase and cartridge subscription appear only as mitigations if production cost exceeds farmer budget, and SDG 10 on Sustainability describes renting through unions. The free trial period and the low-cost base unit with seasonal cartridges point the same way. Promoting the shared model from a fallback to the primary model is the correction this section needs.",
+      "answer_zh": "依我們自己的證據，大概應該這樣做。Geospatial Analysis 的結論是：透過農會的共享資產不是偏好，而是數字唯一容許的所有權結構；對個別農民而言重要的數字是向農會所有的機台支付的每公頃每季成本，而非資本支出。在 Entrepreneurship 頁，租賃、合作社共購、NGO 大量採購與匣式訂閱只出現在「生產成本超出農民預算」的風險緩解措施中，而 Sustainability 的 SDG 10 也提到透過產銷班租用。免費試用期與「低價基座加季節性匣」的設計都指向同一方向。把共享模式從備案升為主案，正是這一節需要的修正。",
+      "cite": ["geospatial-analysis/", "entrepreneurship/", "sustainability/"]
+    },
+    {
+      "id": "BE-19",
+      "type": "boundary",
+      "q": "Your vision is every farmer a biomanufacturer. What part of that product exists today?",
+      "q_zh": "你們的願景是「讓每位農民都成為生物製造者」。這個產品今天有哪一部分真的存在？",
+      "answer": "A perfusion loop that held four days. The longest run is 102.4 h, OD600 0.8 to 3.8 with a growth model R squared of 0.991, crossflow about 371 mL/min and transmembrane pressure within about plus or minus 0.1 bar, all measured in one run. What does not exist: no titre has been measured in the permeate, so there is no release figure and no yield; the estimate that one reactor covers roughly a 30 m diameter has no measured titre behind it and is not a specification; the swappable biological cartridge is an intention with no prototype; and no experiment on this wiki shows PcpcG2 output changing with green light, so every ACC deaminase result was produced with a constitutive cassette. The hardware is real, the on-demand product claim is not yet evidenced.",
+      "answer_zh": "一個撐了四天的灌流迴路。最長連續運轉為 102.4 小時，OD600 由 0.8 到 3.8，生長模型 R² 為 0.991，跨膜流量約 371 mL/min，跨膜壓差約在 ±0.1 bar 內，全部出自同一次運轉。不存在的部分：透過液中未測得效價，所以沒有釋出量也沒有產率；「一台反應器可覆蓋約 30 公尺直徑」的估計沒有實測效價支撐，也不是規格；可更換生物匣只是構想，沒有原型；而且本維基沒有任何實驗顯示 PcpcG2 的輸出隨綠光改變，所有 ACC 脫胺酶結果都是用組成型（constitutive）表現匣做出來的。硬體是真的，但「依需求生產」這個產品宣稱還沒有證據。",
+      "cite": ["biomanufacturing/", "results/", "hardware/bioreactor/"],
+      "trap": "Describing the 102.4 h run as a production run; no product was measured leaving the membrane.",
+      "trap_zh": "把 102.4 小時那次運轉描述成生產運轉；沒有量到任何產物離開膜。"
+    },
+    {
+      "id": "BE-20",
+      "type": "fact",
+      "q": "Give me the unit numbers in your four-year plan, and who verifies containment for the regulator.",
+      "q_zh": "請給出你們四年計畫中的機台數字，以及由誰為主管機關驗證圍阻。",
+      "answer": "Year 1 is lab-scale proof of concept to the Jamboree. Year 2 deploys 20 to 50 prototype devices reaching 20 to 70 farmers, targeting 20 to 30% fewer applications per season. Year 3 deploys 150 to 400 units and opens the Philippines. Year 4 deploys 500 to 1500 units across two to three countries, split into Bundle A, hardware pre-packed with our cartridges, and Bundle B, hardware with a software API and universal media so partners can culture their own native strains. Containment verification is to be done with government-recognized testing units, Taiwan Agricultural Research Institute (TARI) and the Tainan District Agricultural Research and Extension Station.",
+      "answer_zh": "第 1 年是到 Jamboree 的實驗室規模概念驗證。第 2 年部署 20 至 50 台原型、觸及 20 至 70 位農民，目標是每季施用次數減少 20 至 30%。第 3 年部署 150 至 400 台並開拓菲律賓。第 4 年在 2 至 3 個國家部署 500 至 1500 台，分為 A 組合（硬體預裝我們的生物匣）與 B 組合（硬體加軟體 API 與通用培養基，讓合作夥伴培養自己的本地菌株）。圍阻驗證將與政府認可的檢測單位合作，即農業試驗所（TARI）與台南區農業改良場。",
+      "cite": ["entrepreneurship/"]
+    },
+    {
+      "id": "BE-21",
+      "type": "decision",
+      "q": "Why the Philippines and Vietnam as your first export markets, and what evidence sits behind that choice?",
+      "q_zh": "為什麼把菲律賓與越南選為首批出口市場？這個選擇背後有什麼證據？",
+      "answer": "The trigger was one conversation. At the BIO-Asia Taiwan exhibition on 18 July 2026 a vendor suggested we look at Southeast Asia because several countries have large agricultural sectors and looser rules than the US or EU, and we then researched those regulations. The Philippines was chosen for its mature GMO framework and an active Fertilizer and Pesticide Authority registration and licensed-handler system, with IRRI and state universities as pilot partners; Vietnam for its large vegetable industry, intensive chemical use in areas like Da Lat, and a national mandate to cut pesticide residues. We should be straight that the desk research on the Laws page is the substance and the vendor conversation was only the prompt.",
+      "answer_zh": "起因是一次對話。2026 年 7 月 18 日在台灣生技月（BIO-Asia Taiwan）展會上，一位廠商建議我們看東南亞，因為當地多國農業部門龐大、法規較美國或歐盟寬鬆，我們隨後研究了那些法規。選擇菲律賓是因為其基改框架成熟，且有運作中的肥料與農藥管理局（FPA）登記與許可經銷制度，並以國際稻米研究所（IRRI）與州立大學為試點夥伴；選擇越南是因為蔬菜產業龐大、如大叻（Da Lat）等地化學品使用密集，且有全國性削減農藥殘留的政策目標。我們應該坦白說：實質內容是法規頁上的案頭研究，廠商對話只是起點。",
+      "cite": ["entrepreneurship/", "laws-and-regulations/", "human-practices/"],
+      "trap": "Presenting the vendor tip as market research; it was a single conversation at one exhibition.",
+      "trap_zh": "把廠商的建議當成市場研究；那只是一場展會中的一次對話。"
+    },
+    {
+      "id": "BE-22",
+      "type": "weakness",
+      "q": "Which country do you enter after Taiwan? I count several different answers on your wiki.",
+      "q_zh": "台灣之後你們進入哪個國家？我在你們的維基上看到好幾個不同答案。",
+      "answer": "You are right, and we should fix it to one sequence. The stakeholder entry says we decided to expand to the Philippines and Indonesia after Taiwan; the distribution section lists the USA, EU, Philippines and Vietnam as looser markets, in a sentence that then contrasts them with Europe and Japan, which is self-contradictory since the EU is in the list; the development plan runs Taiwan, Philippines in year 3, Vietnam second; the conclusion runs Taiwan and Philippines, then Vietnam and the US, then Brazil and Ghana; and Laws and Regulations prioritizes the EU as the first international commercialization market. The development plan and the Laws page are the two we trust; the others are stale drafts.",
+      "answer_zh": "您說得對，我們應該統一成一條路線。利害關係人條目說台灣之後決定拓展到菲律賓與印尼；通路章節把美國、歐盟、菲律賓、越南列為法規較寬鬆的市場，卻在同一句把它們和「歐洲或日本」對比，而歐盟就在清單裡，自相矛盾；產品發展計畫是台灣、第 3 年菲律賓、越南次之；結論是台灣與菲律賓、再越南與美國、再巴西與迦納；Laws and Regulations 則以歐盟為首個國際商業化市場。我們信任的是產品發展計畫與法規頁，其餘是過期草稿。",
+      "cite": ["entrepreneurship/", "laws-and-regulations/"]
+    },
+    {
+      "id": "BE-23",
+      "type": "boundary",
+      "q": "Which of your sustainability claims is measured, and which is only asserted?",
+      "q_zh": "你們的永續宣稱中，哪一項是有量測的，哪一項只是主張？",
+      "answer": "Only SDG 4 has numbers, and they are the pre and post surveys from four school visits plus the forum and booth KAP results on Education. SDG 2, 10 and 15 are stated as what the project would do, not as something measured: the Sustainability page says so itself in the award-question list. We also have a live inconsistency to correct, since Sustainability explicitly rejects SDG 13 as not significant enough for us to claim while Entrepreneurship's value proposition claims alignment with SDGs 2, 8, 11, 12, 13 and 15. And the carbon case is genuinely open: on-site production removes supply-chain emissions but adds operational electricity and embodied hardware, so decentralization is not automatically lower-carbon.",
+      "answer_zh": "只有 SDG 4 有數字，就是四場校園參訪的前後測問卷，加上 Education 頁的論壇與攤位 KAP 結果。SDG 2、10、15 是以「本專案將會做什麼」陳述，而非量測結果；Sustainability 頁在獎項問題清單中自己就這麼寫。我們還有一處需要更正的不一致：Sustainability 明確排除 SDG 13，認為影響不足以宣稱，而 Entrepreneurship 的價值主張卻宣稱符合 SDG 2、8、11、12、13 與 15。碳足跡則確實仍未定論：現地生產省去供應鏈排放，但加入了運轉電力與硬體隱含碳，分散式生產並不自動等於低碳。",
+      "cite": ["sustainability/", "entrepreneurship/", "geospatial-analysis/", "education/"],
+      "trap": "Claiming the Arabidopsis result measures SDG 2; it is evidence of plant rescue, not of food production or farmer income.",
+      "trap_zh": "聲稱阿拉伯芥（Arabidopsis）結果量測了 SDG 2；那是植物挽救的證據，不是糧食產量或農民收入的證據。"
+    },
+    {
+      "id": "BE-24",
+      "type": "alternative",
+      "q": "You name data sales as a secondary revenue stream. Who buys it, for how much, and on whose consent?",
+      "q_zh": "你們把資料販售列為第二收入來源。誰會買、賣多少錢、經誰同意？",
+      "answer": "We cannot answer the second and third parts. The idea came from Professor Chen 陳文亮, who suggested the ReLeaf database as a platform for organizing experimental data and supporting future optimization, and we recorded that he gave us the idea of selling our data. The plan then says year 3 collects real-time environmental data as a secondary revenue stream, used internally to optimize the product and sold externally for market research and crop-yield improvement, and Sustainability's SDG 10 counts data revenue as part of what subsidises smallholders. No buyer, no price, no data-sharing agreement and no farmer consent mechanism is documented. For farm-level data on identifiable holdings that is a gap we should not be relying on for cross-subsidy.",
+      "answer_zh": "第二與第三部分我們答不出來。這個想法來自陳文亮教授，他建議把 ReLeaf 資料庫作為整理實驗資料、支援未來優化的平台，我們也記錄下「賣資料」的點子來自他。計畫接著說第 3 年蒐集即時環境資料作為第二收入來源，內部用於優化產品，外部則售予市場研究與作物產量改善用途；Sustainability 的 SDG 10 也把資料收入算進補貼小農的來源。但沒有買方、沒有價格、沒有資料共享協議、也沒有農民同意機制的紀錄。對於可識別農地的農場級資料來說，這是個缺口，我們不該把交叉補貼建立在上面。",
+      "cite": ["entrepreneurship/", "human-practices/", "sustainability/"]
+    },
+    {
+      "id": "BE-25",
+      "type": "weakness",
+      "q": "What is still missing from your business plan as published, and who would you have to hire to run this company?",
+      "q_zh": "你們已發布的商業計畫還缺什麼？要經營這家公司，你們必須聘用誰？",
+      "answer": "The page declares four gaps and we should name them rather than talk around them. The PESTEL analysis is not written yet; the World Vegetable Centre entry has no What we changed line; the roles the company would have to recruit are not named on the page, only the expertise in the Key resources panel; and the full business plan sections the page quotes, 1.1, 7.1 and 7.2, are not published on the wiki, so a judge cannot check the numbers we cite from them. We also have smaller errors to clear: the membrane is 0.2 micrometre, not 0.22, and it has no molecular-weight cutoff, so the risk table's miscalibrated cutoff row does not describe our hardware.",
+      "answer_zh": "該頁自己宣告了四個缺口，我們應該直接點名而不是繞過去。PESTEL 分析尚未撰寫；世界蔬菜中心（World Vegetable Centre）條目沒有「我們改了什麼」那一行；公司需要招募的職位並未列於該頁，只有關鍵資源欄中的專業領域；而該頁引用的完整商業計畫第 1.1、7.1、7.2 節並未發布在維基上，所以評審無法核對我們引自其中的數字。還有幾個較小的錯誤要清理：膜孔徑是 0.2 微米而非 0.22，而且它沒有分子量截留值（MWCO），所以風險表中「截留值校準錯誤」那一列並不符合我們的硬體。",
+      "cite": ["entrepreneurship/", "hardware/bioreactor/", "biomanufacturing/"]
+    },
+    {
+      "id": "BE-26",
+      "type": "fact",
+      "q": "How do you scale manufacturing, and what is the unresolved process problem that scaling inherits?",
+      "q_zh": "你們如何擴大生產規模？規模化會繼承哪個尚未解決的製程問題？",
+      "answer": "We scale out, not up. The advice we took was that heat transfer behaves differently in large vessels and B. subtilis favours higher temperatures for faster growth, which gets harder to control as the vessel grows, so the unit stays at about 400 mL working volume and we add units instead. What that inherits is unit count, answered on paper by a swappable biological cartridge so a farm never opens a culture, and by a shift from localized assembly to global contract manufacturing in year 4. The unresolved process problem is foaming, which can damage the hollow fibre: Professor Chang proposed a defoamer or a surfactant-deficient strain, and we built neither. Biofouling inside the chambers is listed in our own SWOT weaknesses for the same reason.",
+      "answer_zh": "我們是橫向擴展（scale out），不是放大槽體（scale up）。我們採納的建議是：大槽體的熱傳行為不同，而枯草桿菌（B. subtilis）偏好較高溫以加快生長，槽體越大越難控溫，所以單機維持在約 400 mL 工作體積，改以增加台數應對。這樣繼承下來的問題是台數，紙上的答案是可更換生物匣（農場永遠不必打開培養液），以及第 4 年從本地組裝轉為全球委外製造。未解決的製程問題是起泡，它可能損傷中空纖維：張教授建議使用消泡劑或建構缺乏表面活性劑的菌株，兩者我們都沒有做。我們自己的 SWOT 弱項中列出的反應室內生物膜積垢（biofouling）也是同一個原因。",
+      "cite": ["biomanufacturing/", "hardware/bioreactor/", "entrepreneurship/"],
+      "trap": "Saying the cartridge solves unit count; the cartridge is an intention with no prototype built.",
+      "trap_zh": "說生物匣解決了台數問題；生物匣只是構想，沒有做出原型。"
+    }
+  ]
+}

@@ -1,0 +1,270 @@
+{
+  "slug": "biomanufacturing",
+  "title": "Biomanufacturing",
+  "title_zh": "生物製造",
+  "blurb": "The on-farm production case: why a perfusion hollow-fibre loop replaces a fermenter plus a downstream train, what the process has actually been measured to do, and where the product numbers a village judge will ask for do not yet exist.",
+  "blurb_zh": "農場端生產的主張：為何以灌流中空纖維迴路 (perfusion hollow-fiber loop) 取代發酵槽加下游純化流程、這個製程實際量到了什麼，以及生物製造村評審會追問的產物數據目前還缺哪些。",
+  "questions": [
+    {
+      "id": "BM-01",
+      "type": "fact",
+      "q": "What is the longest uninterrupted reactor run, and exactly what was recorded during it?",
+      "q_zh": "反應器最長的一次不中斷運轉是多久？這次運轉實際記錄了哪些數據？",
+      "answer": "102.4 hours without interruption. OD600 rose from about 0.8 to 3.8, crossflow was held near 371 mL/min, and transmembrane pressure stayed inside a band of about ±0.1 bar; the perfusion growth model fits the whole series at R² = 0.991 with RMSE 0.087 OD. It is one run, and it is the only place on the wiki where growth, flow and pressure are recorded together as a continuous series. What it demonstrates is that the loop holds its hydraulics unattended for four days, not that it made product.",
+      "answer_zh": "102.4 小時不中斷。OD600 由約 0.8 升到 3.8，跨膜流量 (crossflow) 維持在約 371 mL/min，跨膜壓差 (transmembrane pressure) 整段維持在約 ±0.1 bar 內；灌流生長模型對整條曲線的擬合為 R² = 0.991、RMSE 0.087 OD。這只有一次運轉，也是全站唯一把生長、流量、壓力同時記錄成連續序列的資料。它證明的是迴路能無人看管地維持四天的流體條件，而不是證明做出了產物。",
+      "cite": ["results/", "biomanufacturing/"],
+      "trap": "Calling it a production run, or implying the 102.4 h run shows protectant release.",
+      "trap_zh": "把它說成一次生產運轉，或暗示 102.4 小時的運轉已證明保護劑釋放。"
+    },
+    {
+      "id": "BM-02",
+      "type": "decision",
+      "q": "Why a perfusion hollow-fibre loop instead of a batch fermenter followed by a downstream purification train?",
+      "q_zh": "為什麼採用灌流中空纖維迴路，而不是批次發酵槽加上下游純化流程？",
+      "answer": "One cartridge performs two unit operations at once: cells stay on the lumen side and the protein crosses to the shell side, so retention and recovery are the same step and the process has no downstream train at all. Medium is exchanged while the culture runs, so density is sustained rather than peaked and harvested, and the product leaves as a continuous stream. The same choice is what makes containment the unit operation rather than a safeguard bolted around one, which is the argument that lets the cell-free permeate be treated as a separate regulatory object from the GMO culture.",
+      "answer_zh": "一個濾心同時完成兩個單元操作：細胞留在管內側 (lumen)，蛋白穿過膜到外殼側 (shell)，因此菌體截留與產物回收是同一個步驟，整個製程完全沒有下游純化流程。培養進行中持續換液，菌體密度維持在高位而不是長到峰值後收槽，產物以連續流出的形式離開。同一個選擇也讓圍阻 (containment) 本身成為單元操作，而不是加掛在外的防護，這正是讓無細胞透液 (cell-free permeate) 能與基改菌培養分開視為不同法規對象的論據。",
+      "cite": ["biomanufacturing/", "hardware/bioreactor/", "laws-and-regulations/"]
+    },
+    {
+      "id": "BM-03",
+      "type": "weakness",
+      "q": "Give me a titre: how many milligrams of ACC deaminase per litre does this process make, and from which run?",
+      "q_zh": "請給我一個效價 (titre)：這個製程每公升可以產出多少毫克的 ACC 去胺酶 (ACC deaminase)，資料來自哪一次運轉？",
+      "answer": "We do not have one, and the wiki says so. There is no protein concentration anywhere in the project record: no Bradford curve, no A280, no milligrams per litre of culture, and therefore no recovery figure for any purification step. The 5.4 mg/L that appears in the model is a conservative placeholder for heterologous secreted protein in B. subtilis, explicitly labelled as assumed and pending wet-lab data, and every downstream figure built on it inherits that. The cheapest fix is a Bradford assay on every fraction before the gel, which the measurement page says would take an afternoon.",
+      "answer_zh": "我們沒有，維基上也直接這麼寫。整個專案紀錄中找不到任何蛋白質濃度：沒有 Bradford 標準曲線、沒有 A280、沒有每公升培養液的毫克數，因此任何純化步驟也沒有回收率。模型裡出現的 5.4 mg/L 是枯草桿菌 (B. subtilis) 異源分泌蛋白的保守佔位值，文中明確標示為假設值、待濕實驗資料補上，所有由它推導出的下游數字都帶著這個性質。最便宜的補救是跑膠前對每個分液做 Bradford，量測頁說這只需一個下午。",
+      "cite": ["measurement/", "model/", "results/"],
+      "trap": "Quoting 5.4 mg/L, or the 50 mg/L Cshell used in the spray model, as if either were measured in-house.",
+      "trap_zh": "把 5.4 mg/L 或噴施模型用的 Cshell 50 mg/L 當成自己量到的數字引用。"
+    },
+    {
+      "id": "BM-04",
+      "type": "boundary",
+      "q": "State the operating conditions the reactor growth result actually holds at. Where does it stop holding?",
+      "q_zh": "請說明反應器生長結果實際成立的操作條件。超出哪些條件就不再成立？",
+      "answer": "The growth result is 300 mL of LB in a 500 mL reservoir, a 20 mL overnight inoculum, 94 mL/min circulation, a 200 rpm magnetic stirrer and 37 °C, which is version 2 on 14 June; it reached OD600 0.8 to 0.9 in about two hours against a shake flask at 0.6 to 0.8 in about four and a half. Outside that it fails: version 1 at 22 °C with no stirring did not grow at all, a regression on its lumen series giving a slope of −0.0024 OD/h at p = 0.759 while a control at the same temperature did grow. It is also strain 168, not the WB800N production strain, and the two have never been compared. Oxygen starvation, shear and wall adhesion are all still live explanations for the 22 °C failure and none has been eliminated.",
+      "answer_zh": "該生長結果的條件是 500 mL 培養瓶中 300 mL LB、20 mL 隔夜菌液接種、94 mL/min 循環、200 rpm 磁石攪拌、37 °C，也就是 6 月 14 日的第二版；約兩小時達到 OD600 0.8 至 0.9，而搖瓶約四個半小時才到 0.6 至 0.8。超出這些條件就不成立：第一版在 22 °C 且無攪拌時完全不生長，管內側數列回歸的斜率為 −0.0024 OD/h、p = 0.759，而同溫度的對照組有生長。此外用的是 168 菌株，不是生產菌株 WB800N，兩者從未比較過。22 °C 失敗的可能原因包含缺氧、剪應力與貼附纖維壁，都還沒被排除。",
+      "cite": ["results/", "hardware/bioreactor/", "development/"],
+      "trap": "Presenting \"the reactor beats a shake flask\" as a general claim; stirring, sampling point and temperature all changed between cycles, so the comparison is confounded and it is one run each.",
+      "trap_zh": "把「反應器勝過搖瓶」講成普遍結論；兩個週期之間攪拌、取樣點、溫度全都變了，比較本身混淆，而且各只有一次運轉。"
+    },
+    {
+      "id": "BM-05",
+      "type": "fact",
+      "q": "How is the protein in the permeate detected, and what does that measurement entitle you to say?",
+      "q_zh": "透液中的蛋白質是怎麼被偵測的？這個量測讓你們能主張到什麼程度？",
+      "answer": "The reactor was run on the constitutive ACCD cassette (module J) and sampled at 14, 16, 18, 20, 22, 24, 40, 42 and 44 h in three fractions, lumen cell lysate, lumen medium and shell medium, then blotted with a mouse anti-His primary antibody. A Western blot with no loading quantity and no purified standard can only report presence or absence with a mass to about a kilodalton, which is what the measurement page says this blot is entitled to. It does not give a concentration, and this particular blot does not even settle presence: our own drafts read it two opposite ways, which is open fix R3.",
+      "answer_zh": "反應器以組成型 ACCD 卡匣 (module J) 運轉，在 14、16、18、20、22、24、40、42、44 小時取樣，分管內細胞裂解液、管內培養液、外殼側培養液三個分液，以小鼠 anti-His 一級抗體做西方墨點法 (Western blot)。沒有上樣定量、也沒有純化標準品的墨點，只能報告有或沒有，以及約到千道爾頓的分子量，量測頁就是這樣界定它的權限。它給不出濃度，而且這張墨點連「有沒有」都還沒定案：我們自己的兩份草稿讀出相反結論，就是待修項目 R3。",
+      "cite": ["results/", "measurement/", "hardware/bioreactor/"],
+      "trap": "Saying the anti-His time course quantified release; it is a presence/absence blot whose reading is disputed in our own files.",
+      "trap_zh": "說 anti-His 時間序列已量化釋放量；那只是有無判讀的墨點，而且我們自己的檔案對它的判讀相互矛盾。"
+    },
+    {
+      "id": "BM-06",
+      "type": "alternative",
+      "q": "Why light as the production trigger rather than a chemical inducer such as IPTG?",
+      "q_zh": "為什麼用光而不是像 IPTG 這類化學誘導劑作為生產開關？",
+      "answer": "For a process, light is an actuator with no mass. A chemical inducer has to be bought, stored, metered into a sterile vessel and then accounted for in the product stream, and it is a running cost that scales with every batch; light adds no line into the loop, leaves no residue in the permeate, and can be re-dosed from software without anyone opening the vessel. That is what lets a forecast drive production at all, because the command path ends at an LED rather than at a pump full of inducer. The cost of the choice is that we owe a light dose-response and do not have one: no experiment in this project shows PcpcG2 output changing with green light.",
+      "answer_zh": "對製程而言，光是沒有質量的致動器。化學誘導劑要採購、儲存、計量加進無菌槽，還要在產物流中被追蹤，而且是隨每一批次累加的經常性成本；光不會在迴路上多一條管線、不在透液中留下殘留，也能由軟體重新給劑而不必有人打開槽體。這正是預測模型能驅動生產的前提，因為命令路徑終點是一顆 LED，而不是一台裝滿誘導劑的泵。代價是我們必須提出光的劑量反應曲線而目前沒有：本專案沒有任何實驗顯示 PcpcG2 的輸出隨綠光改變。",
+      "cite": ["biomanufacturing/", "results/"],
+      "trap": "Defending light on cost grounds and then forgetting that the induction curve is missing; green light also carries no measured growth penalty, which is a separate result from induction.",
+      "trap_zh": "用成本論證光的優勢，卻忘了誘導曲線還缺；綠光沒有可測到的生長負擔是另一項結果，不等於誘導已被證明。"
+    },
+    {
+      "id": "BM-07",
+      "type": "weakness",
+      "q": "Your Development page lists \"Anti-His ELISA\" as the evidence for five of the Produce and Deliver criteria. Show me the ELISA.",
+      "q_zh": "你們的 Development 頁把「Anti-His ELISA」列為生產與輸送階段五項指標的證據。請把 ELISA 資料給我看。",
+      "answer": "There isn't one. Measurement lists the ELISA for ACC deaminase as design only, with the results draft carrying the placeholder [INSERT GRAPH - ELISA assay] and nothing behind it: no kit bought, no antigen standard, no ReLeaf sample ever assayed. So the evidence column on the Development criteria table names an assay the project has never run, and the statuses in it were filled in on 28 September by reading our own drafts rather than from new measurements. It would also need a purified ACC deaminase standard, which we do not have either, so until that exists no concentration can be put on any ReLeaf preparation by any route.",
+      "answer_zh": "並不存在。量測頁把 ACC 去胺酶的 ELISA 列為僅有設計 (design only)，結果草稿只留著佔位字串 [INSERT GRAPH - ELISA assay]，後面沒有東西：沒買套組、沒有抗原標準品、也從未測過任何 ReLeaf 樣品。因此 Development 指標表的證據欄寫的是一個本專案從未執行的分析，而表中狀態是 9 月 28 日依我們自己的草稿填入、不是新的量測。它還需要純化的 ACC 去胺酶標準品，而我們同樣沒有；在那之前任何途徑都無法給 ReLeaf 製備品一個濃度。",
+      "cite": ["development/", "measurement/"],
+      "trap": "Treating \"Preliminary\" on the Produce row as ELISA data; it rests on a faint Western blot band, not an immunoassay.",
+      "trap_zh": "把生產列的「Preliminary」當成 ELISA 資料；它其實靠的是一條微弱的西方墨點帶，不是免疫分析。"
+    },
+    {
+      "id": "BM-08",
+      "type": "decision",
+      "q": "You say you scale out rather than up. What drove that, and what does scaling out cost you?",
+      "q_zh": "你們說採取增加單元數 (scale out) 而非放大槽體 (scale up)。這個決定的依據是什麼？代價又是什麼？",
+      "answer": "It came from bioprocess advice: heat transfer behaves differently in large vessels, and B. subtilis favours higher temperatures for faster growth, which gets harder to control as the vessel grows, so a unit that stays small avoids a problem a bigger tank would create. What scaling out inherits instead is unit count, and the design answer to that is a swappable biological cartridge so a farm never opens a culture, which is Professor Chang's replaceable-capsule suggestion. That cartridge is an intention: it is planned, not yet drawn, and no prototype has been built.",
+      "answer_zh": "這來自生物製程的專家意見：大型槽體的熱傳行為不同，而枯草桿菌偏好較高溫以加快生長，槽體越大越難控制，因此維持小型單元可以避開大槽才會產生的問題。增加單元數換來的代價是單元數量本身，設計上的答案是可更換的生物卡匣，讓農場永遠不需打開培養液，也就是張教授提出的「像換電池一樣的膠囊」。這個卡匣仍是意圖：只有規劃、還沒畫出來，也沒有做出原型。",
+      "cite": ["biomanufacturing/", "hardware/bioreactor/"],
+      "trap": "Describing the three-chamber package or the refill cartridge as built; both are CAD concepts, and the 3D prints were not watertight.",
+      "trap_zh": "把三槽式封裝或補料卡匣說成已製作完成；兩者都只是 CAD 概念，而且 3D 列印件無法完全防水。"
+    },
+    {
+      "id": "BM-09",
+      "type": "fact",
+      "q": "On the Development page, what does success for the whole system mean, and what is the current tally against it?",
+      "q_zh": "在 Development 頁上，整個系統的「成功」如何定義？目前對照這個定義的統計結果是什麼？",
+      "answer": "Success is defined as a six-stage chain that must all work and hand on: Detect, Activate, Produce, Contain, Deliver, Protect, each with quantified acceptance criteria and named evidence. Against the 27 criteria, the tally as of 28 September 2026 is zero Met, six Preliminary, three Not yet shown and eighteen Awaiting data. The page also states that those statuses were filled in from the team's own drafts rather than from new measurements, and that each one still needs a student to confirm or correct it.",
+      "answer_zh": "成功被定義為六個階段必須全部成立並前後銜接的鏈條：偵測、啟動、生產、圍阻、輸送、保護，每個階段都有量化的驗收標準與指定證據。對照這 27 項標準，2026 年 9 月 28 日的統計是 0 項達成 (Met)、6 項初步 (Preliminary)、3 項尚未展示 (Not yet shown)、18 項待資料 (Awaiting data)。該頁也說明這些狀態是依團隊自己的草稿填入、而非新的量測，每一項仍需由學生確認或更正。",
+      "cite": ["development/"],
+      "trap": "Saying the system is validated; the page's own table has nothing in the Met column.",
+      "trap_zh": "說系統已經驗證完成；該頁自己的表格在「達成」欄位是空的。"
+    },
+    {
+      "id": "BM-10",
+      "type": "boundary",
+      "q": "The 102.4 h run is your strongest process result. Name three things it cannot be used to claim.",
+      "q_zh": "102.4 小時的運轉是你們最強的製程結果。請說出三件它無法用來主張的事。",
+      "answer": "It cannot claim product: no titre was measured in the permeate, and the reactor blot from the sampled run is read two opposite ways by two of our own drafts, so the wiki reports no release figure. It cannot claim biomass: the OD axis is the inline photometer's own reading, which the calibration establishes as linear in turbidity rather than tied to a cell count. And it cannot claim predictive validity for the perfusion model, because that fit was made to this one run and has never been tested against a second. Pressure stability is also weaker than it looks: every other pressure reading in the archive is a spot value and three runs disagree threefold at the same flow.",
+      "answer_zh": "它無法主張產物：透液中沒有量到效價，而且採樣那次運轉的墨點被我們自己的兩份草稿讀成相反結論，因此維基不報告任何釋放量。它無法主張生物量：OD 軸是內置光度計自己的讀值，校正只證明它對濁度是線性的，並未對應到細胞數。它也無法主張灌流模型具預測力，因為那個擬合只做在這一次運轉上，從未用第二次運轉檢驗。壓力穩定性也比看起來弱：檔案中其他壓力資料都是單點讀值，三次運轉在同一流量下相差三倍。",
+      "cite": ["results/", "measurement/", "biomanufacturing/"]
+    },
+    {
+      "id": "BM-11",
+      "type": "alternative",
+      "q": "There is no downstream processing at all. What is in the permeate besides your protein, and what would you add if a customer needed a defined product?",
+      "q_zh": "你們完全沒有下游處理。除了目標蛋白，透液裡還有什麼？如果客戶需要成分明確的產品，你們會加上什麼？",
+      "answer": "The absence is deliberate: the membrane is the separation step, so the component that contains the organism is the component that delivers the product. But a 0.2 µm microfiltration membrane has no molecular-weight cut-off, so the permeate carries medium components, secreted vesicles and cell debris in the 20 to 200 nm range along with the protein; whole cells are the only thing the wall is there to stop. A bench purification route does exist and has been run, HisPur Ni-NTA with imidazole wash and elution then dialysis against PBS through a 10 kDa cassette, but it has never produced a number, so we cannot state a recovery for it. If a registered product were needed, the Laws work says we would have to characterise identity, concentration, purity, stability and efficacy rather than ship an undefined biological secretion, and that is where a polishing step would be argued.",
+      "answer_zh": "沒有下游處理是刻意的：膜就是分離步驟，所以圍阻菌體的元件同時也是輸送產物的元件。但 0.2 µm 微過濾膜沒有分子量截留值，因此透液除了蛋白，也帶著培養基成分、分泌囊泡與 20 至 200 nm 的細胞碎片；膜壁真正阻擋的只有完整細胞。實驗室層級的純化路線確實存在並跑過，HisPur Ni-NTA 以咪唑清洗與沖提、再用 10 kDa 透析匣對 PBS 透析，但從未產出數字，所以無法給出回收率。若要做成登記產品，法規頁指出我們必須界定同一性、濃度、純度、穩定性與功效，而不是出貨一份未定義的生物分泌物，純化步驟的必要性會在那裡被討論。",
+      "cite": ["hardware/bioreactor/", "measurement/", "laws-and-regulations/"],
+      "trap": "Claiming the membrane gives a cell-free, protein-only stream; it has no 50 kDa cut-off and does not retain vesicles.",
+      "trap_zh": "聲稱膜能給出只含蛋白的無細胞流；它沒有 50 kDa 截留值，也無法截留囊泡。"
+    },
+    {
+      "id": "BM-12",
+      "type": "weakness",
+      "q": "Product quality: if a regulator asked you to specify what is in the bottle, what could you put on the label today?",
+      "q_zh": "產品品質：如果法規機關要你們說明瓶子裡裝的是什麼，你們今天能在標籤上寫什麼？",
+      "answer": "Almost nothing quantitative, and our own Laws work is the page that makes that uncomfortable. Taiwan's Fertilizer Management Act route requires a registration certificate naming category, registered ingredients, physical characteristics and composition, so the output has to be a defined agricultural input rather than an undefined biological secretion; the EU PFC 6(B) route likewise requires component, composition, safety, labelling and efficacy conformity. Today we have presence-or-absence blots, no concentration, no activity rate, no purity and no stability data, so the only honest label content is the identity of the construct and the process it came from. Closing it runs through Bradford, then a purified standard on the blot, then the ELISA or a Berthelot activity rate.",
+      "answer_zh": "幾乎沒有任何定量內容，而讓這件事難以回避的正是我們自己的法規頁。台灣《肥料管理法》路線要求登記證載明種類、登記成分、物理性狀與組成，因此輸出必須是成分明確的農業投入品，而不是未定義的生物分泌物；歐盟 PFC 6(B) 路線同樣要求成分、組成、安全、標示與功效的符合性。今天我們只有有無判讀的墨點，沒有濃度、沒有活性速率、沒有純度、沒有穩定性資料，所以唯一誠實能寫上的是構築體的身分與其製程。補齊的順序是先 Bradford、再在墨點上加純化標準品、然後 ELISA 或 Berthelot 活性速率。",
+      "cite": ["laws-and-regulations/", "measurement/", "development/"]
+    },
+    {
+      "id": "BM-13",
+      "type": "fact",
+      "q": "Give me the module and working volume. Why does the Biomanufacturing page tell you not to quote that row yet?",
+      "q_zh": "請說明膜組與工作體積。為什麼生物製造頁要你們暫時不要引用那一列？",
+      "answer": "The module is a PES hollow-fibre cartridge rated 0.2 µm, and the Biomanufacturing table gives about 400 mL working volume while Results gives about 200 mL of lumen volume and the Hardware specification gives 300 mL of LB in a 500 mL reservoir. The area and fibre count disagree too: the vendor sheet is 150 cm² with 8 fibres and a 1.0 mm bore, while Contribution's figure caption says 200 cm² with 11 fibres, and the hydraulic fit on Measurement is computed for eleven open fibres of 0.5 mm radius. The page says to settle it against the vendor sheet before the table is quoted, because the fouling model is otherwise fitting a curve to a pipe whose dimensions are in dispute.",
+      "answer_zh": "膜組是孔徑標示 0.2 µm 的 PES 中空纖維濾心。生物製造頁的表格寫工作體積約 400 mL，Results 寫管內體積約 200 mL，硬體規格則寫 500 mL 容器中 300 mL LB。面積與纖維數也不一致：供應商規格是 150 cm²、8 根纖維、內徑 1.0 mm，而 Contribution 的圖說寫 200 cm²、11 根纖維，量測頁的流阻擬合則是以 11 根半徑 0.5 mm 的開放纖維計算。該頁要求在引用這個表格前先以供應商規格定案，否則結垢模型是在對一根尺寸仍有爭議的管子擬合曲線。",
+      "cite": ["biomanufacturing/", "results/", "hardware/bioreactor/", "contribution/", "measurement/"],
+      "trap": "Quoting one area figure confidently; the wiki flags the disagreement itself.",
+      "trap_zh": "很有把握地引用其中一個面積數字；維基本身就標示了這個矛盾。"
+    },
+    {
+      "id": "BM-14",
+      "type": "decision",
+      "q": "Make the case against centralised production. What evidence do you have that distributed manufacturing is better, not just different?",
+      "q_zh": "請論述反對集中式生產的理由。你們有什麼證據顯示分散式製造是更好、而不只是不一樣？",
+      "answer": "Two arguments, one evidenced and one structural. The evidenced one borrows the nearest measured analogue for a temperature-controlled biological supply chain: in one field logistics study of vaccine distribution, cold-chain infrastructure was 43% of logistics cost at the national store and transport a further 34%, 77% together, and a protectant made on the farm never enters that chain. The structural one is timing and stability: peptides degrade in storage and a bottle filled months earlier cannot respond to a drought that arrives this week, so on-site production means the dose matches the conditions on the day. The honest limit is that in exchange every farm needs its own machine, we publish no unit cost or saving because the bill of materials is not settled, and the citation for the 77% figure is still marked as to be taken from the Entrepreneurship source file.",
+      "answer_zh": "兩個論點，一個有證據、一個屬結構性。有證據的那個借用最接近的已量測類比，也就是需溫控的生物供應鏈：一份疫苗配送的實地物流研究中，冷鏈基礎設施占國家倉儲端物流成本的 43%，運輸再占 34%，合計 77%，而在農場生產的保護劑完全不進入這條鏈。結構性的那個是時效與穩定性：胜肽在儲存中降解，數月前裝瓶的產品無法回應這週才到的乾旱，現地生產讓劑量對應當天的狀況。誠實的界線是：代價為每座農場都需要一台機器；因為物料清單尚未定案，我們不公布單位成本或節省金額；而 77% 這個數字的引用來源仍標註為待自 Entrepreneurship 原始檔案取得。",
+      "cite": ["biomanufacturing/", "hardware/bioreactor/", "entrepreneurship/"],
+      "trap": "Turning the 77% into a ReLeaf saving; it is a vaccine logistics figure borrowed as an analogue, with the citation still incomplete.",
+      "trap_zh": "把 77% 當成 ReLeaf 的節省幅度；那是借來作類比的疫苗物流數字，而且引用尚未補齊。"
+    },
+    {
+      "id": "BM-15",
+      "type": "boundary",
+      "q": "This machine is meant to sit beside a field. What keeps the culture sterile there, and what have you actually tested?",
+      "q_zh": "這台機器預計放在田邊。在那裡靠什麼維持培養的無菌？你們實際測過哪些？",
+      "answer": "The design answer is a closed culture loop: reservoir, pump, photometer, fibre lumens and back, closed for the duration of the run, with an air filter on the reservoir so gas can pass without affecting sterility, and the Luer sampling valves named as the one place procedure still matters. What we have tested is less than that. The assembly guide's sterility run is listed as not written yet, along with sterilization and disposal; a CIP method appears only as a line item in the cycle-1 outline. And the one hint of a real contamination event is unresolved: Professor Chang's reading of our inconsistent 22 °C growth was that the reactor was either contaminated or the behaviour is characteristic of the strain, and his recommendation to repeat the run has not been carried out.",
+      "answer_zh": "設計上的答案是封閉培養迴路：培養瓶、泵、光度計、纖維管內側再回到培養瓶，運轉期間保持封閉，培養瓶上有空氣濾材讓氣體通過而不影響無菌，而 Luer 取樣閥被指明是唯一仍靠操作程序把關的地方。我們實際測到的少於此。組裝指南中的無菌運轉與滅菌、廢棄處理都標為尚未撰寫；原位清洗 (CIP) 方法只在第一週期的大綱中以條目出現。唯一指向真實污染事件的線索也未解決：張教授對我們 22 °C 生長不一致的判讀是，反應器可能被污染，也可能是該菌株的特性，而他建議重跑該次運轉的工作尚未執行。",
+      "cite": ["hardware/bioreactor/", "biomanufacturing/", "measurement/"],
+      "trap": "Describing CIP, the sterility run or the leak-detection system as working features; the bioreactor page marks all three as not written.",
+      "trap_zh": "把 CIP、無菌運轉或洩漏偵測系統說成已運作的功能；生物反應器頁把這三者都標為尚未撰寫。"
+    },
+    {
+      "id": "BM-16",
+      "type": "weakness",
+      "q": "A farm unit finishes a campaign. What happens to the spent culture and the used cartridge?",
+      "q_zh": "農場端的機台跑完一輪之後，用過的培養液與濾心怎麼處理？",
+      "answer": "The wiki does not answer that, and says so: under the bioreactor's containment and safety part, sterilization and disposal are listed as not written yet, alongside the second leak system. What exists is laboratory practice, not a farm procedure: solid biological waste autoclaved at 121 °C for 15 to 30 minutes, liquid waste treated with 10% bleach or equivalent, all to BSL-1. The farm-side answer the team intends is the swappable biological cartridge so a grower never opens a culture, and that has no prototype and no drawing. For a judge this is a real gap, because the permeate leaves the machine continuously while the only thing standing between the culture and the field is the cartridge.",
+      "answer_zh": "維基沒有回答，而且直說沒有：在生物反應器的圍阻與安全章節中，滅菌與廢棄處理與第二套洩漏系統同列為尚未撰寫。現有的是實驗室作業，不是農場程序：固體生物廢棄物以 121 °C 滅菌 15 至 30 分鐘，液體廢棄物以 10% 漂白水或同等藥劑處理，全部依 BSL-1 規範。團隊打算的農場端答案是可更換的生物卡匣，讓農民永遠不必打開培養液，而它沒有原型也沒有圖。對評審而言這是真正的缺口，因為透液持續離開機器，而培養液與田地之間唯一的屏障就是濾心。",
+      "cite": ["hardware/bioreactor/", "safety-and-security/", "biomanufacturing/"]
+    },
+    {
+      "id": "BM-17",
+      "type": "fact",
+      "q": "What is the productivity of one unit, in mass of protectant per unit time?",
+      "q_zh": "一台機組的生產力是多少？請用單位時間的保護劑質量表示。",
+      "answer": "Every mass-per-time number we have is model output, not measurement, and the model says so. The supply surface gives a reference point of about 42 mg at day 8 with 10 g of biomass, and a 14-day maximum of about 120 mg; against the demand side on a 200 m² field at week 8, mild stress needs 7 mg and is covered within three days, moderate needs 38 mg and is covered by day 8, and severe needs 191 mg, which exceeds the 14-day maximum. All of it is computed from the assumed titre of 5.4 mg/L and an assumed Cshell of 50 mg/L, so the correct answer to a judge is that the model predicts one unit cannot cover a severe event at heading, and no measured productivity exists to check it.",
+      "answer_zh": "我們擁有的每一個「單位時間質量」數字都是模型輸出、不是量測，模型本身也這麼標示。供給面給出的參考點是第 8 天、生物量 10 g 時約 42 mg，14 天上限約 120 mg；對照需求面，在 200 m² 田區的第 8 週，輕度逆境需 7 mg、三天內可供應，中度需 38 mg、第 8 天可供應，重度需 191 mg，超過 14 天上限。這些全部由假設效價 5.4 mg/L 與假設 Cshell 50 mg/L 推算，因此對評審的正確回答是：模型預測單一機組無法支應抽穗期的重度逆境事件，而我們沒有任何實測生產力可以驗證它。",
+      "cite": ["model/", "biomanufacturing/"],
+      "trap": "Quoting 42 mg or 120 mg as a measured reactor output.",
+      "trap_zh": "把 42 mg 或 120 mg 當成實測的反應器產量引用。"
+    },
+    {
+      "id": "BM-18",
+      "type": "alternative",
+      "q": "Why quantify by Western blot at all? What happened to the activity assay and the immunoassay routes?",
+      "q_zh": "為什麼只用西方墨點法？活性分析與免疫分析這兩條路線後來怎麼了？",
+      "answer": "Neither route has produced a number, for different reasons. The planned activity assay was a DNPH assay for α-ketobutyrate, which could not be run because DNPH could not be obtained, so we switched to the Berthelot indophenol route measuring released ammonium; we solved its two interference problems, medium background from Terrific Broth and the chromogenic contribution of ACC itself, and showed quantification holds against a 2 mM ACC background, but no activity figure for a reactor extract has come out of it. The ELISA is design only. Both also sit behind the Bradford assay, because a rate per milligram of protein needs a protein concentration first, and the measurement page describes that whole group as a chain where each measurement needs the one before it.",
+      "answer_zh": "兩條路線都還沒產出數字，原因不同。原定的活性分析是以 DNPH 測 α-酮丁酸，因為買不到 DNPH 而無法進行，於是改走 Berthelot 靛酚法、以釋出的銨為讀值；我們解決了它的兩個干擾問題，即 Terrific Broth 培養基的背景與 ACC 本身的顯色貢獻，並證明在 2 mM ACC 背景下仍能定量，但始終沒有針對反應器萃取液得到活性數值。ELISA 則只有設計。兩者同時都排在 Bradford 之後，因為「每毫克蛋白的速率」必須先有蛋白濃度，量測頁把這一組描述為每個量測都依賴前一個的鏈條。",
+      "cite": ["measurement/", "results/"],
+      "trap": "Presenting the Berthelot interference work as an ACC deaminase activity result; it validated the readout against an ammonium ladder, not the enzyme.",
+      "trap_zh": "把 Berthelot 的干擾研究當成 ACC 去胺酶的活性結果；它驗證的是對銨標準梯度的讀值，不是酵素本身。"
+    },
+    {
+      "id": "BM-19",
+      "type": "boundary",
+      "q": "How much protein reaches a plant per unit time in your system?",
+      "q_zh": "在你們的系統中，單位時間有多少蛋白質抵達植物？",
+      "answer": "We cannot say, and three separate gaps are why. There is no titre in the permeate, no transfer efficiency measurement, and no logged permeate flow during a protein run: the Deliver stage's own criterion sets ≥50% transfer efficiency as, in its words, a starting proposal, and every Deliver criterion except \"protectant crosses the membrane\" is Awaiting data. The minimum plant-effective concentration that would make a delivery rate meaningful has not been established either, and the root-zone threshold of 0.1 mg/L in the model is a placeholder pending in-house dose response. What we can say is which experiment closes it: a time-course of permeate samples with a concentration assay, against logged shell-side flow.",
+      "answer_zh": "我們無法回答，原因有三個獨立缺口。透液沒有效價、沒有轉移效率的量測，蛋白生產運轉期間也沒有記錄透液流量：輸送階段自己的標準把 ≥50% 轉移效率寫成「起始提案」，而除了「保護劑穿過膜」之外，輸送階段每一項標準都是待資料。能讓輸送速率有意義的最低植物有效濃度也還沒建立，模型中 0.1 mg/L 的根圈門檻是待自家劑量反應補上的佔位值。我們能說的是哪個實驗可以補起來：對透液做時間序列取樣並搭配濃度分析，對照記錄下來的外殼側流量。",
+      "cite": ["development/", "model/", "results/"]
+    },
+    {
+      "id": "BM-20",
+      "type": "decision",
+      "q": "The reactor ran on the constitutive cassette, not the light-driven one. Why, and what does that cost the project's story?",
+      "q_zh": "反應器用的是組成型卡匣，不是光驅動的那一個。為什麼？這對專案敘事的代價是什麼？",
+      "answer": "The reactor cycle was written to test integration, not the optogenetic circuit, so ACC deaminase was placed under a constitutive promoter (module J, clone J9) to remove light as a variable while the hydraulics, monitoring and containment were exercised. The deeper reason is that the switch has never been shown to switch: no experiment anywhere in the project shows PcpcG2 output changing with green light, so the light-driven cassette (module I) could not have carried the run. The cost is that every ACC deaminase result on the wiki, the reactor, the fractionation blot and the plant sprays, is constitutive expression, and Results names the induction curve as the single experiment that would move the project furthest.",
+      "answer_zh": "該反應器週期的設計目的是測整合、不是測光遺傳迴路，因此把 ACC 去胺酶放在組成型啟動子下 (module J，選殖株 J9)，在操練流體、監測與圍阻時排除光這個變因。更根本的原因是這個開關從未被證明會開：專案中沒有任何實驗顯示 PcpcG2 的輸出隨綠光改變，所以光驅動卡匣 (module I) 無法承擔這次運轉。代價是維基上每一個 ACC 去胺酶結果，包括反應器、分液墨點與植物噴施，都是組成型表現，而 Results 頁指明誘導曲線是最能推進整個專案的單一實驗。",
+      "cite": ["results/", "biomanufacturing/", "hardware/bioreactor/"],
+      "trap": "Saying the reactor demonstrated light-controlled production.",
+      "trap_zh": "說反應器已展示光控生產。"
+    },
+    {
+      "id": "BM-21",
+      "type": "weakness",
+      "q": "Walk me through your batch records. If I asked for the raw log of your longest monitoring run, what would I get?",
+      "q_zh": "請說明你們的批次紀錄。如果我要求最長那次監測運轉的原始紀錄檔，我會拿到什麼？",
+      "answer": "You would not get it, and that is open fix R1. The run appears as 400 h in one draft, 434.2 h with 2,671 valid rows on Digital Twin, and 336 h with 2,132 points on Hardware, and no source says whether those are a logged span, a dashboard snapshot and the usable window before the OD channel failed at 243 h, or three different runs. Worse, nobody recorded what the instrument was looking at: the medium, the inoculum and which compartment the optics sat on are all unrecorded, and the wet lab archive contains no OD600 time series at all. The same problem runs through the hydraulics, where four flow rates are in circulation for the same dial position and the pressure sheets carry no configuration labels, which is why our own Contribution page's advice is to record run conditions in the same file as the data.",
+      "answer_zh": "你拿不到，這就是待修項目 R1。該次運轉在一份草稿中是 400 小時，在 Digital Twin 頁是 434.2 小時、2,671 筆有效資料，在 Hardware 頁是 336 小時、2,132 筆，而沒有任何來源說明這些分別是完整記錄區間、儀表板快照，還是 OD 通道在 243 小時失效前的可用區間，甚至可能是三次不同的運轉。更嚴重的是沒有人記下儀器當時在看什麼：培養基、接種物、光學件所在的區室全都沒有紀錄，而濕實驗檔案庫裡根本沒有任何 OD600 時間序列。同樣的問題貫穿流體資料，同一個轉盤位置流通著四個流量值，壓力表單也沒有條件標註，這正是我們自己的 Contribution 頁建議把運轉條件與資料記在同一個檔案裡的原因。",
+      "cite": ["results/", "contribution/", "measurement/"]
+    },
+    {
+      "id": "BM-22",
+      "type": "fact",
+      "q": "State the containment evidence precisely, and tell me which containment number must never be quoted.",
+      "q_zh": "請精確說明圍阻的證據，並指出哪一個圍阻數字絕對不能引用。",
+      "answer": "The record is two platings, one per run: during the version 1 run on 6 June, 2 mL of shell-side liquid was spread on LB agar and no colonies grew, and a later run was plated from both sides and photographed after 24 h at 37 °C, the lumen streak growing and the shell plate clear. There is one plating per run with no replicate, no stated detection limit, and for the June plate the incubation time and temperature were not recorded; the first of them came from the run that stopped early on a pump-head leak. The number that must never be quoted is the log reduction value of 7.5 on a poster figure in the design folder: no LRV measurement exists in any data file, which is open fix R8. The geometry argument is also weaker than it sounds, because our own pages give the cell dimension four ways, from 0.25 to 1.0 µm diameter to a 1 to 2 µm rod to 0.8 by 3 µm, none with a citation.",
+      "answer_zh": "紀錄只有兩次塗盤、每次運轉一次：6 月 6 日第一版運轉時取 2 mL 外殼側液體塗在 LB 培養盤上、無菌落生長；後來一次運轉從兩側取樣塗盤，37 °C 24 小時後拍照，管內側劃線長菌、外殼側盤面乾淨。每次運轉只有一次塗盤、沒有重複、沒有標明偵測極限，而 6 月那盤的培養時間與溫度沒有記錄；其中第一次還來自因泵頭漏液而提前中止的那次運轉。絕對不能引用的數字是設計資料夾中海報圖上的對數去除值 (LRV) 7.5：任何資料檔案都沒有 LRV 的量測，這是待修項目 R8。幾何論證也比表面上弱，因為我們自己的頁面對菌體尺寸有四種說法，從直徑 0.25 至 1.0 µm、1 至 2 µm 的桿狀，到 0.8 乘 3 µm，而且都沒有引用來源。",
+      "cite": ["results/", "hardware/bioreactor/", "measurement/", "safety-and-security/"],
+      "trap": "Quoting the 7.5 LRV, or saying the shell side was shown sterile; an absence of colonies at an unrecorded detection limit gives no bound on escape.",
+      "trap_zh": "引用 7.5 的 LRV，或說外殼側已證明無菌；在未記錄偵測極限的情況下沒有菌落並不能給出逸出上限。"
+    },
+    {
+      "id": "BM-23",
+      "type": "alternative",
+      "q": "Most teams with an environmental chassis build a kill switch. Why did you not?",
+      "q_zh": "多數在環境中應用底盤菌的團隊會做自殺開關 (kill switch)。你們為什麼沒有？",
+      "answer": "Two consultations pushed us off it. Dr. Lin advised in March not to use a kill switch, and Dr. Brophy strengthened the design from a biosafety angle by arguing that physical containment should be the primary safety mechanism rather than depending on a kill switch, which led directly to the membrane strategy. The project's origin reinforces it: the first concept was a transgenic plant growth promoting rhizobacterium in the soil, and we abandoned it because once a transgenic organism is released, expression, dose and spread are no longer ours to set. Moving the organism into a machine turned a release problem into a containment problem, which is something hardware can solve, and it is also what lets the cell-free permeate be a separate regulatory object from the contained GMO.",
+      "answer_zh": "兩次諮詢讓我們放棄這條路。3 月時林博士建議不要用自殺開關；Brophy 博士從生物安全角度強化設計，主張物理圍阻應作為主要安全機制，而不是依賴自殺開關，這直接導向膜的策略。專案的起點也強化這個選擇：最初的構想是在土壤中使用轉基因植物生長促進根圈細菌 (TgPGPR)，我們放棄它，因為轉基因生物一旦釋出，表現量、劑量與擴散就不再由我們決定。把生物體移進機器裡，把釋出問題轉成圍阻問題，而圍阻是硬體可以解決的；這同時也讓無細胞透液能與受圍阻的基改生物成為不同的法規對象。",
+      "cite": ["hardware/bioreactor/", "development/", "laws-and-regulations/"]
+    },
+    {
+      "id": "BM-24",
+      "type": "boundary",
+      "q": "How much land does one unit serve? Your pages give several answers.",
+      "q_zh": "一台機組能服務多少土地面積？你們的頁面給了好幾個答案。",
+      "answer": "They do, and the Biomanufacturing page already disowns one of them. The team estimate that one reactor could cover roughly a 30 m diameter of land has no measured titre behind it and is explicitly not a specification. The model's transport calculation runs the other way: coverage area per unit is 0.20 m² in sandy loam up to 1.02 m² in clay, giving 10 to 50 bioreactors per hectare, and that figure comes from soil physics with the crop never entering the calculation. The delivery model meanwhile sizes doses against a 200 m² field. The honest answer is that we have three numbers at three different levels of the model and no measured titre to anchor any of them, and the unit cost is in the same state, NT$30,000 in the model draft against NT$60,000 in the business plan, neither traced to a bill of materials.",
+      "answer_zh": "確實如此，而生物製造頁已經先否認了其中一個。團隊估計一台反應器可覆蓋約 30 公尺直徑的土地，這個說法背後沒有實測效價，頁面明確指出它不是規格。模型的傳輸計算方向相反：每台機組的覆蓋面積從砂質壤土的 0.20 m² 到黏土的 1.02 m²，換算為每公頃 10 至 50 台，而這個數字出自土壤物理，計算中完全沒有作物。輸送模型則以 200 m² 田區來估算劑量。誠實的回答是：我們有三個分屬模型不同層級的數字，而且沒有實測效價可以把任何一個定下來；單位成本也是同樣狀態，模型草稿寫 NT$30,000、營運計畫寫 NT$60,000，兩者都沒有對應到物料清單。",
+      "cite": ["biomanufacturing/", "model/", "entrepreneurship/"],
+      "trap": "Offering the 30 m diameter as a spec, or the 50 units per hectare as if it accounted for packing geometry and overlap.",
+      "trap_zh": "把 30 公尺直徑當成規格，或把每公頃 50 台當成已考慮排列幾何與重疊範圍的結果。"
+    },
+    {
+      "id": "BM-25",
+      "type": "weakness",
+      "q": "Nothing in your success table is Met. So in one minute: what has ReLeaf established as a biomanufacturing process, and what would you run next?",
+      "q_zh": "你們的成功標準表沒有任何一項達成。請用一分鐘說明：ReLeaf 作為生物製造製程已經建立了什麼？下一步會跑什麼實驗？",
+      "answer": "Established: a contained perfusion loop that held its hydraulics and grew a culture twenty-fold over 102.4 h unattended; nine Level-1 modules confirmed by colony PCR, amplicon check and sequencing, and a Level-2 device junction-checked on three clones at 375, 632 and 661 bp; one fractionation blot on 2 August putting ACC deaminase in the supernatant with both pellet lanes blank, which is what the cell-free design rests on; an inline photometer linear in turbidity and steadier than a benchtop BioDrop above 30 mg of TiO2; and a membrane pressure drop agreeing with a Hagen-Poiseuille prediction to 3% in a jumper-controlled sweep. Not established: any induction, any titre, any activity, any quantified release, any containment figure, and anything at all about WB800N, since every number on the wiki is strain 168. Next, in order: the green-versus-dark induction curve with an expression readout, because several other items wait on it; Bradford on every fraction so the blots become quantities; and shell-side plating at every sampling point of the next run.",
+      "answer_zh": "已建立的部分：一個受圍阻的灌流迴路，在 102.4 小時無人看管下維持流體條件並讓菌體生長二十倍；九個 Level-1 模組經菌落 PCR、擴增產物確認與定序驗證，一個 Level-2 裝置在三個選殖株上以 375、632、661 bp 完成接點檢查；8 月 2 日一張分液墨點顯示 ACC 去胺酶出現在上清液、兩條沉澱物泳道皆空白，這是無細胞設計的立足點；一台對濁度呈線性、且在 TiO2 加量超過 30 mg 後比桌上型 BioDrop 更穩定的內置光度計；以及在以跳接管為對照的掃描中，膜的壓降與 Hagen-Poiseuille 預測相差 3% 以內。未建立的部分：任何光誘導、任何效價、任何活性、任何定量釋放、任何圍阻數值，以及關於 WB800N 的一切，因為維基上每個數字都是 168 菌株。接下來的順序是：帶表現讀值的綠光對暗處誘導曲線，因為多個項目都在等它；每個分液都做 Bradford，讓墨點成為定量；以及在下一次運轉的每個取樣點都做外殼側塗盤。",
+      "cite": ["results/", "development/", "measurement/", "biomanufacturing/"],
+      "trap": "Listing the digital twin's 434 h and Kalman results as process results; they are instrument and software results, and the run's contents are unrecorded.",
+      "trap_zh": "把數位孿生的 434 小時與卡爾曼預測結果列為製程結果；那是儀器與軟體的結果，而且該次運轉的內容物沒有紀錄。"
+    }
+  ]
+}

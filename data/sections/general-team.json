@@ -1,0 +1,368 @@
+{
+  "slug": "general-team",
+  "title": "General Team Questions",
+  "title_zh": "團隊綜合問題",
+  "blurb": "The whole-project questions any team member must field regardless of sub-team: the pitch, why this problem and why synthetic biology, what was built against what was designed, who did what and who helped from outside, what goes back to future teams, and how far the evidence actually reaches.",
+  "blurb_zh": "任何團員不分組別都必須能回答的全專題問題：一句話的定位、為什麼是這個問題、為什麼用合成生物學、哪些真正做出來而哪些只是設計、誰做了什麼以及外部提供了哪些協助、留給未來團隊什麼，以及證據實際上走到哪裡。",
+  "questions": [
+    {
+      "id": "GT-01",
+      "type": "fact",
+      "q": "The Development page defines ReLeaf's success as a chain of six stages. Name them in order, and say which part of the system carries each one.",
+      "q_zh": "Development 頁把 ReLeaf 的成功定義為六個階段組成的一條鏈。請依序說出這六個階段，並說明每個階段由系統的哪一部分承擔。",
+      "answer": "Detect, Activate, Produce, Contain, Deliver, Protect. The AIoT sensor detects stress, green light activates the circuit, engineered B. subtilis carrying CcaS/CcaR produces the protectant, the hollow-fiber membrane keeps the cells in, the secreted protectant is delivered by hydroponic circulation or soil irrigation, and the plant is protected. Development's argument is that if one link fails the others are not enough, which is why the page scores all 27 criteria stage by stage.",
+      "answer_zh": "偵測 (Detect)、啟動 (Activate)、生產 (Produce)、圍阻 (Contain)、傳遞 (Deliver)、保護 (Protect)。AIoT 感測器偵測逆境，綠光啟動線路，帶有綠光感應系統 (CcaSR) 的工程化枯草桿菌 (B. subtilis) 生產保護劑，中空纖維膜 (hollow-fiber membrane) 把細胞留在裡面，分泌出的保護劑經水耕循環或土壤灌溉傳遞，最後植物受到保護。Development 頁的論點是：只要一環失效，其他環節再好也不夠，所以該頁逐階段評分全部 27 條判準。",
+      "cite": [
+        "development/",
+        "/"
+      ],
+      "trap": "Merging Deliver into Produce and giving five stages, or reciting the homepage's five demands (Protective, On demand, Automatic, Biosafe, Monitored) instead of the six stages.",
+      "trap_zh": "把 Deliver 併進 Produce 只說五個階段，或背出首頁的五項需求（Protective、On demand、Automatic、Biosafe、Monitored）而不是這六個階段。"
+    },
+    {
+      "id": "GT-02",
+      "type": "decision",
+      "q": "Why make the protectant on the farm at all? Biological protectants can be bought today.",
+      "q_zh": "為什麼一定要在農場現地生產保護劑？生物性保護劑現在就買得到。",
+      "answer": "Because the gap we identified is timing and automation, not the molecule. Description sets out that existing products are made centrally, purified, formulated for stability, transported and stored, with each step adding time and cost, and farmers still cannot judge the right day to apply them. The homepage holds four existing categories against five demands and none covers all five: ready-made products miss On demand and Automatic; live microbial inoculants are closed to an engineered strain because Taiwan's microbial fertilisers must be free of GM microbes; on-farm open tanks are hand-tended live broth; dosing platforms still dispense a product somebody bought. Producing beside the field when stress is predicted is the only route that covers all five.",
+      "answer_zh": "因為我們找到的缺口是時機與自動化，不是分子本身。Description 頁指出現有產品在集中廠生產、純化、為穩定性配方化、運輸、儲存，每一步都增加時間與成本，而農民仍然判斷不出該在哪一天施用。首頁把四類現有工具對上五項需求，沒有一類全部涵蓋：成品保護劑缺 On demand 與 Automatic；活體微生物接種劑對工程菌株是封閉的，因為台灣的微生物肥料必須不含基改微生物；農場開放式培養槽是人工照顧的活菌液；加藥平台放出去的仍然是別人買來裝上去的產品。在預測到逆境時於田邊生產，是唯一同時涵蓋五項的路徑。",
+      "cite": [
+        "description/",
+        "/"
+      ],
+      "trap": "Arguing cost alone. The gap in the homepage's comparison is timing and automation, and this wiki quotes no cost comparison against a commercial product.",
+      "trap_zh": "只用成本來論證。首頁比較表上的缺口是時機與自動化，而且本 wiki 並未引用任何與商業產品的成本比較。"
+    },
+    {
+      "id": "GT-03",
+      "type": "weakness",
+      "q": "Your criteria validation table counts 0 Met, 6 Preliminary, 3 Not yet shown and 18 Awaiting data. The same page then says ReLeaf is validated. Which is it?",
+      "q_zh": "你們的判準驗證表統計為 0 項達成 (Met)、6 項初步 (Preliminary)、3 項尚未展示 (Not yet shown)、18 項待數據 (Awaiting data)。同一頁接著說 ReLeaf 已被驗證。到底是哪一個？",
+      "answer": "Not one of the 27 criteria is marked Met, and we should say that plainly. The six Preliminary stamps sit in Activate, Produce, Contain and Deliver; all four Detect criteria and all but one Protect criterion are Awaiting data; two criteria were never even defined. The closing paragraph describes what validation would mean rather than claiming it has happened, and the page itself records that the statuses were filled in on 28 September 2026 from our own drafts rather than from new measurements, with each one still needing a student to confirm or correct it.",
+      "answer_zh": "27 條判準中沒有一條標為達成 (Met)，我們應該直說。六個初步 (Preliminary) 落在 Activate、Produce、Contain、Deliver；Detect 的四條判準全部、以及 Protect 除一條以外全部都是待數據 (Awaiting data)；還有兩條判準根本沒定義。結尾那段是在描述「驗證成立會是什麼樣子」，不是宣稱已經發生；而且該頁自己記載這些狀態是 2026 年 9 月 28 日依團隊草稿填入的，不是新的量測，每一條都還需要學生確認或修正。",
+      "cite": [
+        "development/",
+        "results/"
+      ],
+      "trap": "Reading 'a validated foundation for further improvement' as a claim that the system works. Nothing in the table is scored Met.",
+      "trap_zh": "把「可供後續改進的已驗證基礎」讀成系統已經運作的宣稱。表中沒有任何一項評為達成 (Met)。"
+    },
+    {
+      "id": "GT-04",
+      "type": "boundary",
+      "q": "Your homepage promises 'a cell that answers green light with a protein.' Under what conditions has that been shown?",
+      "q_zh": "你們首頁承諾「一個以蛋白質回應綠光的細胞」。這件事在什麼條件下被證明過？",
+      "answer": "It has not been shown. Every ACC deaminase result on this wiki came from the constitutive cassette, module J (Pveg), not from the light-driven module I (PcpcG2). No experiment anywhere in the project shows PcpcG2 output changing with green light, so CcaS/CcaR is a design and not a characterised switch. The 520 nm and 660 nm wavelengths are taken from the Castillo-Hair optogenetics literature rather than measured on our own parts, and the induction kinetics on Math Model are model output.",
+      "answer_zh": "還沒有被證明。本 wiki 上每一個 ACC 去胺酶 (ACC deaminase) 結果都來自組成型表現匣 module J (Pveg)，不是光驅動的 module I (PcpcG2)。整個專題沒有任何實驗顯示 PcpcG2 的輸出會隨綠光改變，所以綠光感應系統 (CcaSR) 是一個設計，不是已被特性化的開關。520 nm 與 660 nm 這兩個波長取自 Castillo-Hair 的光遺傳學文獻，不是在我們自己的元件上量出來的；Math Model 上的誘導動力學是模型輸出。",
+      "cite": [
+        "results/",
+        "biomanufacturing/",
+        "contribution/"
+      ],
+      "trap": "Pointing to the 19 September Level-2 junction gel. That shows the four modules are joined in the right order; it says nothing about induction, and the Level-2 sequencing date is still blank for both devices.",
+      "trap_zh": "拿 9 月 19 日的 Level-2 接點膠來回答。那只證明四個模組接合順序正確，完全沒有談誘導，而且兩個 Level-2 裝置的定序日期都還是空白。"
+    },
+    {
+      "id": "GT-05",
+      "type": "alternative",
+      "q": "A kill switch is the standard answer to releasing engineered bacteria. Why is there no kill switch in ReLeaf?",
+      "q_zh": "面對工程菌釋放的問題，自殺開關 (kill switch) 是標準答案。為什麼 ReLeaf 裡沒有自殺開關？",
+      "answer": "We dropped it on advice. Dr. Lin advised against a kill switch in March, and on 18 April Dr. Brophy's argument was that physical containment should be the primary safety mechanism rather than a genetic one; that led directly to the membrane. Prof. Chen's 'the hardware is a printer, the biofertiliser is the ink' framing pushed the same way, toward a contained reactor with clear inputs and outputs instead of engineered bacteria in soil. We never built or tested a kill switch, so we cannot offer an experimental comparison between the two strategies.",
+      "answer_zh": "我們是依建議放棄的。Dr. Lin 在三月就建議不要用自殺開關；4 月 18 日 Dr. Brophy 的論點是物理圍阻應該是主要的安全機制，而非基因機制，這直接導向了膜的設計。Prof. Chen 把「硬體是印表機、生物肥料是墨水」的框架推向同一個方向：要一個輸入輸出清楚的封閉反應器，而不是把工程菌放進土裡。我們從未建造或測試自殺開關，所以無法提供兩種策略的實驗比較。",
+      "cite": [
+        "development/",
+        "milestone/",
+        "safety-and-security/"
+      ]
+    },
+    {
+      "id": "GT-06",
+      "type": "fact",
+      "q": "Give us the one plant result your wiki calls solid: the numbers, the group size, and what it sets.",
+      "q_zh": "請給出 wiki 上唯一被稱為紮實的植物結果：數字、每組樣本數，以及它確立了什麼。",
+      "answer": "Experiment set 6, the salt dose response in Arabidopsis thaliana. Primary root length at day 6 was 74.95, 34.77, 11.00 and 1.36 mm across 0, 75, 100 and 150 mM NaCl, nine seedlings per group (seven measurable in the 150 mM control). The spreads do not overlap and root length falls 42.7-fold across the range. It sets the working stress window for any rescue experiment, 75 to 100 mM, and it is the number Math Model uses to calibrate injury. One open fix, R2, is that the 150 mM value reads 1.36 mm here against 1.8 mm elsewhere in our files.",
+      "answer_zh": "實驗組 6，阿拉伯芥 (Arabidopsis thaliana) 的鹽劑量反應。第 6 天主根長在 0、75、100、150 mM NaCl 下分別為 74.95、34.77、11.00、1.36 mm，每組九株幼苗（150 mM 對照組只有七株可量）。各組離散範圍不重疊，全段根長下降 42.7 倍。它確立了任何救援實驗的逆境操作窗口，75 到 100 mM，也是 Math Model 用來校正傷害程度的數字。尚未解決的 R2 項是：150 mM 的值在這裡寫 1.36 mm，在我們其他檔案裡是 1.8 mm。",
+      "cite": [
+        "results/",
+        "plant/"
+      ],
+      "trap": "Quoting the trehalose column as a rescue. Trehalose moved the 100 mM group up by 3.71 mm and the 75 mM group down by 5.59 mm, both inside the pooled standard error.",
+      "trap_zh": "把海藻糖 (trehalose) 那一欄當成救援效果來引用。海藻糖讓 100 mM 組上升 3.71 mm、75 mM 組下降 5.59 mm，兩者都在合併標準誤差之內。"
+    },
+    {
+      "id": "GT-07",
+      "type": "decision",
+      "q": "Your first design had the bacteria sense plant stress. Why is sensing now done by electronics?",
+      "q_zh": "你們最初的設計是由細菌感測植物逆境。為什麼現在改由電子元件來感測？",
+      "answer": "Consultations with professors and bioprocess experts raised problems with biological sensing, environmental release and system control, so we split the job: electronic sensors plus an AIoT model predict stress and decide when to drive the green channel, and the cells only do production inside a contained reactor. Dr. Brophy's containment argument and Prof. Chen's insistence on clear input-output relationships drove the second half of that move. The honest limit is that the prediction path has never driven a light that reached a culture, so the handover from electronics to biology is untested.",
+      "answer_zh": "與教授和生物製程專家的諮詢指出生物感測、環境釋放與系統控制上的問題，於是我們把工作拆開：電子感測器加上 AIoT 模型預測逆境並決定何時驅動綠光通道，細胞只在封閉反應器內負責生產。Dr. Brophy 的圍阻論點與 Prof. Chen 對清楚輸入輸出關係的堅持，推動了這個轉變的後半。老實說的限制是：預測路徑從未驅動過真正照到培養物的燈，所以電子到生物的交接還沒被測試過。",
+      "cite": [
+        "description/",
+        "results/",
+        "milestone/"
+      ]
+    },
+    {
+      "id": "GT-08",
+      "type": "weakness",
+      "q": "Your Attribution page carries no text at all. Who outside the student team did what?",
+      "q_zh": "你們的 Attribution 頁完全沒有文字。學生團隊之外的人各做了什麼？",
+      "answer": "The page is only the embedded iGEM Project Attribution form, because iGEM's 2026 template allows the nav, that iframe and the footer and nothing else; the content is filled in on teams.igem.org, and everything we want to say about outside help sits on Human Practices, Milestone and the notebooks. In substance: our instructors ran lab training from 7 March and supervised biosafety cabinet transfers; Prof. Cheng Mei-Chun at NTU taught us the plant protocols and gave us the Arabidopsis seed on 27 March; Dr. Lin, Dr. Verslues, Dr. Brophy, Prof. Chen, Prof. Chang, Prof. Huang, Dr. Sattely and Prof. Endy advised at dated meetings; NCHU gave us the WB800 plate on 6 August; CH Biotech supplied the benchmark peptide; Daniel Viragh gave the GIS group its mapping method. One figure, the wet lab notebook timeline, was derived by an AI assistant and its caption says so.",
+      "answer_zh": "那一頁只有嵌入的 iGEM Project Attribution 表單，因為 iGEM 2026 的模板規定該頁只能放導覽、這個 iframe 與頁尾，別無其他；內容是在 teams.igem.org 上填寫的，而我們想說的外部協助都放在 Human Practices、Milestone 與實驗記錄本。實質內容是：指導老師自 3 月 7 日起進行實驗室訓練並監督生物安全櫃操作；台大鄭美君教授教我們植物操作流程，並在 3 月 27 日給我們阿拉伯芥種子；Dr. Lin、Dr. Verslues、Dr. Brophy、Prof. Chen、Prof. Chang、Prof. Huang、Dr. Sattely 與 Prof. Endy 在有記錄日期的會議上提供建議；中興大學在 8 月 6 日給我們 WB800 的培養盤；正瀚生技提供作為基準的胜肽；Daniel Viragh 給 GIS 組製圖方法。有一張圖——濕式實驗記錄本的時間軸——是由 AI 助理導出的，圖說已載明。",
+      "cite": [
+        "attributions/",
+        "team/",
+        "milestone/",
+        "human-practices/",
+        "notebook/"
+      ],
+      "trap": "Saying the page is unfinished. It is finished to iGEM's own spec; the real exposure is a member who cannot name the outside contributions from memory.",
+      "trap_zh": "說那一頁還沒做完。它其實已符合 iGEM 自己的規格；真正的弱點是團員無法憑記憶說出外部貢獻。"
+    },
+    {
+      "id": "GT-09",
+      "type": "boundary",
+      "q": "Your Biosafe claim is that no engineered cell reaches the field. What exactly supports it, and where does it stop being true?",
+      "q_zh": "你們的生物安全 (Biosafe) 宣稱是沒有工程細胞會進入田間。究竟有什麼證據支持，而這個宣稱在哪裡就不再成立？",
+      "answer": "A geometry argument plus two platings. The module is a PES hollow-fibre cartridge rated 0.2 µm, 200 cm² with 11 fibres, run crossflow with cells on the lumen side against a B. subtilis rod; shell-side medium plated on LB grew no colonies. That is one plating per run with no replicate, no recorded detection limit, and for the June plate no recorded incubation time or temperature, and one of the two runs is the version 1 run that stopped early when medium leaked at the pump head. No log reduction value was ever measured, so the LRV of 7.5 on a poster figure must not be quoted anywhere. On 4 September we told Prof. Chang that protectant and B. subtilis appeared to leak out of the membrane with no driving force, and that is unresolved.",
+      "answer_zh": "一個幾何論證加上兩次塗盤。模組是孔徑 0.2 µm 的 PES 中空纖維匣，面積 200 cm²、11 根纖維，以切向流運作、細胞在管腔側，對上尺度為微米的枯草桿菌 (B. subtilis) 桿狀細胞；殼側培養液塗在 LB 盤上沒有長出菌落。那是每次運轉只有一次塗盤、沒有重複、沒有記錄偵測極限；六月那一盤連培養時間與溫度都沒記，而兩次運轉中有一次正是在蠕動泵頭漏液而提早終止的第一版。從來沒有量過對數削減值 (LRV)，所以海報圖上那個 7.5 的 LRV 絕對不能在任何地方引用。9 月 4 日我們曾向 Prof. Chang 報告，保護劑與枯草桿菌似乎在沒有任何驅動力的情況下就從膜漏出，這件事尚未釐清。",
+      "cite": [
+        "results/",
+        "contribution/",
+        "milestone/",
+        "safety-and-security/"
+      ],
+      "trap": "Quoting the 7.5 log reduction value from the poster figure. No LRV measurement exists in any data file.",
+      "trap_zh": "引用海報圖上的 7.5 對數削減值。任何資料檔案裡都不存在 LRV 的量測。"
+    },
+    {
+      "id": "GT-10",
+      "type": "alternative",
+      "q": "You started on Medicago truncatula and ended on Arabidopsis. Why, and what did you give up?",
+      "q_zh": "你們從截形苜蓿 (Medicago truncatula) 開始，最後做的是阿拉伯芥。為什麼？又放棄了什麼？",
+      "answer": "In March the project was broad: Medicago, hydroponics and several stresses at once. Dr. Lin on 19 March pushed us to rethink the target plant and shift to seedling-stage testing, and Prof. Cheng on 27 March gave us a controllable path, Arabidopsis thaliana Col-0 on agar, plus the seed to start with. Dr. Sattely later told us to cut the number of stresses as well. What we gave up is crop relevance: Arabidopsis is a model, nothing on this wiki shows a protectant working on a crop a farmer actually grows, and no field trial has been run.",
+      "answer_zh": "三月的專題很廣：苜蓿、水耕，同時處理多種逆境。Dr. Lin 在 3 月 19 日要我們重新考慮目標植物並轉向幼苗期測試；Prof. Cheng 在 3 月 27 日給了我們一條可控的路徑——洋菜膠上的阿拉伯芥 Col-0，還給了起始種子。Dr. Sattely 後來也要我們減少逆境種類。我們放棄的是作物相關性：阿拉伯芥是模式植物，本 wiki 沒有任何結果顯示保護劑在農民真正栽培的作物上有效，也沒有做過田間試驗。",
+      "cite": [
+        "development/",
+        "milestone/",
+        "plant/"
+      ]
+    },
+    {
+      "id": "GT-11",
+      "type": "fact",
+      "q": "Bronze criterion 3 asks for a useful contribution to future teams. Name what you are offering and where part documentation has to live.",
+      "q_zh": "銅牌判準第三項要求對未來團隊做出有用的貢獻。請說出你們提供了什麼，以及元件文件必須放在哪裡。",
+      "answer": "Seven items: the four-module parts design built on the SubtiToolKit, a standardised 3D-printable laboratory hydroponics plate with CAD/STL, dimensions and BOM, a standardised plant experiment protocol as a 15-page PDF, membrane-based containment as a reusable geometry and plating method, the inline dual-beam photometer with its calibration problems documented, a GIS workflow including an LLM-assisted data-organising prompt, and education materials taught and revised across three age bands. Everything on the wiki is CC BY 4.0. Part documentation itself has to live on each part's Registry entry, not on the Contribution page, and our page says so and points at the entries.",
+      "answer_zh": "七項：建立在 SubtiToolKit 上的四模組元件設計；一個標準化、可 3D 列印的實驗室水耕板，附 CAD/STL、尺寸與材料清單；一份 15 頁 PDF 的標準化植物實驗流程；以中空纖維膜為基礎的圍阻策略，作為可重用的幾何與塗盤方法；內置雙光束光度計，連同其校正問題一併記錄；一套 GIS 工作流程，含一個由大型語言模型 (LLM) 協助整理資料的提示；以及在三個年齡層教過並修訂過的教育材料。wiki 上所有內容採 CC BY 4.0。元件本身的文件必須放在該元件的 Registry 條目上，不能放在 Contribution 頁，我們頁面已明說並指向那些條目。",
+      "cite": [
+        "contribution/",
+        "parts/"
+      ],
+      "trap": "Listing the hydroponics plate's retention or the photometer's accuracy as part of the contribution. Both are explicitly excluded: there is no log reduction value and no biomass calibration.",
+      "trap_zh": "把水耕板的截留率或光度計的準確度算進貢獻內容。兩者都被明確排除：沒有對數削減值，也沒有生物量校正。"
+    },
+    {
+      "id": "GT-12",
+      "type": "weakness",
+      "q": "Your homepage's Big Picture names B. subtilis WB800N. Which strain actually produced the results on this wiki?",
+      "q_zh": "你們首頁的 Big Picture 寫的是枯草桿菌 WB800N。本 wiki 上的結果到底是哪一個菌株做出來的？",
+      "answer": "Strain 168. Results and Engineering both state that every number on this wiki is strain 168 and that the planned WB800N versus 168 comparison has never been run; we brought a WB800 plate back from NCHU on 6 August as a protease-deficient secretion strain, and the April notebook records 168 coming out of the collection. Biomanufacturing contradicts both pages: it calls WB800N the production strain and its Figure 2 is captioned 'WB800N under six light arms, 19 September' with a logistic fit. The answer to give is that 168 produced the results, WB800N is the intended production strain, and the Biomanufacturing figure and the homepage label have to be reconciled before the freeze.",
+      "answer_zh": "是菌株 168。Results 與 Engineering 都明寫本 wiki 上每一個數字都是菌株 168，而原計畫中 WB800N 對 168 的比較從未執行；我們 8 月 6 日從中興大學帶回一盤 WB800，作為缺乏蛋白酶、適合分泌的菌株，而四月的實驗記錄本記載是從菌種庫取出 168。Biomanufacturing 頁與這兩頁矛盾：它稱 WB800N 為生產菌株，其圖 2 的圖說是「WB800N 在六個光照組下，9 月 19 日」並附邏輯斯迴歸擬合。該給的答案是：結果是 168 做的，WB800N 是預定的生產菌株，而 Biomanufacturing 的圖與首頁的標示必須在凍結前統一。",
+      "cite": [
+        "results/",
+        "engineering/",
+        "biomanufacturing/",
+        "/"
+      ],
+      "trap": "Answering WB800N because the homepage says so. Two other pages say every number is 168.",
+      "trap_zh": "因為首頁這樣寫就回答 WB800N。另外兩頁都說每個數字都是 168。"
+    },
+    {
+      "id": "GT-13",
+      "type": "decision",
+      "q": "Why control production with light rather than a chemical inducer like IPTG?",
+      "q_zh": "為什麼用光來控制生產，而不是像 IPTG 這樣的化學誘導物？",
+      "answer": "Because light has no mass in the process. A chemical inducer has to be bought, stored, metered into a sterile vessel and then accounted for in the product stream, and it is a running cost that scales with every batch. Light adds no line into the loop, leaves no residue in the permeate, and can be re-dosed from software without anyone opening the vessel, which is what lets a weather forecast drive production at all: the command path ends at an LED, not at a pump full of inducer. On the cost to the culture, growth rate across the six light arms spans 0.279 to 0.317 per hour, all within one standard error, so green induction carries no measurable growth penalty at those intensities. That growth figure is the one whose strain label is disputed, so quote it as growth only.",
+      "answer_zh": "因為光在製程裡沒有質量。化學誘導物必須購買、儲存、精準加入無菌容器，之後還要在產品流中被追蹤交代，而且是隨每一批次累加的經常成本。光不在迴路上多接一條管線、不在穿透液留下殘留，而且可以由軟體重新給劑量，不必有人打開容器——這正是天氣預報能夠驅動生產的原因：指令路徑終點是一顆 LED，不是一桶誘導物。關於對培養物的代價：六個光照組的生長速率介於每小時 0.279 到 0.317，全部落在一個標準誤差內，所以在這些強度下綠光誘導沒有可量測的生長代價。這張生長數據就是菌株標示有爭議的那一張，引用時只拿它談生長。",
+      "cite": [
+        "biomanufacturing/",
+        "results/"
+      ]
+    },
+    {
+      "id": "GT-14",
+      "type": "boundary",
+      "q": "How far has the Detect and Activate half of your chain actually been tested?",
+      "q_zh": "你們這條鏈的偵測 (Detect) 與啟動 (Activate) 這一半，實際上被測試到什麼程度？",
+      "answer": "It is computation and it never touched a bench. The stress index, the forward projection, the measurement trust layer and the land, farm-size and farmer-age layers were all written and run on real data, and they are reported on Math Model, Digital Twin and Geospatial Analysis with their error bars. But no forecast has ever driven a light, and no light driven by a forecast has reached a culture. All four Detect criteria are Awaiting data: no sensor accuracy test, no repeatability CV, no time-series response, no severity series. The command path cannot be closed end to end until the induction curve in the Produce stage exists.",
+      "answer_zh": "那是計算，從未碰過實驗檯。逆境指數、向前推估、量測可信度層，以及土地、農場規模與農民年齡圖層，全都寫好並在真實資料上跑過，連誤差範圍一起報告在 Math Model、Digital Twin 與 Geospatial Analysis。但從來沒有任何預報驅動過一盞燈，也沒有任何由預報驅動的燈照到過培養物。Detect 的四條判準全部是待數據：沒有感測器準確度測試、沒有重現性變異係數、沒有時間序列反應、沒有嚴重度分級序列。在 Produce 階段的誘導曲線出現之前，這條指令路徑無法端到端閉合。",
+      "cite": [
+        "results/",
+        "development/",
+        "model/"
+      ]
+    },
+    {
+      "id": "GT-15",
+      "type": "alternative",
+      "q": "Why B. subtilis and not E. coli, which almost every team knows how to express protein in?",
+      "q_zh": "為什麼用枯草桿菌而不是幾乎每個團隊都會拿來表現蛋白質的大腸桿菌 (E. coli)？",
+      "answer": "Because the reactor needs the protein outside the cell. B. subtilis is non-pathogenic and a natural secretor, so the permeate stream can carry protectant without a lysis step, and our whole build is the SubtiToolKit Golden Gate system, which is written for B. subtilis and Gram-positive hosts; the CcaS/CcaR optogenetics we took the circuit from is itself B. subtilis work. The secretion choice rests on exactly one piece of evidence: the 2 August fractionation blot, with ACC deaminase in the supernatant lanes and both pellet lanes blank, one blot with no loading control. We never built the circuit in E. coli, so we cannot compare yields.",
+      "answer_zh": "因為反應器需要蛋白質在細胞外。枯草桿菌非病原性且本身就是分泌型菌，所以穿透液可以直接帶出保護劑而不需要裂解步驟；而我們整個組裝都用 SubtiToolKit Golden Gate 系統，那是為枯草桿菌與革蘭氏陽性宿主寫的；我們線路所取自的綠光感應系統 (CcaSR) 光遺傳學文獻本身也是枯草桿菌的研究。分泌這個選擇只靠一項證據：8 月 2 日的分劃西方墨點，ACC 去胺酶出現在上清液通道、兩條沉澱通道皆空白——一張墨點，沒有上樣對照。我們從未在大腸桿菌裡做過這個線路，所以無法比較產量。",
+      "cite": [
+        "results/",
+        "biomanufacturing/",
+        "parts/"
+      ]
+    },
+    {
+      "id": "GT-16",
+      "type": "fact",
+      "q": "Who is on this team, and what did instructors and student advisors do that students did not?",
+      "q_zh": "這個團隊有哪些人？指導老師與學生顧問做了哪些不是學生做的事？",
+      "answer": "The roster is 31 student members, 9 student advisors and 6 instructors: Timmy as dry lab instructor, Chars Hsieh, Gabriel Ng and Gina Yu as wet lab instructors, Jessie Lau for human practices, and Dr. Pak as project advisor. Instructors ran lab training from 7 March and supervised transfers in the biosafety cabinet. Student advisors turned a previous year's experience into the education site, the logistics and software behind advanced peptide design, video structure, a plant-stress photography initiative, and bench technique passed down directly; advisor Ian ran wet lab training on 18 April and advisor Neo Su taught the team to code the wiki on 2 July. One thing to flag: Milestone says forty-seven people while the roster lists forty-six, and the Project Leads section of the roster is empty.",
+      "answer_zh": "名冊是 31 位學生成員、9 位學生顧問、6 位指導老師：Timmy 是乾式實驗室指導老師，Chars Hsieh、Gabriel Ng、Gina Yu 是濕式實驗室指導老師，Jessie Lau 負責人類實踐，Dr. Pak 是專題顧問。指導老師自 3 月 7 日起進行實驗室訓練，並監督生物安全櫃內的轉接操作。學生顧問把前一年的經驗轉化為教育網站、進階胜肽設計背後的後勤與軟體、影片結構、植物逆境攝影計畫，以及直接在實驗檯上傳承的技術；顧問 Ian 在 4 月 18 日帶濕式實驗室訓練，顧問 Neo Su 在 7 月 2 日教團隊寫 wiki。有一點要主動說明：Milestone 頁寫四十七人，名冊實際列出四十六人，而名冊的 Project Leads 區塊是空的。",
+      "cite": [
+        "team/",
+        "milestone/",
+        "attributions/"
+      ]
+    },
+    {
+      "id": "GT-17",
+      "type": "decision",
+      "q": "Why define success as a 27-criterion chain instead of showing that each component works?",
+      "q_zh": "為什麼把成功定義為 27 條判準組成的一條鏈，而不是分別證明每個元件可以運作？",
+      "answer": "Because components that each work do not make a system that works. Development's argument is that a failure in one link makes the success of the others insufficient, so for each of the six stages we asked five questions: what it must accomplish, what can be measured, what performance counts as success, what evidence is needed, and how the stage affects the rest. That produced 27 criteria with numbers attached, including detection accuracy at or above 90 per cent, CV at or below 10 per cent, detect-to-activate within 3 minutes, output retention at or above 80 per cent, transfer efficiency of at least 50 per cent as a starting proposal, and a 20 per cent plant improvement. The cost of writing it that way is a scoreboard with nothing Met, and two criteria we never defined at all.",
+      "answer_zh": "因為各自可運作的元件並不等於可運作的系統。Development 頁的論點是：一環失效會讓其他環節的成功變得不足，所以我們對六個階段各問五個問題：它必須達成什麼、什麼可以被量化、什麼表現才算成功、需要什麼證據、這一階段如何影響其餘。這產生了 27 條附帶數字的判準，包括偵測準確度達 90% 以上、變異係數 10% 以下、偵測到啟動在 3 分鐘內、輸出維持率 80% 以上、作為初步提案的轉移效率至少 50%，以及植物表現改善 20%。這樣寫的代價是一張沒有任何一項達成的成績表，以及兩條我們根本沒定義的判準。",
+      "cite": [
+        "development/"
+      ]
+    },
+    {
+      "id": "GT-18",
+      "type": "weakness",
+      "q": "Has any protectant been shown to help a plant?",
+      "q_zh": "有任何保護劑被證明對植物有幫助嗎？",
+      "answer": "No. Six experiment sets used trehalose as the reference osmolyte and none produced a rescue that survives its own controls; different sets even picked different best doses, 5 mM in one and 10 mM in another. Four CH Biotech peptide trials gave one large effect, about three and a half times the salted control at 100 mM on 5 September, but that arm's own no-salt control read 0.0318, lower than every salted arm on the plate, and there is one plate per arm, so the table is an n of one biologically. Our own designed protectants have never been applied to a plant at all: module G failed, module H produced no clone, and the SamyQ fusions were only assembled at Level 1 at the end of August. There is also no ACC deaminase activity assay, no ELISA and no kinetics anywhere in the wet lab archive.",
+      "answer_zh": "沒有。六個實驗組用海藻糖當參考滲透調節物，沒有一組產生能通過自身對照檢驗的救援效果；不同組甚至選出不同的最佳劑量，一組是 5 mM、另一組是 10 mM。四次正瀚生技胜肽試驗中有一個大效應，9 月 5 日在 100 mM 下約為加鹽對照的三點五倍，但那一組自己的無鹽對照讀到 0.0318，比盤上每個加鹽組都低，而且每組只有一盤，所以整張表在生物學上是 n 等於一。我們自己設計的保護劑則完全沒有用在植物上：module G 失敗、module H 沒有產生轉殖株，SamyQ 融合蛋白直到八月底才組到 Level 1。濕式實驗室檔案裡也沒有任何 ACC 去胺酶活性分析、沒有 ELISA、沒有酵素動力學。",
+      "cite": [
+        "results/",
+        "plant/",
+        "development/"
+      ],
+      "trap": "Offering the three-and-a-half-fold chlorophyll effect as a result. The arm it came from has a failed internal control.",
+      "trap_zh": "把那個三點五倍的葉綠素效應當成結果提出。它所在的組別內部對照是失敗的。"
+    },
+    {
+      "id": "GT-19",
+      "type": "boundary",
+      "q": "ReLeaf is for small-scale farmers. Where does that claim stop?",
+      "q_zh": "ReLeaf 是為小農設計的。這個宣稱到哪裡就停住？",
+      "answer": "It stops short of the field and of certification. Taiwan's organic standards prohibit genetically modified preparations and microbial fertilisers must be free of GM microbes, which is why physical containment is the centre of the design and why farmers at our 5 September forum asked whether a treated crop could still be certified organic; our Laws and Regulations work does not conclude that it can. Nothing has run outside the bench: no field trial, no crop species, and the two delivery routes, hydroponic circulation and soil irrigation, exist as a design informed by the Yes Health iFarm visit rather than as a tested connection to real plumbing. Farmer Chen's willingness, quoted on the homepage, is an interview answer about a bench unit, not a deployment.",
+      "answer_zh": "它在田間與驗證之前就停住。台灣的有機標準禁止基因改造製劑，微生物肥料必須不含基改微生物，這正是物理圍阻成為設計核心的原因，也是 9 月 5 日論壇上農民問「處理過的作物還能不能拿到有機驗證」的原因；我們的法規研究並未得出可以的結論。實驗檯以外什麼都沒跑過：沒有田間試驗、沒有作物物種，而水耕循環與土壤灌溉這兩條傳遞路徑，是受源鮮智慧農場參訪啟發的設計，不是與真實管路測試過的接續。首頁引用的陳農友意願，是針對檯面機型的訪談回答，不是實地部署。",
+      "cite": [
+        "/",
+        "description/",
+        "laws-and-regulations/",
+        "human-practices/"
+      ]
+    },
+    {
+      "id": "GT-20",
+      "type": "alternative",
+      "q": "The CH Biotech peptide is the only preparation in your data with a large effect. Why not build the machine around it, or just sell that?",
+      "q_zh": "正瀚生技的胜肽是你們資料中唯一有大效應的製劑。為什麼不就圍繞它做機器，或乾脆賣那個？",
+      "answer": "That preparation is our benchmark, not our product. We ran it at a 1:500 dilution in pre-, co- and after-treatment timings to find out whether our assay could see a rescue at all, and its one large result sits on a plate whose internal control failed. What a bought product cannot do is the thing ReLeaf exists for: be made beside the field when the forecast turns, rather than bought, stored and sprayed after the first visible sign, by which point the damage is already days old. CH Biotech's own input to us was about formulation and storage barriers, which is exactly the cost we are trying to remove. We cannot claim our protectants beat theirs, because LEA14 and BoPep4 have never reached a plant.",
+      "answer_zh": "那個製劑是我們的基準，不是產品。我們以 1:500 稀釋在前處理、同時處理、後處理三種時機下測試，目的是確認我們的分析系統到底看不看得出救援效果；而它唯一的大結果落在一個內部對照失敗的盤上。買來的產品做不到的，正是 ReLeaf 存在的理由：在預報轉壞時於田邊製造，而不是買來、儲存，等第一個看得見的徵兆出現才噴——那時傷害已經發生好幾天了。正瀚生技給我們的意見正是關於配方與儲存的門檻，而那就是我們想消除的成本。我們無法宣稱自己的保護劑勝過他們的，因為 LEA14 與 BoPep4 從未用到植物上。",
+      "cite": [
+        "results/",
+        "contribution/",
+        "human-practices/"
+      ]
+    },
+    {
+      "id": "GT-21",
+      "type": "fact",
+      "q": "What did your long photometer run establish, and how long was it?",
+      "q_zh": "你們那次長時間的光度計運轉確立了什麼？它跑了多久？",
+      "answer": "It started on 21 July 2026 at 22 °C, logged at ten-minute intervals, and produced 2,671 valid rows. A process event sits between 120 and 160 hours, an instrument event begins around 215 hours, the sensor alarm fires at 216.3 hours, and from 243.0 hours the OD channel cannot be used at all. Separately, against a BioDrop reading the same titanium dioxide suspension the instrument is linear: ours equals 1.018 times BioDrop minus 0.031, R squared 0.995, and it is the steadier of the two above 30 mg of added TiO2. Two honest problems: three of our pages give three different lengths for the run, 400, 434 and 336 hours, and nobody recorded the medium, the inoculum or which compartment the optics sat on, so the trace shows an instrument running rather than a culture growing.",
+      "answer_zh": "它在 2026 年 7 月 21 日於 22 °C 開始，每十分鐘記錄一次，產生 2,671 筆有效資料列。製程事件落在 120 到 160 小時之間，儀器事件約在 215 小時開始，感測器警報在 216.3 小時觸發，從 243.0 小時起 OD 通道完全不能用。另外，在讀同一份二氧化鈦懸浮液時與 BioDrop 相比，我們的儀器是線性的：我們等於 1.018 乘 BioDrop 減 0.031，R 平方 0.995，而且在加入超過 30 mg TiO2 之後我們比它更穩。兩個要誠實說的問題：我們有三頁給了三個不同的運轉長度——400、434、336 小時；而且沒有人記錄培養基、接種物，或光學元件裝在哪一個腔室，所以那條曲線顯示的是一台儀器在運轉，不是一群細胞在生長。",
+      "cite": [
+        "results/",
+        "hardware/photometer/",
+        "contribution/"
+      ],
+      "trap": "Calling it a growth curve, or quoting the reading as a cell count. TiO2 gives linearity in turbidity; the silica calibration that would tie a reading to biomass is written up but has not been run.",
+      "trap_zh": "把它稱為生長曲線，或把讀值當細胞數引用。二氧化鈦只給出對濁度的線性；能把讀值連到生物量的二氧化矽校正已寫好流程但還沒跑。"
+    },
+    {
+      "id": "GT-22",
+      "type": "weakness",
+      "q": "Name a place where your own data handling made a result unusable.",
+      "q_zh": "請說出一個你們自己的資料處理讓結果變成不可用的地方。",
+      "answer": "Two places. Chlorophyll was maintained in two workbooks holding the same raw absorbances that compute different answers on every shared sheet, with a wavelength typo of OD633 for OD663 on nine sheets, a parenthesis that normalises only one term, a coefficient used twice where the second should differ, and a volume header that contradicts its own formulas; every chlorophyll number from experiment sets 4, 6, 7 and 8 is out of use until the sheets are re-derived. Second, the hydroponic box sheets left the reagent field blank, so two complete chlorophyll datasets exist and nobody can say what was added to the boxes. Our own stated fixes are one canonical spreadsheet per assay with the formula written once and raw readings never retyped, and the run conditions recorded in the same file as the data.",
+      "answer_zh": "兩處。葉綠素資料維護在兩本工作簿裡，持有相同的原始吸光值，卻在每一張共用工作表上算出不同答案：九張表把公式裡的 OD663 誤寫為 OD633，一處括號只讓其中一項被標準化，一處係數重複使用而第二次本應不同，還有一處體積標頭與自己的公式矛盾；在工作表重新推導之前，實驗組 4、6、7、8 的每一個葉綠素數字都不可用。第二處，水耕箱紀錄表的試劑欄位留空，所以存在兩套完整的葉綠素資料，卻沒有人說得出箱子裡加了什麼。我們自己列出的修正是：每個分析只保留一本正式試算表，公式只寫一次、原始讀值絕不重新手打，並把運轉條件記在與資料同一個檔案裡。",
+      "cite": [
+        "results/",
+        "contribution/"
+      ]
+    },
+    {
+      "id": "GT-23",
+      "type": "decision",
+      "q": "If you had one more week of bench time, what would you run, and why that?",
+      "q_zh": "如果再給你們一週的實驗檯時間，你們會做什麼實驗？為什麼是那一個？",
+      "answer": "One dose series on DiOPAL with an expression readout, green against dark, on the light-driven PcpcG2 ACC deaminase construct. Results names it as the single experiment that would move the project furthest, because several other items wait on it: the Produce criterion for controllable production, the command path from sensor to light, and the Hill parameters the model currently borrows from a chemically induced version of this circuit. Second would be plating 100 µL of shell-side fluid at every sampling point of the next run with incubation time and temperature recorded, which is cheap and takes the containment claim off a single plate.",
+      "answer_zh": "在 DiOPAL 上做一組劑量序列，以表現量作為讀值，綠光對黑暗，使用光驅動的 PcpcG2 ACC 去胺酶構築。Results 頁點名它是最能推動整個專題的單一實驗，因為好幾項都等著它：Produce 階段「生產可控」那條判準、從感測器到燈的指令路徑，以及模型目前向化學誘導版本線路借用的 Hill 參數。第二順位是在下一次運轉的每個取樣點塗 100 µL 殼側液體，並記錄培養時間與溫度，這很便宜，而且能讓圍阻宣稱不再只靠一張培養盤。",
+      "cite": [
+        "results/",
+        "biomanufacturing/",
+        "contribution/"
+      ]
+    },
+    {
+      "id": "GT-24",
+      "type": "boundary",
+      "q": "Development calls ReLeaf 'a validated foundation for further improvement.' What is that foundation, precisely?",
+      "q_zh": "Development 頁稱 ReLeaf 是「可供後續改進的已驗證基礎」。這個基礎具體是什麼？",
+      "answer": "What stands up is: nine Level-1 modules confirmed by colony PCR, amplicon check and sequencing with dates for each, plus three named failures; a Level-2 device junction-checked on three independent clones at 375, 632 and 661 bp on 19 September; a reactor reaching OD600 0.8 to 0.9 in about two hours under stirring at 37 °C against a shake flask at 0.6 to 0.8 in four and a half; a 102.4 hour run holding crossflow near 371 mL/min with transmembrane pressure inside about plus or minus 0.1 bar; a photometer linear in turbidity; one secretion blot; one salt dose response; and one shell-side plating. Nearly every one of those is a single run. What is not founded is light induction, any protectant rescue, any membrane transfer number, any containment figure and any end-to-end run.",
+      "answer_zh": "站得住的是：九個 Level-1 模組經菌落 PCR、擴增產物檢查與定序三重確認，各有日期，另有三個被指名的失敗；9 月 19 日一個 Level-2 裝置在三個獨立轉殖株上於 375、632、661 bp 完成接點檢查；反應器在 37 °C 攪拌下約兩小時達到 OD600 0.8 至 0.9，相對於搖瓶四個半小時到 0.6 至 0.8；一次 102.4 小時的運轉，切向流維持在約 371 mL/min、跨膜壓差維持在約正負 0.1 bar 以內；一台對濁度呈線性的光度計；一張分泌墨點；一組鹽劑量反應；一次殼側塗盤。其中幾乎每一項都只有單一次運轉。沒有基礎的是：光誘導、任何保護劑救援效果、任何跨膜轉移數值、任何圍阻量化數字，以及任何端到端運轉。",
+      "cite": [
+        "results/",
+        "development/"
+      ],
+      "trap": "Treating the 102.4 hour fit at R squared 0.991 as predictive. It is a model fitted to one run and never tested against a second, and its OD axis is our own instrument, which is linear in turbidity but not tied to a cell count.",
+      "trap_zh": "把 102.4 小時那個 R 平方 0.991 的擬合當成有預測力。那是對單一次運轉擬合的模型，從未用第二次運轉檢驗，而且其 OD 軸是我們自己的儀器——對濁度線性，但沒有連結到細胞數。"
+    },
+    {
+      "id": "GT-25",
+      "type": "weakness",
+      "q": "Name your project's single biggest weakness, before we ask you about it.",
+      "q_zh": "在我們問之前，請自己說出這個專題最大的單一弱點。",
+      "answer": "The switch has never been shown to switch. No experiment in this project shows PcpcG2 output changing with green light, so the optogenetic control the whole concept rests on is unproven, and every ACC deaminase number on this wiki came from the constitutive cassette instead. The second is the plant end: no protectant rescue survives its own controls, and LEA14 and BoPep4 have never been applied to a plant. The failure that taught us most was spraying plants with a culture nobody had blotted; the 24 August blot showed no detectable ACC deaminase in the 23 August batch that went onto the trays, which voided a week of plant work, and our rule now is to blot every batch before it is applied.",
+      "answer_zh": "這個開關從來沒有被證明會切換。整個專題沒有任何實驗顯示 PcpcG2 的輸出隨綠光改變，所以整個概念所倚賴的光遺傳控制未被證明，而本 wiki 上每一個 ACC 去胺酶數字其實都來自組成型表現匣。第二個弱點在植物端：沒有任何保護劑救援效果能通過自身對照，而 LEA14 與 BoPep4 從未用在植物上。教會我們最多的失敗，是用沒有人做過西方墨點的培養液去噴植物；8 月 24 日的墨點顯示 8 月 23 日那批上盤的材料裡測不到 ACC 去胺酶，整週的植物工作因此作廢。我們現在的規則是：每一批在施用前都先做墨點。",
+      "cite": [
+        "results/",
+        "development/",
+        "contribution/"
+      ],
+      "trap": "Naming a cosmetic gap such as a missing figure or an unexported notebook. Judges will read that as not knowing which link of the chain is open.",
+      "trap_zh": "說出像是缺一張圖、記錄本還沒匯出這類表面問題。評審會把那解讀為不知道鏈上哪一環是斷的。"
+    },
+    {
+      "id": "GT-26",
+      "type": "alternative",
+      "q": "Existing products make the protein in bacteria and kill the cells before sale. Why keep a live engineered culture on a farm at all?",
+      "q_zh": "現有產品是在細菌裡做出蛋白質，上市前把細胞殺掉。為什麼還要在農場裡養一缸活的工程菌？",
+      "answer": "Because killing the cells puts manufacture back in a factory, and the gap we identified is timing rather than the protein. On the homepage's own comparison, a ready-made product covers Protective, Biosafe and Monitored but not On demand or Automatic: it has to be bought, mixed and sprayed, and protection applied after the first visible sign reaches a crop whose damage is already days old, since a warm night burns sugar while the field still looks healthy at dawn. Keeping the culture alive beside the field is what lets production answer a forecast. We pay for that with a containment requirement, which the 0.2 µm hollow-fibre membrane answers by design, and which our evidence supports only preliminarily, on two platings.",
+      "answer_zh": "因為把細胞殺掉就等於把製造搬回工廠，而我們找到的缺口是時機而不是蛋白質本身。按首頁自己的比較，成品保護劑涵蓋 Protective、Biosafe、Monitored，但不涵蓋 On demand 與 Automatic：它必須買來、調配、噴灑，而在第一個看得見的徵兆之後才施用的保護，面對的是傷害已經累積好幾天的作物——因為一個暖夜會燒掉植物當天製造的糖，清晨看起來卻還很健康。讓培養物在田邊活著，才使生產能夠回應預報。代價是圍阻的要求，而 0.2 µm 中空纖維膜在設計上回答了這一點，我們的證據只有兩次塗盤，僅能支持到初步程度。",
+      "cite": [
+        "/",
+        "description/",
+        "results/"
+      ]
+    }
+  ]
+}
